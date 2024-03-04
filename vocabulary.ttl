@@ -112,22 +112,22 @@ focu:seeAlso a rdf:Property ;
 
 # Subclasses for Lecture Content Types
 focu:Slides a rdfs:Class ;
-    rdfs:subClassOf focu:LectureContent ;
+    rdfs:subClassOf focu:Lecture ;
     rdfs:label "Slides"@en ;
     rdfs:comment "Presentation slides used during the lecture."@en .
 
 focu:Worksheets a rdfs:Class ;
-    rdfs:subClassOf focu:LectureContent ;
+    rdfs:subClassOf focu:Lecture ;
     rdfs:label "Worksheets"@en ;
     rdfs:comment "Worksheets provided during or for the lecture."@en .
 
 focu:Readings a rdfs:Class ;
-    rdfs:subClassOf focu:LectureContent ;
+    rdfs:subClassOf focu:Lecture ;
     rdfs:label "Readings"@en ;
     rdfs:comment "Recommended reading materials for the lecture."@en .
 
 focu:OtherMaterial a rdfs:Class ;
-    rdfs:subClassOf focu:LectureContent ;
+    rdfs:subClassOf focu:Lecture ;
     rdfs:label "Other Material"@en ;
     rdfs:comment "Other types of content provided for the lecture, such as videos or images."@en .
 
