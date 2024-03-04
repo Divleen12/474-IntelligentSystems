@@ -69,13 +69,13 @@ focu:courseDescription a rdf:Property ;
 focu:seeAlso a rdf:Property ;
     rdfs:subPropertyOf rdfs:seeAlso ;
     rdfs:label "See Also"@en ;
-    rdfs:comment "A reference to further information related to the course."@en ;
+    rdfs:comment "Additional information about the subject resource."@en ;
     rdfs:domain focu:Course ;
     rdfs:range rdfs:Resource .
 
 focu:courseOutline a rdf:Property ;
     rdfs:label "Course Outline"@en ;
-    rdfs:comment "A detailed document outlining the course structure, syllabus, assessment methods, and other relevant information."@en ;
+    rdfs:comment "A detailed description of the course structure, syllabus, assessment methods, and other relevant information."@en ;
     rdfs:domain focu:Course ;
     rdfs:range rdfs:Literal .
 
@@ -174,9 +174,41 @@ ex:grade a rdf:Property ;
     rdfs:domain ex:Student ;
     rdfs:range rdfs:Literal .
 
+ex:retakeGrade a rdf:Property ;
+    rdfs:label "Retake Grade"@en ;
+    rdfs:comment "New grade achieved after re-taking the course if applicable." ;
+    rdfs:domain ex:Student ;
+    rdfs:range rdfs:Literal .
+
 ex:competency a rdf:Property ;
     rdfs:label "Competency"@en ;
     rdfs:comment "A competency or skill that the student has acquired through completing courses."@en ;
     rdfs:domain ex:Student ;
     rdfs:range focu:Topic .
+
+
+# Topic Class
+focu:Topic a rdf:Class ;
+    rdfs:label "Topic"@en ;
+    rdfs:comment "Topics covered in the course."@en .
+
+# Properties
+focu:topicName a rdf:Property ;
+    rdfs:label "Topic Name"@en ;
+    rdfs:comment "The topic’s name as mentioned in the source material." ;
+    rdfs:domain focu:Topic ;
+    rdfs:range rdfs:Literal .
+
+focu:provenance a rdf:Property ;
+    rdfs:label "Provenance"@en ;
+    rdfs:comment "Where the topic was identified as being covered in the course." ;
+    rdfs:domain focu:Topic ;
+    rdfs:range rdfs:Literal .
+
+focu:linkedTo a rdf:Property ;
+    rdfs:label "Linked To"@en ;
+    rdfs:comment "Link to either DBpedia or Wikidata." ;
+    rdfs:domain focu:Topic ;
+    rdfs:range rdfs:Resource .
+	
 
