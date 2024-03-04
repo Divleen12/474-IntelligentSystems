@@ -1,0 +1,182 @@
+@prefix ex: <http://example.org/course#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix schema: <http://schema.org/> .
+@prefix focu: <http://focu.io/schema#> .
+
+# University Class
+ex:University a rdfs:Class ;
+    rdfs:subClassOf foaf:Organization ;
+    rdfs:label "University"@en ;
+    rdfs:comment "An institution of higher education and research which awards academic degrees in various academic disciplines."@en .
+
+# University Properties
+ex:universityName a rdf:Property ;
+    rdfs:label "University Name"@en ;
+    rdfs:comment "The official name of the university."@en ;
+    rdfs:domain ex:University ;
+    rdfs:range rdfs:Literal .
+
+ex:dbpediaLink a rdf:Property ;
+    rdfs:label "DBpedia Link"@en ;
+    rdfs:comment "A link to the university's corresponding DBpedia entry."@en ;
+    rdfs:domain ex:University ;
+    rdfs:range rdfs:Resource .
+
+ex:wikidataLink a rdf:Property ;
+    rdfs:label "Wikidata Link"@en ;
+    rdfs:comment "A link to the university's corresponding Wikidata entry."@en ;
+    rdfs:domain ex:University ;
+    rdfs:range rdfs:Resource .
+
+# Course Class
+focu:Course a rdfs:Class ;
+    rdfs:label "Course"@en ;
+    rdfs:comment "A structured series of educational lectures or lessons in a particular subject."@en .
+
+# Course Properties
+focu:courseName a rdf:Property ;
+    rdfs:label "Course Name"@en ;
+    rdfs:comment "The formal title of the course."@en ;
+    rdfs:domain focu:Course ;
+    rdfs:range rdfs:Literal .
+
+focu:courseSubject a rdf:Property ;
+    rdfs:label "Course Subject"@en ;
+    rdfs:comment "The academic discipline or subject area to which the course belongs."@en ;
+    rdfs:domain focu:Course ;
+    rdfs:range rdfs:Literal .
+
+focu:courseNumber a rdf:Property ;
+    rdfs:label "Course Number"@en ;
+    rdfs:comment "The unique number assigned to the course for identification purposes."@en ;
+    rdfs:domain focu:Course ;
+    rdfs:range rdfs:Literal .
+
+focu:courseCredits a rdf:Property ;
+    rdfs:label "Course Credits"@en ;
+    rdfs:comment "The number of academic credits awarded for the successful completion of the course."@en ;
+    rdfs:domain focu:Course ;
+    rdfs:range rdfs:Literal .
+
+focu:courseDescription a rdf:Property ;
+    rdfs:label "Course Description"@en ;
+    rdfs:comment "A brief overview of the course content and objectives."@en ;
+    rdfs:domain focu:Course ;
+    rdfs:range rdfs:Literal .
+
+focu:seeAlso a rdf:Property ;
+    rdfs:subPropertyOf rdfs:seeAlso ;
+    rdfs:label "See Also"@en ;
+    rdfs:comment "A reference to further information related to the course."@en ;
+    rdfs:domain focu:Course ;
+    rdfs:range rdfs:Resource .
+
+focu:courseOutline a rdf:Property ;
+    rdfs:label "Course Outline"@en ;
+    rdfs:comment "A detailed document outlining the course structure, syllabus, assessment methods, and other relevant information."@en ;
+    rdfs:domain focu:Course ;
+    rdfs:range rdfs:Literal .
+
+# Lecture Class
+focu:Lecture a rdfs:Class ;
+    rdfs:label "Lecture"@en ;
+    rdfs:comment "An educational talk or presentation given by a teacher or lecturer, often as part of a course."@en .
+
+# Lecture Properties
+focu:lectureNumber a rdf:Property ;
+    rdfs:label "Lecture Number"@en ;
+    rdfs:comment "The sequential number of the lecture within the course."@en ;
+    rdfs:domain focu:Lecture ;
+    rdfs:range rdfs:Literal .
+
+focu:lectureName a rdf:Property ;
+    rdfs:label "Lecture Name"@en ;
+    rdfs:comment "The name of the lecture, if available."@en ;
+    rdfs:domain focu:Lecture ;
+    rdfs:range rdfs:Literal .
+
+focu:lectureContent a rdf:Property ;
+    rdfs:label "Lecture Content"@en ;
+    rdfs:comment "Content of the lecture, such as slides, worksheets, readings, etc."@en ;
+    rdfs:domain focu:Lecture ;
+    rdfs:range rdfs:Resource .
+
+focu:seeAlso a rdf:Property ;
+    rdfs:subPropertyOf rdfs:seeAlso ;
+    rdfs:label "See Also"@en ;
+    rdfs:comment "Link to a web page with lecture information, if available."@en ;
+    rdfs:domain focu:Lecture ;
+    rdfs:range rdfs:Resource .
+
+# Subclasses for Lecture Content Types
+focu:Slides a rdfs:Class ;
+    rdfs:subClassOf focu:LectureContent ;
+    rdfs:label "Slides"@en ;
+    rdfs:comment "Presentation slides used during the lecture."@en .
+
+focu:Worksheets a rdfs:Class ;
+    rdfs:subClassOf focu:LectureContent ;
+    rdfs:label "Worksheets"@en ;
+    rdfs:comment "Worksheets provided during or for the lecture."@en .
+
+focu:Readings a rdfs:Class ;
+    rdfs:subClassOf focu:LectureContent ;
+    rdfs:label "Readings"@en ;
+    rdfs:comment "Recommended reading materials for the lecture."@en .
+
+focu:OtherMaterial a rdfs:Class ;
+    rdfs:subClassOf focu:LectureContent ;
+    rdfs:label "Other Material"@en ;
+    rdfs:comment "Other types of content provided for the lecture, such as videos or images."@en .
+
+# Student Class
+ex:Student a rdf:Class ;
+    rdfs:subClassOf foaf:Person ;
+    rdfs:label "Student"@en ;
+    rdfs:comment "A student who is or was enrolled in courses at the university."@en .
+
+# Student Properties
+foaf:givenName a rdf:Property ;
+    rdfs:label "First Name"@en ;
+    rdfs:comment "The student's first name."@en ;
+    rdfs:domain ex:Student ;
+    rdfs:range rdfs:Literal .
+
+foaf:familyName a rdf:Property ;
+    rdfs:label "Last Name"@en ;
+    rdfs:comment "The student's last name."@en ;
+    rdfs:domain ex:Student ;
+    rdfs:range rdfs:Literal .
+
+ex:studentID a rdf:Property ;
+    rdfs:label "Student ID"@en ;
+    rdfs:comment "The unique identifier for the student."@en ;
+    rdfs:domain ex:Student ;
+    rdfs:range rdfs:Literal .
+
+foaf:mbox a rdf:Property ;
+    rdfs:label "Email"@en ;
+    rdfs:comment "The student's email address."@en ;
+    rdfs:domain ex:Student ;
+    rdfs:range rdfs:Resource .
+
+ex:completedCourse a rdf:Property ;
+    rdfs:label "Completed Course"@en ;
+    rdfs:comment "A course that the student has completed."@en ;
+    rdfs:domain ex:Student ;
+    rdfs:range focu:Course .
+
+ex:grade a rdf:Property ;
+    rdfs:label "Grade"@en ;
+    rdfs:comment "The grade the student achieved in a completed course."@en ;
+    rdfs:domain ex:Student ;
+    rdfs:range rdfs:Literal .
+
+ex:competency a rdf:Property ;
+    rdfs:label "Competency"@en ;
+    rdfs:comment "A competency or skill that the student has acquired through completing courses."@en ;
+    rdfs:domain ex:Student ;
+    rdfs:range focu:Topic .
+
