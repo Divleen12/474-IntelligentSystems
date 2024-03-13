@@ -1,0 +1,83 @@
+@prefix rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xs:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix focu: <http://focu.io/schema#> .
+@prefix ex: <http://example.org/> .
+@prefix focu: <http://focu.io/schema#> .
+#comp 474 course
+ex:COMP474 a focu:Course ;
+    focu:courseName "Intelligent Systems" ;
+    focu:courseSubject "COMP" ;
+    focu:courseNumber "474" ;
+    focu:courseCredits "4" ;
+    focu:courseDescription "Rule-based expert systems, blackboard architecture, and agent-based.Knowledge acquisition and representation.Uncertainty and conflict resolution. Reasoning and explanation. Design of intelligent systems. Project." ;
+    focu:courseOutline """
+        COMP 474/6741 Intelligent Systems
+        Department of Computer Science and Software Engineering
+        Winter 2024
+        Course Instructor: Dr. René Witte, Associate Professor
+        Email: rene.witte@concordia.ca
+       Office Hours:
+       Every Thursday, 16:00-17:00, in ER 933 (starting Week 2).
+       Online meetings (via Zoom) can also be scheduled on-demand via Moodle.
+       Prerequisites: COMP 352 or COEN 352 (applies to COMP 474 only)
+       Co-requisites: n/a
+       Skills Needed for this Course:
+       Python: Proficiency in general programming using Python is essential for lab sessions and the course project.
+       APIs and Data Handling: Basic understanding of working with APIs and data formats (like JSON, XML) is important.
+       Linear Algebra
+       Grading Scheme
+       Your grade will be based on exams and a team project (split into multiple submissions). The
+       grading distribution of these deliverables is as follows:
+       35% Course Project (team work, split into 2-3 submissions)
+       15% Midterm Exam
+       50% Final Exam
+       Letter grades for this course will be assigned based on a curve
+        """ ;
+    focu:seeAlso <http://www.concordia.ca/artsci/computer-science-software-engineering/courses.html#COMP474> .
+
+
+#Lecture 1
+ex:COMP474Lecture01 a focu:Lecture ;
+    focu:lectureNumber "1" ;
+    focu:lectureName "Introduction to Intelligent Systems" ;
+    focu:lectureContent ex:COMP474Slides01 ;
+    focu:seeAlso <https://psych.fullerton.edu/mbirnbaum/psych101/Eliza.htm>,
+                 <https://www.masswerk.at/elizabot/> .
+
+ex:COMP474Slides01 a focu:Slides ;
+    rdfs:label "Slides 01: Intelligent Systems Introduction" ;
+    focu:seeAlso <file:///Users/kimiagoodarzi/Desktop/roboprof/COMP4746741/Lectures/slides01.pdf> .
+
+ex:COMP474Readings01 a focu:Readings ;
+    rdfs:label "1-Introduction 2-Text Mining 3-Knowledge Graphs 4-The Agents are coming 5-Agent AI: From Dumb to Deep 6-Notes and Further Reading" .
+#LEcture 2
+ex:COMP474Lecture02 a focu:Lecture ;
+    focu:lectureNumber "2" ;
+    focu:seeAlso <file:///Users/kimiagoodarzi/Desktop/roboprof/COMP4746741/Lectures/slides02.pdf> .
+
+#Lecture 3
+ex:COMP474Lecture01 a focu:Lecture ;
+    focu:lectureNumber "3" ;
+    focu:seeAlso <file:///Users/kimiagoodarzi/Desktop/roboprof/COMP4746741/Lectures/slides03.pdf> .
+
+#Lecture 4
+ex:COMP474Lecture01 a focu:Lecture ;
+    focu:lectureNumber "4" ;
+    focu:seeAlso <file:///Users/kimiagoodarzi/Desktop/roboprof/COMP4746741/Lectures/slides04.pdf> .
+#Lecture 5
+ex:COMP474Lecture01 a focu:Lecture ;
+    focu:lectureNumber "5" ;
+    focu:seeAlso <file:///Users/kimiagoodarzi/Desktop/roboprof/COMP4746741/Lectures/slides05.pdf> .
+
+#Lecture 6
+ex:COMP474Lecture01 a focu:Lecture ;
+    focu:lectureNumber "6" ;
+    focu:seeAlso <file:///Users/kimiagoodarzi/Desktop/roboprof/COMP4746741/Lectures/slides06.pdf> .
+
+#LEcture 7
+ex:COMP474Lecture01 a focu:Lecture ;
+    focu:lectureNumber "7" ;
+    focu:seeAlso <file:///Users/kimiagoodarzi/Desktop/roboprof/COMP4746741/Lectures/slides07.pdf> .
+
+
