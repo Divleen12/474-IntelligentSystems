@@ -1,0 +1,7 @@
+@prefix ex: <https://example.org/> .
+
+ex:ConcordiaUniversity a ex:University ;
+    ex:dbpediaLink <https://dbpedia.org/page/Concordia_University> ;
+    ex:universityName "Concordia University" ;
+    ex:wikidataLink <https://www.wikidata.org/wiki/Q326342> .
+
