@@ -252,13 +252,13 @@ ex:COMP474Worksheet06 a focu:Worksheets ;
 ex:COMP474Readings07 a focu:Readings ;
     rdfs:label "Readings for Lecture 7" ;
     focu:seeAlso [
-        a focu:Reading ;
+        a focu:Readings ;
         rdfs:label "[LHH19, Chapter 12] (Dialog engines)"
     ], [
-        a focu:Reading ;
+        a focu:Readings ;
         rdfs:label "[IMF13, Chapter 8] (Building a QA System)"
     ], [
-        a focu:Reading ;
+        a focu:Readings ;
         rdfs:label "[RN10, Chapter 26] (Philosophical Foundations)"
     ] .
 
