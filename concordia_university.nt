@@ -1,0 +1,4 @@
+<https://example.org/ConcordiaUniversity> <https://example.org/dbpediaLink> <https://dbpedia.org/page/Concordia_University> .
+<https://example.org/ConcordiaUniversity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://example.org/University> .
+<https://example.org/ConcordiaUniversity> <https://example.org/wikidataLink> <https://www.wikidata.org/wiki/Q326342> .
+<https://example.org/ConcordiaUniversity> <https://example.org/universityName> "Concordia University" .
