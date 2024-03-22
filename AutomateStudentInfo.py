@@ -33,7 +33,8 @@ for index, row in df.iterrows():
     g.add((student_uri, ex.studentID, Literal(row["ID Number"])))
     g.add((student_uri, foaf.mbox, URIRef(f"mailto:{row['Email']}")))
 
-    course_uri = focu[row["Completed Course"]]
+    course_name = row["Completed Course"].replace(' ', '_')
+    course_uri = focu[course_name]
     g.add((student_uri, ex.completedCourse, course_uri))
     g.add((course_uri, rdf.type, focu.Course))
     g.add((course_uri, focu.courseName, Literal(row["Completed Course"])))
@@ -42,13 +43,13 @@ for index, row in df.iterrows():
     if row["Retake Grade"] != row["Grade"]:
         g.add((student_uri, ex.retakeGrade, Literal(row["Retake Grade"])))
 
-# Serialize to Turtle format
-turtle = g.serialize(format="turtle")
-print(turtle)
 
-with open('students.ttl', 'w', encoding='utf-8') as f:
-    f.write(g.serialize(format="turtle"))
+# Turtle format
+turtle_filename = "students.ttl"
+with open(turtle_filename, 'w', encoding='utf-8') as turtle_file:
+    turtle_file.write(g.serialize(format="turtle"))
 
-# Serialize to N-Triples format
-with open('students.nt', 'w', encoding='utf-8') as f:
-    f.write(g.serialize(format="nt"))
+# N-Triples format
+nt_filename = "students.nt"
+with open(nt_filename, 'w', encoding='utf-8') as nt_file:
+    nt_file.write(g.serialize(format="nt"))
