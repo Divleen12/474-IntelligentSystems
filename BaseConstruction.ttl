@@ -73,6 +73,7 @@ ex:COMP474Slides02 a focu:Slides ;
     focu:seeAlso <file:///Users/kimiagoodarzi/Desktop/roboprof/COMP4746741/Lectures/slides02.pdf> .
 
 ex:COMP474Worksheet01 a focu:Worksheets ;
+    rdfs:label "Worksheet 01" ;
     focu:seeAlso <file:///Users/kimiagoodarzi/Desktop/roboprof/COMP4746741/Worksheets/Worksheet01.pdf> .
 
 ex:COMP474Lecture02YouTube1 a focu:OtherMaterial ;
@@ -294,3 +295,186 @@ ex:COMP472 a focu:Course ;
         """ ;
     focu:seeAlso <http://www.concordia.ca/artsci/computer-science-software-engineering/courses.html#COMP472> .
 
+# COMP 472 Lecture 01
+ex:COMP472Lecture01 a focu:Lecture ;
+    focu:lectureNumber "1" ;
+    focu:lectureName "Artificial Intelligence: Introduction" ;
+    focu:lectureContent ex:COMP472Slides01 , ex:COMP472Slides01;
+    focu:seeAlso <file:///Users/kimiagoodarzi/Desktop/roboprof/COMP472/Lectures/slides01.pdf>,
+                 <https://www.youtube.com/watch?embed=no&v=4RixMPF4xis>,
+                 <https://www.youtube.com/watch?embed=no&v=bo4RvYJYOzI>,
+                 <https://www.youtube.com/watch?embed=no&v=P18EdAKuC1U>,
+                 <https://www.youtube.com/watch?embed=no&v=L32BRcvnWRU> .
+
+# COMP 472 Slides 01
+ex:COMP472Slides01 a focu:Slides ;
+    rdfs:label "Slides 01: Artificial Intelligence: Introduction" ;
+    focu:seeAlso <file:///Users/kimiagoodarzi/Desktop/roboprof/COMP472/Lectures/slides01.pdf> .
+
+# COMP 472 Lecture 01 Readings
+ex:COMP472Readings01 a focu:Readings ;
+    rdfs:label "Readings for Lecture 01: Artificial Intelligence" ;
+    focu:seeAlso <https://en.wikipedia.org/wiki/History_of_artificial_intelligence>,
+                 <https://plato.stanford.edu/entries/artificial-intelligence/> .
+
+
+# COMP 472 Lecture 02
+ex:COMP472Lecture02 a focu:Lecture ;
+    focu:lectureNumber "02" ;
+    focu:lectureName "Artificial Intelligence: State Space Search" ;
+    focu:lectureContent "State Space Representation - State Space Search - Uninformed search - Breadth-first and Depth-first - Depth-limited Search Iterative Deepening Uniform Cost - Informed search - Hill climbing - Best-First - Summary"
+                                , ex:COMP472Worksheet01 ;
+    focu:seeAlso <file:///Users/kimiagoodarzi/Desktop/roboprof/COMP472/Worksheets/Worksheet01.pdf>,
+                 <https://www.youtube.com/watch?embed=no&v=kAsVvS02T_U> .
+
+ex:COMP472Slides02 a focu:Slides ;
+    rdfs:label "Slides 02:Artificial Intelligence: State Space Search" ;
+    focu:seeAlso <file:///Users/kimiagoodarzi/Desktop/roboprof/COMP472/Lectures/slides01.pdf> .
+
+# COMP 472 Worksheet 01
+ex:COMP472Worksheet01 a focu:Worksheets ;
+    rdfs:label "Worksheet 01" ;
+    focu:seeAlso <file:///Users/kimiagoodarzi/Desktop/roboprof/COMP472/Worksheets/Worksheet01.pdf> .
+
+# COMP 472 Lecture 02 Readings
+ex:COMP472Readings02 a focu:Readings ;
+    rdfs:label "Readings for Lecture 02: State Space Search" ;
+    focu:seeAlso <https://reserves.concordia.ca/ares/ares.dll?Action=10&Type=10&Value=123851>,
+                 <https://artint.info/3e/html/ArtInt3e.Ch3.html> .
+
+
+
+@prefix ex: <http://example.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix schema: <http://schema.org/> .
+@prefix focu: <http://focu.io/schema#> .
+
+# COMP 472 Lecture 03
+ex:COMP472Lecture03 a focu:Lecture ;
+    focu:lectureNumber "03" ;
+    focu:lectureName "Artificial Intelligence: Introduction to Machine Learning & Naive Bayes Classification" ;
+    focu:lectureContent "1. Introduction to ML 2. Naïve Bayes Classifier 3. Evaluation",
+                        ex:COMP472Slides03,
+                        ex:COMP472Worksheet02 ;
+    focu:seeAlso <http://reserves.concordia.ca/ares/ares.dll/plink?14EF6050> .
+
+# COMP 472 Slides 03
+ex:COMP472Slides03 a focu:Slides ;
+    rdfs:label "Slides 03: Introduction to Machine Learning & Naive Bayes Classification" ;
+    focu:seeAlso <file:///Users/kimiagoodarzi/Desktop/roboprof/COMP472/Lectures/slides03.pdf> .
+
+# COMP 472 Worksheet 02
+ex:COMP472Worksheet02 a focu:Worksheets ;
+    rdfs:label "Worksheet 02: Introduction to Machine Learning & Naive Bayes Classification" ;
+    focu:seeAlso <file:///Users/kimiagoodarzi/Desktop/roboprof/COMP472/Worksheets/Worksheet02.pdf> .
+
+# COMP 472 Lecture 03 Readings
+ex:COMP472Readings03 a focu:Readings ;
+    rdfs:label "Readings for Lecture 03: Introduction to Machine Learning & Naive Bayes Classification" ;
+    focu:seeAlso <https://reserves.concordia.ca/ares/ares.dll/plink?14EF6050>,
+                 <https://www.someurl.com/naive_bayes> .
+
+# COMP 472 Lecture 04
+ex:COMP472Lecture04 a focu:Lecture ;
+    focu:lectureNumber "04" ;
+    focu:lectureName "ML: Decision Trees & k-means Clustering" ;
+    focu:lectureContent "1. Introduction to ML (contd.) 2. Decision Trees 3. Evaluation (contd.) 4. Unsupervised Learning: k-means Clustering",
+                        ex:COMP472Slides04,
+                        ex:COMP472Worksheet03 ;
+    focu:seeAlso <https://en.wikipedia.org/wiki/Precision_and_recall>,
+                 <https://en.wikipedia.org/wiki/K-means_clustering>,
+                 <https://www.analyticsvidhya.com/blog/2020/11/entropy-a-key-concept-for-all-data-science-beginners/>,
+                 <https://www.datacamp.com/community/data-science-cheatsheets>,
+                 <https://www.datacamp.com/cheat-sheet/scikit-learn-cheat-sheet-python-machine-learning> .
+
+# COMP 472 Slides 04
+ex:COMP472Slides04 a focu:Slides ;
+    rdfs:label "Slides 04: ML: Decision Trees & k-means Clustering" ;
+    focu:seeAlso <file:///Users/kimiagoodarzi/Desktop/roboprof/COMP472/Lectures/slides04.pdf> .
+
+# COMP 472 Worksheet 03
+ex:COMP472Worksheet03 a focu:Worksheets ;
+    rdfs:label "Worksheet 03: ML: Decision Trees & k-means Clustering" ;
+    focu:seeAlso <file:///Users/kimiagoodarzi/Desktop/roboprof/COMP472/Worksheets/Worksheet03.pdf> .
+
+# COMP 472 Lecture 04 Readings
+ex:COMP472Readings04 a focu:Readings ;
+    rdfs:label "Readings for Lecture 04: ML: Decision Trees & k-means Clustering" ;
+    focu:seeAlso <https://reserves.concordia.ca/ares/ares.dll?Action=10&Type=10&Value=123456> .  # Placeholder URL for the course reserve
+
+# COMP 472 Lecture 04 Other Material
+ex:COMP472OtherMaterial04 a focu:OtherMaterial ;
+    focu:seeAlso <https://en.wikipedia.org/wiki/Precision_and_recall>,
+                 <https://en.wikipedia.org/wiki/K-means_clustering>,
+                 <https://www.analyticsvidhya.com/blog/2020/11/entropy-a-key-concept-for-all-data-science-beginners/>,
+                 <https://www.datacamp.com/community/data-science-cheatsheets>,
+                 <https://www.datacamp.com/cheat-sheet/scikit-learn-cheat-sheet-python-machine-learning> .
+
+# COMP 472 Lecture 05
+ex:COMP472Lecture05 a focu:Lecture ;
+    focu:lectureNumber "05" ;
+    focu:lectureName "Artificial Intelligence: Introduction to Neural Networks" ;
+    focu:lectureContent "Introduction to Neural Networks - Perceptrons - Backpropagation",
+                        ex:COMP472Slides05,
+                        ex:COMP472Worksheet04 ;
+    focu:seeAlso <https://en.wikipedia.org/wiki/Perceptron>,
+                 <https://en.wikipedia.org/wiki/Backpropagation>,
+                 <https://medium.com/@thomascountz/19-line-line-by-line-python-perceptron-b6f113b161f3>,
+                 <https://www.youtube.com/watch?embed=no&v=gakJlr3GecE>,
+                 <https://en.wikipedia.org/wiki/NETtalk_(artificial_neural_network)> .
+
+# COMP 472 Slides 05
+ex:COMP472Slides05 a focu:Slides ;
+    rdfs:label "Slides 05: Artificial Intelligence: Introduction to Neural Networks" ;
+    focu:seeAlso <file:///Users/kimiagoodarzi/Desktop/roboprof/COMP472/Lectures/slides05.pdf> .
+
+# COMP 472 Worksheet 04
+ex:COMP472Worksheet04 a focu:Worksheets ;
+    rdfs:label "Worksheet 04: Introduction to Neural Networks" ;
+    focu:seeAlso <file:///Users/kimiagoodarzi/Desktop/roboprof/COMP472/Worksheets/Worksheet04.pdf> .
+
+# COMP 472 Lecture 05 Readings
+ex:COMP472Readings05 a focu:Readings ;
+    rdfs:label "Readings for Lecture 05: Introduction to Neural Networks" ;
+    focu:seeAlso <https://reserves.concordia.ca/ares/ares.dll?Action=10&Type=10&Value=123457>,  # Placeholder URL for the course reserve
+                 <https://en.wikipedia.org/wiki/Perceptron>,
+                 <https://en.wikipedia.org/wiki/Backpropagation> .
+
+# COMP 472 Lecture 05 Other Material
+ex:COMP472OtherMaterial05 a focu:OtherMaterial ;
+    focu:seeAlso <https://medium.com/@thomascountz/19-line-line-by-line-python-perceptron-b6f113b161f3>,
+                 <https://www.youtube.com/watch?embed=no&v=gakJlr3GecE>,
+                 <https://en.wikipedia.org/wiki/NETtalk_(artificial_neural_network)> .
+
+# COMP 472 Lecture 06
+ex:COMP472Lecture06 a focu:Lecture ;
+    focu:lectureNumber "06" ;
+    focu:lectureName "Deep Learning, CNNs" ;
+    focu:lectureContent "1. Motivation 2. Feature Learning 3. Early Training of Deep Neural Networks 4. CNNs for Image Processing 5. Conclusion",
+                        ex:COMP472Slides06,
+                        ex:COMP472Worksheet05 ;
+    focu:seeAlso <https://www.jeremyjordan.me/autoencoders/>,
+                 <https://www.youtube.com/watch?embed=no&v=lFOOjeH2wsY> .
+
+# COMP 472 Slides 06
+ex:COMP472Slides06 a focu:Slides ;
+    rdfs:label "Slides 06: Deep Learning, CNNs" ;
+    focu:seeAlso <file:///Users/kimiagoodarzi/Desktop/roboprof/COMP472/Lectures/slides06.pdf> .
+
+# COMP 472 Worksheet 05
+ex:COMP472Worksheet05 a focu:Worksheets ;
+    rdfs:label "Worksheet 05: Deep Learning, CNNs" ;
+    focu:seeAlso <file:///Users/kimiagoodarzi/Desktop/roboprof/COMP472/Worksheets/Worksheet05.pdf> .
+
+# COMP 472 Lecture 06 Readings
+ex:COMP472Readings06 a focu:Readings ;
+    rdfs:label "Readings for Lecture 06: Deep Learning, CNNs" ;
+    focu:seeAlso <https://www.jeremyjordan.me/autoencoders/> .
+
+# COMP 472 Lecture 06 Other Material
+ex:COMP472OtherMaterial06 a focu:OtherMaterial ;
+    focu:seeAlso <https://www.youtube.com/watch?embed=no&v=lFOOjeH2wsY>,
+                 <https://poloclub.github.io/cnn-explainer/>,
+                 <https://transcranial.github.io/keras-js/#/mnist-cnn>.
