@@ -1,0 +1,52 @@
+@prefix ex: <http://example.org/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix focu: <http://focu.io/schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+ex:student_1 a ex:Student ;
+    ex:completedCourse focu:COMP_474 ;
+    ex:grade "D" ;
+    ex:retakeGrade "A" ;
+    ex:studentID 40834 ;
+    foaf:familyName "Hinkle" ;
+    foaf:givenName "Gloria" ;
+    foaf:mbox <mailto:gayla.chou@example.com> .
+
+ex:student_2 a ex:Student ;
+    ex:completedCourse focu:COMP_474 ;
+    ex:grade "C" ;
+    ex:retakeGrade "D" ;
+    ex:studentID 81620 ;
+    foaf:familyName "Taylor" ;
+    foaf:givenName "Elizabeth" ;
+    foaf:mbox <mailto:carlotta.myers@example.com> .
+
+ex:student_3 a ex:Student ;
+    ex:completedCourse focu:COMP_474 ;
+    ex:grade "A" ;
+    ex:studentID 68340 ;
+    foaf:familyName "Reid" ;
+    foaf:givenName "Mary" ;
+    foaf:mbox <mailto:mara.sule@example.com> .
+
+ex:student_4 a ex:Student ;
+    ex:completedCourse focu:COMP_474 ;
+    ex:grade "B" ;
+    ex:retakeGrade "D" ;
+    ex:studentID 92158 ;
+    foaf:familyName "Ruiz" ;
+    foaf:givenName "Mary" ;
+    foaf:mbox <mailto:michelle.hartmann@example.com> .
+
+ex:student_5 a ex:Student ;
+    ex:completedCourse focu:COMP_474 ;
+    ex:grade "D" ;
+    ex:retakeGrade "F" ;
+    ex:studentID 32295 ;
+    foaf:familyName "Kimball" ;
+    foaf:givenName "Melissa" ;
+    foaf:mbox <mailto:gloria.anchors@example.com> .
+
+focu:COMP_474 a focu:Course ;
+    focu:courseName "COMP 474" .
+
