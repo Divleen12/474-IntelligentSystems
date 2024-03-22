@@ -68,3 +68,21 @@ The RDF data includes the following information for each student:
 - `students.ttl`: The RDF data in Turtle format.
 - `students.nt`: The RDF data in N-Triples format.
 
+## Execution Steps
+
+In order to generate the RDF data, you can follow the steps below:
+
+### Step 1: Base Construction File
+
+The BaseConstruction.ttl file contains the course information, start by placing it in your working directory.
+
+### Step 2: Generate Concordia University Information
+
+In order to create RDF data for Concordia University, execute automateConcordiaInfo.py. This will produce the RDF data in Turtle and N-Triples formats. 
+### Step 3: Generate the Excel Sheet for Student Information
+
+For a sample Excel sheet with student data, execute `makeExcelStudent.py`. It will create an Excel file with random student information.
+
+### Step 4: Generate RDF Data for Student Information
+ Convert the student data from the Excel sheet into RDF format by running the AutomateStudentInfo.py script which produces Turtle and N-Triples files.
+
