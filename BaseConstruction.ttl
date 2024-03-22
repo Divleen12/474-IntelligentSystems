@@ -67,19 +67,19 @@ ex:COMP474Lecture02 a focu:Lecture ;
     focu:lectureName "Introduction to Knowledge Graphs (RDF)" ;
     focu:lectureContent ex:COMP474Slides02, ex:COMP474Worksheet01 ;
     focu:seeAlso <https://moodle.concordia.ca/moodle/pluginfile.php/6430001/mod_resource/content/7/slides02.pdf> .
-ex:COMP474Slides02 a focu:Slides ;
-    focu:seeAlso <file:///Users/kimiagoodarzi/Desktop/roboprof/COMP4746741/Lectures/slides02.pdf> .
 
+ex:COMP474Slides02 a focu:Slides ;
+    rdfs:label "Slides 02: Introduction to Knowledge Graphs (RDF)" ;
+    focu:seeAlso <file:///Users/kimiagoodarzi/Desktop/roboprof/COMP4746741/Lectures/slides02.pdf> .
 
 ex:COMP474Worksheet01 a focu:Worksheets ;
     focu:seeAlso <file:///Users/kimiagoodarzi/Desktop/roboprof/COMP4746741/Worksheets/Worksheet01.pdf> .
 
-
 ex:COMP474Lecture02YouTube1 a focu:OtherMaterial ;
     focu:seeAlso <https://www.youtube.com/watch?v=y7sXDpffzQQ> .
+
 ex:COMP474Lecture02YouTubePlaylist a focu:OtherMaterial ;
     focu:seeAlso <https://www.youtube.com/playlist?list=PLar5iR7mhb4dJHDSjmeo6W7HomHBSZf9t> .
-
 
 
 #Lecture 3
@@ -91,6 +91,7 @@ ex:COMP474Lecture03 a focu:Lecture ;
 
 
 ex:COMP474Slides03 a focu:Slides ;
+     rdfs:label  "Knowledge Graphs: Vocabularies & Ontologies" ;
     focu:seeAlso <file:///Users/kimiagoodarzi/Desktop/roboprof/COMP4746741/Lectures/slides03.pdf> .
 ex:COMP474Worksheet02 a focu:Worksheets ;
     focu:seeAlso <file:///Users/kimiagoodarzi/Desktop/roboprof/COMP4746741/Worksheets/Worksheet02.pdf> .
@@ -124,6 +125,7 @@ ex:COMP474Lecture04 a focu:Lecture ;
     focu:lectureContent ex:COMP474Slides04, ex:COMP474Worksheet03 ;
     focu:seeAlso <https://moodle.concordia.ca/moodle/pluginfile.php/6430011/mod_resource/content/4/slides04.pdf> .
 ex:COMP474Slides04 a focu:Slides ;
+       rdfs:label  "Knowledge Base Queries & Linked Open Data" ;
     focu:seeAlso <file:///Users/kimiagoodarzi/Desktop/roboprof/COMP4746741/Lectures/slides04.pdf> .
 
 ex:COMP474Worksheet03 a focu:Worksheets ;
@@ -168,6 +170,7 @@ ex:COMP474Lecture05 a focu:Lecture ;
     focu:seeAlso <https://moodle.concordia.ca/moodle/pluginfile.php/6430021/mod_resource/content/5/slides05.pdf> .
 
 ex:COMP474Slides05 a focu:Slides ;
+     rdfs:label "Recommender Systems" ;
     focu:seeAlso <file:///Users/kimiagoodarzi/Desktop/roboprof/COMP4746741/Lectures/slides05.pdf> .
 
 
@@ -204,6 +207,7 @@ ex:COMP474Lecture06 a focu:Lecture ;
 
 
 ex:COMP474Slides06 a focu:Slides ;
+    rdfs:label "Machine Learning for Intelligent Systems" ;
     focu:seeAlso <file:///Users/kimiagoodarzi/Desktop/roboprof/COMP4746741/Lectures/slides06.pdf> .
 
 
@@ -242,6 +246,7 @@ ex:COMP474Lecture07 a focu:Lecture ;
 
 
 ex:COMP474Slides07 a focu:Slides ;
+     rdfs:label "Intelligent Agents" ;
     focu:seeAlso <file:///Users/kimiagoodarzi/Desktop/roboprof/COMP4746741/Lectures/slides07.pdf> .
 
 
@@ -262,4 +267,30 @@ ex:COMP474Readings07 a focu:Readings ;
         rdfs:label "[RN10, Chapter 26] (Philosophical Foundations)"
     ] .
 
+
+
+
+# COMP 472 course
+ex:COMP472 a focu:Course ;
+    focu:courseName "Artificial Intelligence" ;
+    focu:courseSubject "COMP" ;
+    focu:courseNumber "472" ;
+    focu:courseCredits "4" ;
+    focu:courseDescription "This course initially describes the scope and history of Artificial Intelligence. Then it covers knowledge representation, heuristic search, game playing and planning." ;
+    focu:courseOutline """
+        COMP 472 Artificial Intelligence
+        Department of Computer Science and Software Engineering
+        Course Instructor: Dr. René Witte, Associate Professor
+        Email: rene.witte@concordia.ca
+        Office Hours:
+        Every Thursday, 16:00-17:00, in ER 933 (starting Week 2).
+        Prerequisites: COMP 352 or COEN 352
+        Lab Details: Beginning in Week 2, weekly lab sessions are an obligatory part of this course and will take place in-person and on campus. Make sure to attend the specific lab section for which you are registered.
+        Grading Scheme:
+        Your grade will be based on exams and a team project (split into multiple submissions). The grading distribution of these deliverables is as follows:
+        35% Course Project (team work, split into 3 submissions)
+        15% Midterm Exam
+        50% Final Exam
+        """ ;
+    focu:seeAlso <http://www.concordia.ca/artsci/computer-science-software-engineering/courses.html#COMP472> .
 
