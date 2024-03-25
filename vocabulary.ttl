@@ -131,7 +131,7 @@ focu:OtherMaterial a rdfs:Class ;
     rdfs:comment "Other types of content provided for the lecture, such as videos or images."@en .
 
 # Student Class
-ex:Student a rdf:Class ;
+ex:Student a rdfs:Class ;
     rdfs:subClassOf foaf:Person ;
     rdfs:label "Student"@en ;
     rdfs:comment "A student who is or was enrolled in courses at the university."@en .
@@ -187,7 +187,7 @@ ex:competency a rdf:Property ;
 
 
 # Topic Class
-focu:Topic a rdf:Class ;
+focu:Topic a rdfs:Class ;
     rdfs:label "Topic"@en ;
     rdfs:comment "Topics covered in the course."@en .
 
