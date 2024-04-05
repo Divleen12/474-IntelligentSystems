@@ -3,10 +3,25 @@
 @prefix focu: <http://focu.io/schema#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
+ex:A a ex:Grade ;
+    ex:studentID 40834,
+        68340 ;
+    focu:courseName focu:COMP_474 .
+
+ex:B a ex:Grade ;
+    ex:studentID 92158 ;
+    focu:courseName focu:COMP_474 .
+
+ex:C a ex:Grade ;
+    ex:studentID 81620 ;
+    focu:courseName focu:COMP_474 .
+
+ex:D a ex:Grade ;
+    ex:studentID 32295 ;
+    focu:courseName focu:COMP_474 .
+
 ex:student_1 a ex:Student ;
     ex:completedCourse focu:COMP_474 ;
-    ex:grade "D" ;
-    ex:retakeGrade "A" ;
     ex:studentID 40834 ;
     foaf:familyName "Hinkle" ;
     foaf:givenName "Gloria" ;
@@ -14,8 +29,6 @@ ex:student_1 a ex:Student ;
 
 ex:student_2 a ex:Student ;
     ex:completedCourse focu:COMP_474 ;
-    ex:grade "C" ;
-    ex:retakeGrade "D" ;
     ex:studentID 81620 ;
     foaf:familyName "Taylor" ;
     foaf:givenName "Elizabeth" ;
@@ -23,7 +36,6 @@ ex:student_2 a ex:Student ;
 
 ex:student_3 a ex:Student ;
     ex:completedCourse focu:COMP_474 ;
-    ex:grade "A" ;
     ex:studentID 68340 ;
     foaf:familyName "Reid" ;
     foaf:givenName "Mary" ;
@@ -31,8 +43,6 @@ ex:student_3 a ex:Student ;
 
 ex:student_4 a ex:Student ;
     ex:completedCourse focu:COMP_474 ;
-    ex:grade "B" ;
-    ex:retakeGrade "D" ;
     ex:studentID 92158 ;
     foaf:familyName "Ruiz" ;
     foaf:givenName "Mary" ;
@@ -40,8 +50,6 @@ ex:student_4 a ex:Student ;
 
 ex:student_5 a ex:Student ;
     ex:completedCourse focu:COMP_474 ;
-    ex:grade "D" ;
-    ex:retakeGrade "F" ;
     ex:studentID 32295 ;
     foaf:familyName "Kimball" ;
     foaf:givenName "Melissa" ;

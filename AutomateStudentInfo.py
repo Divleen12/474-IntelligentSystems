@@ -8,6 +8,22 @@ foaf = Namespace("http://xmlns.com/foaf/0.1/")
 schema = Namespace("http://schema.org/")
 focu = Namespace("http://focu.io/schema#")
 
+# Create check for better Grade
+def letterToNumber(grade):
+    if grade == "A":
+        numberGrade = 5
+    if grade == "B":
+        numberGrade = 4
+    if grade == "C":
+        numberGrade = 3
+    if grade == "D":
+        numberGrade = 2
+    if grade == "E":
+        numberGrade = 1
+    if grade == "F":
+        numberGrade = 0
+    return numberGrade
+
 # Create RDF graph
 g = Graph()
 
@@ -39,10 +55,18 @@ for index, row in df.iterrows():
     g.add((course_uri, rdf.type, focu.Course))
     g.add((course_uri, focu.courseName, Literal(row["Completed Course"])))
 
-    g.add((student_uri, ex.grade, Literal(row["Grade"])))
-    if row["Retake Grade"] != row["Grade"]:
-        g.add((student_uri, ex.retakeGrade, Literal(row["Retake Grade"])))
+    userGrade = ex[Literal(row["Grade"])]
+    userRetakeGrade = ex[Literal(row["Retake Grade"])]
 
+
+    if letterToNumber(row["Retake Grade"]) > letterToNumber(row["Grade"]):
+        g.add((userRetakeGrade, rdf.type, ex.Grade))
+        g.add((userRetakeGrade, ex.studentID, Literal(row["ID Number"])))
+        g.add((userRetakeGrade, focu.courseName, course_uri))
+    else:
+        g.add((userGrade, rdf.type, ex.Grade))
+        g.add((userGrade, ex.studentID, Literal(row["ID Number"])))
+        g.add((userGrade, focu.courseName, course_uri))
 
 # Turtle format
 turtle_filename = "students.ttl"
