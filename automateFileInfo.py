@@ -12,5 +12,5 @@ outputPath = f'COMP474/Worksheets/worksheet01_LinkedEntities.txt'
 file = open(outputPath, "w", encoding = "utf8")
 
 for span in doc.ents:
-    if (span.label_ != 'CARDINAL' and span.label_ != 'ORDINAL' and span.label_ != 'PRODUCT' and span.label_ != 'LOC'):
+    if (span.label_ != 'CARDINAL' and span.label_ != 'ORDINAL' and span.label_ != 'PRODUCT' and span.label_ != 'LOC' and span._.kb_qid != None):
         file.write(str((span.text, span.label_, span._.kb_qid, span._.url_wikidata, span._.nerd_score)) + "\n")
