@@ -77,26 +77,6 @@ focu:courseOutline a rdf:Property ;
     rdfs:comment "A detailed description of the course structure, syllabus, assessment methods, and other relevant information."@en ;
     rdfs:domain focu:Course ;
     rdfs:range rdfs:Literal .
-# Grade Class
-ex:Grade a rdfs:Class ;
-    rdfs:label "Grade"@en ;
-    rdfs:comment "Grade of the student, associated with its class"@en .
-
-# Grade Properties
-ex:studentID a rdf:Property ;
-    rdfs:label "studentID"@en ;
-    rdfs:comment "StudentID associated to a student"@en ;
-    rdfs:domain ex:Grade ;
-    rdfs:range rdfs:Literal .
-
-focu:courseName a rdf:Property ;
-    rdfs:label "courseName";
-    rdfs:comment "Course taken by the student"@en ;
-    rdfs:domain ex:Grade ;
-    rdfs:range rdfs:Literal .
-
-
-
 
 # Lecture Class
 focu:Lecture a rdfs:Class ;
@@ -191,7 +171,7 @@ ex:grade a rdf:Property ;
     rdfs:label "Grade"@en ;
     rdfs:comment "The grade the student achieved in a completed course."@en ;
     rdfs:domain ex:Student ;
-    rdfs:range rdfs:Literal .
+    rdfs:range focu:Course  .
 
 ex:retakeGrade a rdf:Property ;
     rdfs:label "Retake Grade"@en ;
