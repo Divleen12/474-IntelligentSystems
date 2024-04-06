@@ -60,13 +60,9 @@ for index, row in df.iterrows():
 
 
     if letterToNumber(row["Retake Grade"]) > letterToNumber(row["Grade"]):
-        g.add((userRetakeGrade, rdf.type, ex.Grade))
-        g.add((userRetakeGrade, ex.studentID, Literal(row["ID Number"])))
-        g.add((userRetakeGrade, focu.courseName, course_uri))
+        g.add((student_uri, userRetakeGrade, course_uri))
     else:
-        g.add((userGrade, rdf.type, ex.Grade))
-        g.add((userGrade, ex.studentID, Literal(row["ID Number"])))
-        g.add((userGrade, focu.courseName, course_uri))
+        g.add((student_uri, userGrade, course_uri))
 
 # Turtle format
 turtle_filename = "students.ttl"
