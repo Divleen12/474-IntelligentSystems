@@ -1,0 +1,82 @@
+@prefix ex: <http://example.org/> .
+@prefix focu: <http://focu.io/schema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+ex:COMP474Lecture02 a focu:Lecture ;
+    focu:lectureContent ex:COMP474Slides02,
+        ex:COMP474Worksheet01 ;
+    focu:lectureName "Introduction to Knowledge Graphs (RDF)" ;
+    focu:lectureNumber "2" ;
+    focu:seeAlso <https://moodle.concordia.ca/moodle/pluginfile.php/6430001/mod_resource/content/7/slides02.pdf> .
+
+ex:ConcordiaTopic a focu:Topic ;
+    focu:linkedTo <https://www.wikidata.org/wiki/Q1913996>,
+        <https://www.wikidata.org/wiki/Q52578> ;
+    focu:provenance ex:COMP474Worksheet01 ;
+    focu:topicName "Concordia" .
+
+ex:ConcordiaUniversityTopic a focu:Topic ;
+    focu:linkedTo <https://www.wikidata.org/wiki/Q326342> ;
+    focu:provenance ex:COMP474Worksheet01 ;
+    focu:topicName "Concordia University" .
+
+ex:FacebookTopic a focu:Topic ;
+    focu:linkedTo <https://www.wikidata.org/wiki/Q355> ;
+    focu:provenance ex:COMP474Worksheet01 ;
+    focu:topicName "Facebook" .
+
+ex:JaneTopic a focu:Topic ;
+    focu:linkedTo <https://www.wikidata.org/wiki/Q3039162> ;
+    focu:provenance ex:COMP474Worksheet01 ;
+    focu:topicName "Jane" .
+
+ex:JoeTopic a focu:Topic ;
+    focu:linkedTo <https://www.wikidata.org/wiki/Q1077266>,
+        <https://www.wikidata.org/wiki/Q600789> ;
+    focu:provenance ex:COMP474Worksheet01 ;
+    focu:topicName "Joe" .
+
+ex:LinkedInTopic a focu:Topic ;
+    focu:linkedTo <https://www.wikidata.org/wiki/Q213660> ;
+    focu:provenance ex:COMP474Worksheet01 ;
+    focu:topicName "LinkedIn" .
+
+ex:McGillTopic a focu:Topic ;
+    focu:linkedTo <https://www.wikidata.org/wiki/Q201492> ;
+    focu:provenance ex:COMP474Worksheet01 ;
+    focu:topicName "McGill" .
+
+ex:McGillUniversityTopic a focu:Topic ;
+    focu:linkedTo <https://www.wikidata.org/wiki/Q201492> ;
+    focu:provenance ex:COMP474Worksheet01 ;
+    focu:topicName "McGill University" .
+
+ex:MontrealTopic a focu:Topic ;
+    focu:linkedTo <https://www.wikidata.org/wiki/Q340> ;
+    focu:provenance ex:COMP474Worksheet01 ;
+    focu:topicName "Montreal" .
+
+ex:RDFTopic a focu:Topic ;
+    focu:linkedTo <https://www.wikidata.org/wiki/Q1367488>,
+        <https://www.wikidata.org/wiki/Q54872> ;
+    focu:provenance ex:COMP474Worksheet01 ;
+    focu:topicName "RDF" .
+
+ex:WikidataTopic a focu:Topic ;
+    focu:linkedTo <https://www.wikidata.org/wiki/Q2013> ;
+    focu:provenance ex:COMP474Worksheet01 ;
+    focu:topicName "Wikidata" .
+
+<http://example.org/’sTopic> a focu:Topic ;
+    focu:linkedTo <https://www.wikidata.org/wiki/Q3631750> ;
+    focu:provenance ex:COMP474Worksheet01 ;
+    focu:topicName "’s" .
+
+ex:COMP474Slides02 a focu:Slides ;
+    rdfs:label "Slides 02: Introduction to Knowledge Graphs (RDF)" ;
+    focu:seeAlso <file:///Users/kimiagoodarzi/Desktop/roboprof/COMP4746741/Lectures/slides02.pdf> .
+
+ex:COMP474Worksheet01 a focu:Worksheets ;
+    rdfs:label "Worksheet 01" ;
+    focu:seeAlso <file:///Users/kimiagoodarzi/Desktop/roboprof/COMP4746741/Worksheets/Worksheet01.pdf> .
+
