@@ -32,11 +32,11 @@ def process_entities(filename, worksheet_uri, lecture_uri):
 
 worksheets = {
     'worksheet01_LinkedEntities.txt': ('COMP474Worksheet01', 'COMP474Lecture02'),
-    # 'worksheet02_LinkedEntities.txt': ('COMP474Worksheet02', 'COMP474Lecture03'),
-    # 'worksheet03_LinkedEntities.txt': ('COMP474Worksheet03', 'COMP474Lecture04'),
-    # 'worksheet04_LinkedEntities.txt': ('COMP474Worksheet04', 'COMP474Lecture05'),
-    # 'worksheet05_LinkedEntities.txt': ('COMP474Worksheet05', 'COMP474Lecture06'),
-    # 'worksheet06_LinkedEntities.txt': ('COMP474Worksheet06', 'COMP474Lecture07'),
+    'worksheet02_LinkedEntities.txt': ('COMP474Worksheet02', 'COMP474Lecture03'),
+    'worksheet03_LinkedEntities.txt': ('COMP474Worksheet03', 'COMP474Lecture04'),
+    'worksheet04_LinkedEntities.txt': ('COMP474Worksheet04', 'COMP474Lecture05'),
+    'worksheet05_LinkedEntities.txt': ('COMP474Worksheet05', 'COMP474Lecture06'),
+    'worksheet06_LinkedEntities.txt': ('COMP474Worksheet06', 'COMP474Lecture07'),
 }
 directory = "COMP474/Worksheets"
 for filename, (worksheet_id, lecture_id) in worksheets.items():
