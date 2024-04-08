@@ -1,0 +1,8 @@
+('W', 'PERSON', 'Q1853094', 'https://www.wikidata.org/wiki/Q1853094', 0.341)
+('X.', 'ORG', 'Q249498', 'https://www.wikidata.org/wiki/Q249498', 0.3241)
+('H', 'ORG', 'Q223376', 'https://www.wikidata.org/wiki/Q223376', 0.3531)
+('W', 'ORG', 'Q1853094', 'https://www.wikidata.org/wiki/Q1853094', 0.341)
+('Activation Map', 'PERSON', 'Q4677469', 'https://www.wikidata.org/wiki/Q4677469', 0.7454)
+('CNN', 'ORG', 'Q48340', 'https://www.wikidata.org/wiki/Q48340', 0.8905)
+('Pooling Layer', 'PERSON', 'Q17084460', 'https://www.wikidata.org/wiki/Q17084460', 0.7648)
+('Max', 'PERSON', 'Q1475581', 'https://www.wikidata.org/wiki/Q1475581', 0.3816)
