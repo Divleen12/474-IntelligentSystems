@@ -1,0 +1,1493 @@
+@prefix ex: <http://example.org/> .
+@prefix focu: <http://focu.io/schema#> .
+
+ex:COMP472Lecture01 focu:lectureContent ex:COMP472Slides01 .
+
+ex:COMP472Lecture02 focu:lectureContent ex:COMP472Slides02,
+        ex:COMP472Worksheet01 .
+
+ex:COMP472Lecture03 focu:lectureContent ex:COMP472Slides03,
+        ex:COMP472Worksheet02 .
+
+ex:COMP472Lecture04 focu:lectureContent ex:COMP472Slides04,
+        ex:COMP472Worksheet03 .
+
+ex:COMP472Lecture05 focu:lectureContent ex:COMP472Slides05,
+        ex:COMP472Worksheet04 .
+
+ex:COMP472Lecture06 focu:lectureContent ex:COMP472Slides06,
+        ex:COMP472Worksheet05 .
+
+ex:Slide_1000Topic a focu:Topic ;
+    focu:linkedTo <https://www.wikidata.org/wiki/Q43016> ;
+    focu:provenance ex:COMP472Slides02 ;
+    focu:topicName "1,000" .
+
+ex:Slide_100Topic a focu:Topic ;
+    focu:linkedTo <https://www.wikidata.org/wiki/Q307482> ;
+    focu:provenance ex:COMP472Slides04 ;
+    focu:topicName "100%" .
+
+ex:Slide_1013Topic a focu:Topic ;
+    focu:linkedTo <https://www.wikidata.org/wiki/Q19241> ;
+    focu:provenance ex:COMP472Slides02 ;
+    focu:topicName "1013" .
+
+ex:Slide_1026Topic a focu:Topic ;
+    focu:linkedTo <https://www.wikidata.org/wiki/Q19269> ;
+    focu:provenance ex:COMP472Slides02 ;
+    focu:topicName "1026" .
+
+ex:Slide_1075Topic a focu:Topic ;
+    focu:linkedTo <https://www.wikidata.org/wiki/Q19439> ;
+    focu:provenance ex:COMP472Slides02 ;
+    focu:topicName "1075" .
+
+ex:Slide_1324Topic a focu:Topic ;
+    focu:linkedTo <https://www.wikidata.org/wiki/Q5773> ;
+    focu:provenance ex:COMP472Slides04 ;
+    focu:topicName "1324" .
+
+ex:Slide_1874Topic a focu:Topic ;
+    focu:linkedTo <https://www.wikidata.org/wiki/Q4646180> ;
+    focu:provenance ex:COMP472Slides02 ;
+    focu:topicName "1874" .
+
+ex:Slide_1950Topic a focu:Topic ;
+    focu:linkedTo <https://www.wikidata.org/wiki/Q238738> ;
+    focu:provenance ex:COMP472Slides01 ;
+    focu:topicName "1950" .
+
+ex:Slide_1959Topic a focu:Topic ;
+    focu:linkedTo <https://www.wikidata.org/wiki/Q5302> ;
+    focu:provenance ex:COMP472Slides03 ;
+    focu:topicName "1959" .
+
+ex:Slide_1960Topic a focu:Topic ;
+    focu:linkedTo <https://www.wikidata.org/wiki/Q3754> ;
+    focu:provenance ex:COMP472Slides01 ;
+    focu:topicName "1960" .
+
+ex:Slide_1968Topic a focu:Topic ;
+    focu:linkedTo <https://www.wikidata.org/wiki/Q2644> ;
+    focu:provenance ex:COMP472Slides02 ;
+    focu:topicName "1968" .
+
+ex:Slide_1969Topic a focu:Topic ;
+    focu:linkedTo <https://www.wikidata.org/wiki/Q754020> ;
+    focu:provenance ex:COMP472Slides05 ;
+    focu:topicName "1969" .
+
+ex:Slide_1970Topic a focu:Topic ;
+    focu:linkedTo <https://www.wikidata.org/wiki/Q2474> ;
+    focu:provenance ex:COMP472Slides05 ;
+    focu:topicName "1970" .
+
+ex:Slide_1971Topic a focu:Topic ;
+    focu:linkedTo <https://www.wikidata.org/wiki/Q220737> ;
+    focu:provenance ex:COMP472Slides01 ;
+    focu:topicName "1971" .
+
+ex:Slide_1972Topic a focu:Topic ;
+    focu:linkedTo <https://www.wikidata.org/wiki/Q8438> ;
+    focu:provenance ex:COMP472Slides01 ;
+    focu:topicName "1972" .
+
+ex:Slide_1973Topic a focu:Topic ;
+    focu:linkedTo <https://www.wikidata.org/wiki/Q754023> ;
+    focu:provenance ex:COMP472Slides01 ;
+    focu:topicName "1973" .
+
+ex:Slide_1980sTopic a focu:Topic ;
+    focu:linkedTo <https://www.wikidata.org/wiki/Q4579570> ;
+    focu:provenance ex:COMP472Slides05 ;
+    focu:topicName "1980s" .
+
+ex:Slide_1985Topic a focu:Topic ;
+    focu:linkedTo <https://www.wikidata.org/wiki/Q2431> ;
+    focu:provenance ex:COMP472Slides01 ;
+    focu:topicName "1985" .
+
+ex:Slide_1987Topic a focu:Topic ;
+    focu:linkedTo <https://www.wikidata.org/wiki/Q2429> ;
+    focu:provenance ex:COMP472Slides04 ;
+    focu:topicName "1987" .
+
+ex:Slide_1990Topic a focu:Topic ;
+    focu:linkedTo <https://www.wikidata.org/wiki/Q2064> ;
+    focu:provenance ex:COMP472Slides01,
+        ex:COMP472Slides06 ;
+    focu:topicName "1990" .
+
+ex:Slide_1992Topic a focu:Topic ;
+    focu:linkedTo <https://www.wikidata.org/wiki/Q2060> ;
+    focu:provenance ex:COMP472Slides01 ;
+    focu:topicName "1992" .
+
+ex:Slide_1993Topic a focu:Topic ;
+    focu:linkedTo <https://www.wikidata.org/wiki/Q2065> ;
+    focu:provenance ex:COMP472Slides01 ;
+    focu:topicName "1993" .
+
+ex:Slide_1995Topic a focu:Topic ;
+    focu:linkedTo <https://www.wikidata.org/wiki/Q2068> ;
+    focu:provenance ex:COMP472Slides05 ;
+    focu:topicName "1995" .
+
+ex:Slide_1996Topic a focu:Topic ;
+    focu:linkedTo <https://www.wikidata.org/wiki/Q8531> ;
+    focu:provenance ex:COMP472Slides01 ;
+    focu:topicName "1996" .
+
+ex:Slide_1997Topic a focu:Topic ;
+    focu:linkedTo <https://www.wikidata.org/wiki/Q2088>,
+        <https://www.wikidata.org/wiki/Q751940> ;
+    focu:provenance ex:COMP472Slides01,
+        ex:COMP472Slides04 ;
+    focu:topicName "1997" .
+
+ex:Slide_1998Topic a focu:Topic ;
+    focu:linkedTo <https://www.wikidata.org/wiki/Q2089> ;
+    focu:provenance ex:COMP472Slides05 ;
+    focu:topicName "1998" .
+
+ex:Slide_1millionTopic a focu:Topic ;
+    focu:linkedTo <https://www.wikidata.org/wiki/Q4917> ;
+    focu:provenance ex:COMP472Slides01 ;
+    focu:topicName "$1 million" .
+
+ex:Slide_20000Topic a focu:Topic ;
+    focu:linkedTo <https://www.wikidata.org/wiki/Q8052117> ;
+    focu:provenance ex:COMP472Slides01 ;
+    focu:topicName "20,000" .
+
+ex:Slide_2000Topic a focu:Topic ;
+    focu:linkedTo <https://www.wikidata.org/wiki/Q8544> ;
+    focu:provenance ex:COMP472Slides01 ;
+    focu:topicName "2000" .
+
+ex:Slide_2003Topic a focu:Topic ;
+    focu:linkedTo <https://www.wikidata.org/wiki/Q1986> ;
+    focu:provenance ex:COMP472Slides02,
+        ex:COMP472Slides04 ;
+    focu:topicName "2003" .
+
+ex:Slide_2006Topic a focu:Topic ;
+    focu:linkedTo <https://www.wikidata.org/wiki/Q2021> ;
+    focu:provenance ex:COMP472Slides06 ;
+    focu:topicName "2006" .
+
+ex:Slide_2010Topic a focu:Topic ;
+    focu:linkedTo <https://www.wikidata.org/wiki/Q215622> ;
+    focu:provenance ex:COMP472Slides06 ;
+    focu:topicName "2010" .
+
+ex:Slide_2011Topic a focu:Topic ;
+    focu:linkedTo <https://www.wikidata.org/wiki/Q1994> ;
+    focu:provenance ex:COMP472Slides01 ;
+    focu:topicName "2011" .
+
+ex:Slide_2012Topic a focu:Topic ;
+    focu:linkedTo <https://www.wikidata.org/wiki/Q1990>,
+        <https://www.wikidata.org/wiki/Q4624596> ;
+    focu:provenance ex:COMP472Slides06 ;
+    focu:topicName "2012" .
+
+ex:Slide_2013Topic a focu:Topic ;
+    focu:linkedTo <https://www.wikidata.org/wiki/Q10856934> ;
+    focu:provenance ex:COMP472Slides06 ;
+    focu:topicName "2013" .
+
+ex:Slide_2014Topic a focu:Topic ;
+    focu:linkedTo <https://www.wikidata.org/wiki/Q1999> ;
+    focu:provenance ex:COMP472Slides01 ;
+    focu:topicName "2014" .
+
+ex:Slide_2015Topic a focu:Topic ;
+    focu:linkedTo <https://www.wikidata.org/wiki/Q17985317> ;
+    focu:provenance ex:COMP472Slides06 ;
+    focu:topicName "2015" .
+
+ex:Slide_2023Topic a focu:Topic ;
+    focu:linkedTo <https://www.wikidata.org/wiki/Q107710129>,
+        <https://www.wikidata.org/wiki/Q18124960> ;
+    focu:provenance ex:COMP472Slides01 ;
+    focu:topicName "2023" .
+
+ex:Slide_2029Topic a focu:Topic ;
+    focu:linkedTo <https://www.wikidata.org/wiki/Q12803> ;
+    focu:provenance ex:COMP472Slides01 ;
+    focu:topicName "2029" .
+
+ex:Slide_2222Topic a focu:Topic ;
+    focu:linkedTo <https://www.wikidata.org/wiki/Q26224> ;
+    focu:provenance ex:COMP472Slides04 ;
+    focu:topicName "2222" .
+
+ex:Slide_5minutesTopic a focu:Topic ;
+    focu:linkedTo <https://www.wikidata.org/wiki/Q16158650> ;
+    focu:provenance ex:COMP472Slides01 ;
+    focu:topicName "5 minutes" .
+
+ex:Slide_74Topic a focu:Topic ;
+    focu:linkedTo <https://www.wikidata.org/wiki/Q1937679> ;
+    focu:provenance ex:COMP472Slides04 ;
+    focu:topicName """74
+
+""" .
+
+ex:Slide_AIArtificialIntelligenceTopic a focu:Topic ;
+    focu:linkedTo <https://www.wikidata.org/wiki/Q221113> ;
+    focu:provenance ex:COMP472Slides06 ;
+    focu:topicName """AI
+
+
+Artificial Intelligence""" .
+
+ex:Slide_AccuracyTopic a focu:Topic ;
+    focu:linkedTo <https://www.wikidata.org/wiki/Q272035> ;
+    focu:provenance ex:COMP472Slides03,
+        ex:COMP472Slides04 ;
+    focu:topicName """Accuracy 
+
+""",
+        "Accuracy                        " .
+
+ex:Slide_AdmissibilityTopic a focu:Topic ;
+    focu:linkedTo <https://www.wikidata.org/wiki/Q4683809> ;
+    focu:provenance ex:COMP472Slides02 ;
+    focu:topicName "Admissibility" .
+
+ex:Slide_AlanTopic a focu:Topic ;
+    focu:linkedTo <https://www.wikidata.org/wiki/Q178054> ;
+    focu:provenance ex:COMP472Slides04,
+        ex:COMP472Slides05 ;
+    focu:topicName "Alan" .
+
+ex:Slide_AlanTuringTopic a focu:Topic ;
+    focu:linkedTo <https://www.wikidata.org/wiki/Q7251> ;
+    focu:provenance ex:COMP472Slides01 ;
+    focu:topicName "Alan Turing" .
+
+ex:Slide_AlexKrizhevskyTopic a focu:Topic ;
+    focu:linkedTo <https://www.wikidata.org/wiki/Q28018607> ;
+    focu:provenance ex:COMP472Slides06 ;
+    focu:topicName "Alex Krizhevsky" .
+
+ex:Slide_AlexNetTopic a focu:Topic ;
+    focu:linkedTo <https://www.wikidata.org/wiki/Q28325009> ;
+    focu:provenance ex:COMP472Slides06 ;
+    focu:topicName "AlexNet" .
+
+ex:Slide_AlgorithmTopic a focu:Topic ;
+    focu:linkedTo <https://www.wikidata.org/wiki/Q8366> ;
+    focu:provenance ex:COMP472Slides01,
+        ex:COMP472Slides04 ;
+    focu:topicName "Algorithm" .
+
+ex:Slide_AlisonTopic a focu:Topic ;
+    focu:linkedTo <https://www.wikidata.org/wiki/Q10853873> ;
+    focu:provenance ex:COMP472Slides05 ;
+    focu:topicName "Alison" .
+
+ex:Slide_AmericanTopic a focu:Topic ;
+    focu:linkedTo <https://www.wikidata.org/wiki/Q30> ;
+    focu:provenance ex:COMP472Slides03 ;
+    focu:topicName "American" .
+
+ex:Slide_AndrewNgTopic a focu:Topic ;
+    focu:linkedTo <https://www.wikidata.org/wiki/Q2846695> ;
+    focu:provenance ex:COMP472Slides05 ;
+    focu:topicName "Andrew Ng" .
+
+ex:Slide_AnomalyDetectionTopic a focu:Topic ;
+    focu:linkedTo <https://www.wikidata.org/wiki/Q3560506> ;
+    focu:provenance ex:COMP472Slides03 ;
+    focu:topicName "Anomaly Detection" .
+
+ex:Slide_ArthurSamuelTopic a focu:Topic ;
+    focu:linkedTo <https://www.wikidata.org/wiki/Q710266> ;
+    focu:provenance ex:COMP472Slides01,
+        ex:COMP472Slides03 ;
+    focu:topicName "Arthur Samuel" .
+
+ex:Slide_ArtificialIntelligenceTopic a focu:Topic ;
+    focu:linkedTo <https://www.wikidata.org/wiki/Q109875730>,
+        <https://www.wikidata.org/wiki/Q4801033> ;
+    focu:provenance ex:COMP472Slides01,
+        ex:COMP472Slides02,
+        ex:COMP472Slides05 ;
+    focu:topicName """Artificial
+Intelligence""",
+        "Artificial Intelligence" .
+
+ex:Slide_AssignsTopic a focu:Topic ;
+    focu:linkedTo <https://www.wikidata.org/wiki/Q315364> ;
+    focu:provenance ex:COMP472Slides02 ;
+    focu:topicName "Assigns" .
+
+ex:Slide_AttributesTopic a focu:Topic ;
+    focu:linkedTo <https://www.wikidata.org/wiki/Q7785161> ;
+    focu:provenance ex:COMP472Slides04 ;
+    focu:topicName "Attributes" .
+
+ex:Slide_BackpropTopic a focu:Topic ;
+    focu:linkedTo <https://www.wikidata.org/wiki/Q798503> ;
+    focu:provenance ex:COMP472Slides06 ;
+    focu:topicName "Backprop" .
+
+ex:Slide_BackpropagationTopic a focu:Topic ;
+    focu:linkedTo <https://www.wikidata.org/wiki/Q798503> ;
+    focu:provenance ex:COMP472Slides05 ;
+    focu:topicName "Backpropagation" .
+
+ex:Slide_BayesTopic a focu:Topic ;
+    focu:linkedTo <https://www.wikidata.org/wiki/Q182505>,
+        <https://www.wikidata.org/wiki/Q208452> ;
+    focu:provenance ex:COMP472Slides03 ;
+    focu:topicName "Bayes" .
+
+ex:Slide_BayesianTopic a focu:Topic ;
+    focu:linkedTo <https://www.wikidata.org/wiki/Q812535> ;
+    focu:provenance ex:COMP472Slides03 ;
+    focu:topicName "Bayesian" .
+
+ex:Slide_BengioTopic a focu:Topic ;
+    focu:linkedTo <https://www.wikidata.org/wiki/Q3572699> ;
+    focu:provenance ex:COMP472Slides06 ;
+    focu:topicName "Bengio" .
+
+ex:Slide_BertramRaphaelTopic a focu:Topic ;
+    focu:linkedTo <https://www.wikidata.org/wiki/Q4895807> ;
+    focu:provenance ex:COMP472Slides02 ;
+    focu:topicName """Bertram Raphael
+
+""" .
+
+ex:Slide_BestFirstSearchTopic a focu:Topic ;
+    focu:linkedTo <https://www.wikidata.org/wiki/Q830527> ;
+    focu:provenance ex:COMP472Slides02 ;
+    focu:topicName "Best-First Search" .
+
+ex:Slide_BiasTopic a focu:Topic ;
+    focu:linkedTo <https://www.wikidata.org/wiki/Q742736> ;
+    focu:provenance ex:COMP472Slides05 ;
+    focu:topicName "Bias" .
+
+ex:Slide_BiologicalNeuronsTopic a focu:Topic ;
+    focu:linkedTo <https://www.wikidata.org/wiki/Q1651163> ;
+    focu:provenance ex:COMP472Slides05 ;
+    focu:topicName "Biological Neurons" .
+
+ex:Slide_BooksTopic a focu:Topic ;
+    focu:linkedTo <https://www.wikidata.org/wiki/Q4943275> ;
+    focu:provenance ex:COMP472Slides06 ;
+    focu:topicName "Books" .
+
+ex:Slide_BradRutterTopic a focu:Topic ;
+    focu:linkedTo <https://www.wikidata.org/wiki/Q4954227> ;
+    focu:provenance ex:COMP472Slides01 ;
+    focu:topicName "Brad Rutter" .
+
+ex:Slide_BreadthFirstSearchTopic a focu:Topic ;
+    focu:linkedTo <https://www.wikidata.org/wiki/Q325904> ;
+    focu:provenance ex:COMP472Slides02 ;
+    focu:topicName "Breadth First Search",
+        "Breadth-First Search" .
+
+ex:Slide_BreadthTopic a focu:Topic ;
+    focu:linkedTo <https://www.wikidata.org/wiki/Q36253> ;
+    focu:provenance ex:COMP472Slides02 ;
+    focu:topicName "Breadth" .
+
+ex:Slide_BreakthroughsTopic a focu:Topic ;
+    focu:linkedTo <https://www.wikidata.org/wiki/Q3557114> ;
+    focu:provenance ex:COMP472Slides06 ;
+    focu:topicName "Breakthroughs" .
+
+ex:Slide_BritishTopic a focu:Topic ;
+    focu:linkedTo <https://www.wikidata.org/wiki/Q8680> ;
+    focu:provenance ex:COMP472Slides01 ;
+    focu:topicName "British" .
+
+ex:Slide_BurgerTopic a focu:Topic ;
+    focu:linkedTo <https://www.wikidata.org/wiki/Q346685> ;
+    focu:provenance ex:COMP472Slides04 ;
+    focu:topicName "Burger" .
+
+ex:Slide_CAPTCHATopic a focu:Topic ;
+    focu:linkedTo <https://www.wikidata.org/wiki/Q484598> ;
+    focu:provenance ex:COMP472Slides01 ;
+    focu:topicName "CAPTCHA" .
+
+ex:Slide_COMPTopic a focu:Topic ;
+    focu:linkedTo <https://www.wikidata.org/wiki/Q15320335> ;
+    focu:provenance ex:COMP472Slides04 ;
+    focu:topicName "COMP" .
+
+ex:Slide_CanadaTopic a focu:Topic ;
+    focu:linkedTo <https://www.wikidata.org/wiki/Q16> ;
+    focu:provenance ex:COMP472Slides06 ;
+    focu:topicName "Canada" .
+
+ex:Slide_ChessTopic a focu:Topic ;
+    focu:linkedTo <https://www.wikidata.org/wiki/Q718> ;
+    focu:provenance ex:COMP472Slides01 ;
+    focu:topicName "Chess" .
+
+ex:Slide_ComparingTopic a focu:Topic ;
+    focu:linkedTo <https://www.wikidata.org/wiki/Q645999> ;
+    focu:provenance ex:COMP472Slides04 ;
+    focu:topicName "Comparing" .
+
+ex:Slide_ComplicatedTopic a focu:Topic ;
+    focu:linkedTo <https://www.wikidata.org/wiki/Q543362> ;
+    focu:provenance ex:COMP472Slides04 ;
+    focu:topicName "Complicated" .
+
+ex:Slide_ComputeTopic a focu:Topic ;
+    focu:linkedTo <https://www.wikidata.org/wiki/Q4036474> ;
+    focu:provenance ex:COMP472Slides05 ;
+    focu:topicName "Compute" .
+
+ex:Slide_ConcordiaTopic a focu:Topic ;
+    focu:linkedTo <https://www.wikidata.org/wiki/Q1913996> ;
+    focu:provenance ex:COMP472Slides02 ;
+    focu:topicName "Concordia" .
+
+ex:Slide_ConditionalProbabilityTopic a focu:Topic ;
+    focu:linkedTo <https://www.wikidata.org/wiki/Q327069> ;
+    focu:provenance ex:COMP472Slides03 ;
+    focu:topicName "Conditional Probability" .
+
+ex:Slide_ConvolutionalLayerTopic a focu:Topic ;
+    focu:linkedTo <https://www.wikidata.org/wiki/Q17084460> ;
+    focu:provenance ex:COMP472Slides06 ;
+    focu:topicName "Convolutional Layer" .
+
+ex:Slide_ConvolutionalNeuralNetworksTopic a focu:Topic ;
+    focu:linkedTo <https://www.wikidata.org/wiki/Q17084460> ;
+    focu:provenance ex:COMP472Slides06 ;
+    focu:topicName "Convolutional Neural Networks" .
+
+ex:Slide_CookingTopic a focu:Topic ;
+    focu:linkedTo <https://www.wikidata.org/wiki/Q38695> ;
+    focu:provenance ex:COMP472Slides03 ;
+    focu:topicName "Cooking" .
+
+ex:Slide_DarmouthTopic a focu:Topic ;
+    focu:linkedTo <https://www.wikidata.org/wiki/Q1007083> ;
+    focu:provenance ex:COMP472Slides01 ;
+    focu:topicName "Darmouth" .
+
+ex:Slide_DataMiningTopic a focu:Topic ;
+    focu:linkedTo <https://www.wikidata.org/wiki/Q172491> ;
+    focu:provenance ex:COMP472Slides03 ;
+    focu:topicName "Data Mining" .
+
+ex:Slide_DataSecurityTopic a focu:Topic ;
+    focu:linkedTo <https://www.wikidata.org/wiki/Q3510521> ;
+    focu:provenance ex:COMP472Slides01 ;
+    focu:topicName "Data Security" .
+
+ex:Slide_DataStructuresTopic a focu:Topic ;
+    focu:linkedTo <https://www.wikidata.org/wiki/Q175263> ;
+    focu:provenance ex:COMP472Slides02 ;
+    focu:topicName "Data Structures" .
+
+ex:Slide_DatasetTopic a focu:Topic ;
+    focu:linkedTo <https://www.wikidata.org/wiki/Q1172284> ;
+    focu:provenance ex:COMP472Slides03 ;
+    focu:topicName "Dataset" .
+
+ex:Slide_DavidStorkTopic a focu:Topic ;
+    focu:linkedTo <https://www.wikidata.org/wiki/Q89269984> ;
+    focu:provenance ex:COMP472Slides01 ;
+    focu:topicName "David Stork" .
+
+ex:Slide_DeepBlueTopic a focu:Topic ;
+    focu:linkedTo <https://www.wikidata.org/wiki/Q2293673> ;
+    focu:provenance ex:COMP472Slides01 ;
+    focu:topicName "Deep Blue" .
+
+ex:Slide_DeepFritzTopic a focu:Topic ;
+    focu:linkedTo <https://www.wikidata.org/wiki/Q901348> ;
+    focu:provenance ex:COMP472Slides01 ;
+    focu:topicName "Deep Fritz" .
+
+ex:Slide_DeepLearningTopic a focu:Topic ;
+    focu:linkedTo <https://www.wikidata.org/wiki/Q197536> ;
+    focu:provenance ex:COMP472Slides01,
+        ex:COMP472Slides06 ;
+    focu:topicName "Deep Learning" .
+
+ex:Slide_DepthLimitedSearchTopic a focu:Topic ;
+    focu:linkedTo <https://www.wikidata.org/wiki/Q1675274> ;
+    focu:provenance ex:COMP472Slides02 ;
+    focu:topicName "Depth-Limited Search" .
+
+ex:Slide_DrinksTopic a focu:Topic ;
+    focu:linkedTo <https://www.wikidata.org/wiki/Q40050> ;
+    focu:provenance ex:COMP472Slides04 ;
+    focu:topicName "Drinks" .
+
+ex:Slide_ELIZATopic a focu:Topic ;
+    focu:linkedTo <https://www.wikidata.org/wiki/Q580318> ;
+    focu:provenance ex:COMP472Slides01 ;
+    focu:topicName "ELIZA" .
+
+ex:Slide_EdmontonTopic a focu:Topic ;
+    focu:linkedTo <https://www.wikidata.org/wiki/Q2096> ;
+    focu:provenance ex:COMP472Slides06 ;
+    focu:topicName "Edmonton" .
+
+ex:Slide_ElizaTopic a focu:Topic ;
+    focu:linkedTo <https://www.wikidata.org/wiki/Q5363475>,
+        <https://www.wikidata.org/wiki/Q580318> ;
+    focu:provenance ex:COMP472Slides01 ;
+    focu:topicName "Eliza" .
+
+ex:Slide_EnglishTopic a focu:Topic ;
+    focu:linkedTo <https://www.wikidata.org/wiki/Q1860> ;
+    focu:provenance ex:COMP472Slides01,
+        ex:COMP472Slides05 ;
+    focu:topicName "English" .
+
+ex:Slide_EntropyTopic a focu:Topic ;
+    focu:linkedTo <https://www.wikidata.org/wiki/Q45003> ;
+    focu:provenance ex:COMP472Slides04 ;
+    focu:topicName "Entropy" .
+
+ex:Slide_ErrTopic a focu:Topic ;
+    focu:linkedTo <https://www.wikidata.org/wiki/Q1369252> ;
+    focu:provenance ex:COMP472Slides05 ;
+    focu:topicName "Err  " .
+
+ex:Slide_EthicalConcernsTopic a focu:Topic ;
+    focu:linkedTo <https://www.wikidata.org/wiki/Q7607291> ;
+    focu:provenance ex:COMP472Slides01 ;
+    focu:topicName "Ethical Concerns" .
+
+ex:Slide_ExpertSystemsTopic a focu:Topic ;
+    focu:linkedTo <https://www.wikidata.org/wiki/Q184609> ;
+    focu:provenance ex:COMP472Slides01 ;
+    focu:topicName "Expert Systems" .
+
+ex:Slide_ExploratoryDataAnalysisTopic a focu:Topic ;
+    focu:linkedTo <https://www.wikidata.org/wiki/Q1322871> ;
+    focu:provenance ex:COMP472Slides03 ;
+    focu:topicName "Exploratory Data Analysis" .
+
+ex:Slide_ExtremeTopic a focu:Topic ;
+    focu:linkedTo <https://www.wikidata.org/wiki/Q682710> ;
+    focu:provenance ex:COMP472Slides04 ;
+    focu:topicName "Extreme" .
+
+ex:Slide_FMeasureTopic a focu:Topic ;
+    focu:linkedTo <https://www.wikidata.org/wiki/Q6975395> ;
+    focu:provenance ex:COMP472Slides04 ;
+    focu:topicName "F-Measure" .
+
+ex:Slide_FalsePositiveTopic a focu:Topic ;
+    focu:linkedTo <https://www.wikidata.org/wiki/Q16744831>,
+        <https://www.wikidata.org/wiki/Q69314069> ;
+    focu:provenance ex:COMP472Slides03,
+        ex:COMP472Slides04 ;
+    focu:topicName "False Positive" .
+
+ex:Slide_FeatureLearningTopic a focu:Topic ;
+    focu:linkedTo <https://www.wikidata.org/wiki/Q17013334> ;
+    focu:provenance ex:COMP472Slides06 ;
+    focu:topicName "Feature Learning" .
+
+ex:Slide_FoothillsTopic a focu:Topic ;
+    focu:linkedTo <https://www.wikidata.org/wiki/Q16977569> ;
+    focu:provenance ex:COMP472Slides02 ;
+    focu:topicName "Foothills" .
+
+ex:Slide_FrenchTopic a focu:Topic ;
+    focu:linkedTo <https://www.wikidata.org/wiki/Q150> ;
+    focu:provenance ex:COMP472Slides04 ;
+    focu:topicName "French" .
+
+ex:Slide_FridaysTopic a focu:Topic ;
+    focu:linkedTo <https://www.wikidata.org/wiki/Q130> ;
+    focu:provenance ex:COMP472Slides04 ;
+    focu:topicName "Fridays" .
+
+ex:Slide_GailTopic a focu:Topic ;
+    focu:linkedTo <https://www.wikidata.org/wiki/Q876978> ;
+    focu:provenance ex:COMP472Slides05 ;
+    focu:topicName "Gail" .
+
+ex:Slide_GeneralhillTopic a focu:Topic ;
+    focu:linkedTo <https://www.wikidata.org/wiki/Q336485> ;
+    focu:provenance ex:COMP472Slides02 ;
+    focu:topicName "General hill" .
+
+ex:Slide_GeoffHintonTopic a focu:Topic ;
+    focu:linkedTo <https://www.wikidata.org/wiki/Q92894> ;
+    focu:provenance ex:COMP472Slides06 ;
+    focu:topicName "Geoff Hinton" .
+
+ex:Slide_GeoffreyHintonTopic a focu:Topic ;
+    focu:linkedTo <https://www.wikidata.org/wiki/Q92894> ;
+    focu:provenance ex:COMP472Slides06 ;
+    focu:topicName "Geoffrey Hinton" .
+
+ex:Slide_GrammarTopic a focu:Topic ;
+    focu:linkedTo <https://www.wikidata.org/wiki/Q8091> ;
+    focu:provenance ex:COMP472Slides01 ;
+    focu:topicName "Grammar" .
+
+ex:Slide_GuessTopic a focu:Topic ;
+    focu:linkedTo <https://www.wikidata.org/wiki/Q6136054> ;
+    focu:provenance ex:COMP472Slides04 ;
+    focu:topicName "Guess" .
+
+ex:Slide_HaugelandTopic a focu:Topic ;
+    focu:linkedTo <https://www.wikidata.org/wiki/Q6513655> ;
+    focu:provenance ex:COMP472Slides01 ;
+    focu:topicName "Haugeland" .
+
+ex:Slide_HeuristicsTopic a focu:Topic ;
+    focu:linkedTo <https://www.wikidata.org/wiki/Q201413> ;
+    focu:provenance ex:COMP472Slides02 ;
+    focu:topicName "Heuristics" .
+
+ex:Slide_HiddenTopic a focu:Topic ;
+    focu:linkedTo <https://www.wikidata.org/wiki/Q5751712> ;
+    focu:provenance ex:COMP472Slides06 ;
+    focu:topicName "Hidden" .
+
+ex:Slide_HillClimbingTopic a focu:Topic ;
+    focu:linkedTo <https://www.wikidata.org/wiki/Q820272> ;
+    focu:provenance ex:COMP472Slides02 ;
+    focu:topicName "Hill Climbing" .
+
+ex:Slide_HillTopic a focu:Topic ;
+    focu:linkedTo <https://www.wikidata.org/wiki/Q3195039>,
+        <https://www.wikidata.org/wiki/Q3430418> ;
+    focu:provenance ex:COMP472Slides02 ;
+    focu:topicName "Hill" .
+
+ex:Slide_HintonTopic a focu:Topic ;
+    focu:linkedTo <https://www.wikidata.org/wiki/Q92894> ;
+    focu:provenance ex:COMP472Slides06 ;
+    focu:topicName "Hinton" .
+
+ex:Slide_HumansTopic a focu:Topic ;
+    focu:linkedTo <https://www.wikidata.org/wiki/Q19572149> ;
+    focu:provenance ex:COMP472Slides06 ;
+    focu:topicName "Humans" .
+
+ex:Slide_HyperTopic a focu:Topic ;
+    focu:linkedTo <https://www.wikidata.org/wiki/Q1056823> ;
+    focu:provenance ex:COMP472Slides03 ;
+    focu:topicName "Hyper" .
+
+ex:Slide_HypothesisTopic a focu:Topic ;
+    focu:linkedTo <https://www.wikidata.org/wiki/Q1136221> ;
+    focu:provenance ex:COMP472Slides03 ;
+    focu:topicName "Hypothesis" .
+
+ex:Slide_INFINITYTopic a focu:Topic ;
+    focu:linkedTo <https://www.wikidata.org/wiki/Q6029979> ;
+    focu:provenance ex:COMP472Slides02 ;
+    focu:topicName "INFINITY" .
+
+ex:Slide_ImageProcessingTopic a focu:Topic ;
+    focu:linkedTo <https://www.wikidata.org/wiki/Q1070689> ;
+    focu:provenance ex:COMP472Slides06 ;
+    focu:topicName "Image Processing" .
+
+ex:Slide_InductiveLearningTopic a focu:Topic ;
+    focu:linkedTo <https://www.wikidata.org/wiki/Q484511> ;
+    focu:provenance ex:COMP472Slides04 ;
+    focu:topicName "Inductive Learning" .
+
+ex:Slide_InferenceTopic a focu:Topic ;
+    focu:linkedTo <https://www.wikidata.org/wiki/Q408386> ;
+    focu:provenance ex:COMP472Slides04 ;
+    focu:topicName "Inference" .
+
+ex:Slide_InfoTopic a focu:Topic ;
+    focu:linkedTo <https://www.wikidata.org/wiki/Q6030408> ;
+    focu:provenance ex:COMP472Slides04 ;
+    focu:topicName "Info" .
+
+ex:Slide_InformationRetrievalTopic a focu:Topic ;
+    focu:linkedTo <https://www.wikidata.org/wiki/Q816826> ;
+    focu:provenance ex:COMP472Slides04 ;
+    focu:topicName "Information Retrieval" .
+
+ex:Slide_InsertTopic a focu:Topic ;
+    focu:linkedTo <https://www.wikidata.org/wiki/Q391956> ;
+    focu:provenance ex:COMP472Slides02 ;
+    focu:topicName "Insert" .
+
+ex:Slide_IntelTopic a focu:Topic ;
+    focu:linkedTo <https://www.wikidata.org/wiki/Q248> ;
+    focu:provenance ex:COMP472Slides01 ;
+    focu:topicName "Intel" .
+
+ex:Slide_IntelligenceTopic a focu:Topic ;
+    focu:linkedTo <https://www.wikidata.org/wiki/Q83500> ;
+    focu:provenance ex:COMP472Slides01 ;
+    focu:topicName "Intelligence" .
+
+ex:Slide_IntroTopic a focu:Topic ;
+    focu:linkedTo <https://www.wikidata.org/wiki/Q3153713> ;
+    focu:provenance ex:COMP472Slides01 ;
+    focu:topicName "Intro" .
+
+ex:Slide_ItalianTopic a focu:Topic ;
+    focu:linkedTo <https://www.wikidata.org/wiki/Q38>,
+        <https://www.wikidata.org/wiki/Q652> ;
+    focu:provenance ex:COMP472Slides04 ;
+    focu:topicName "Italian" .
+
+ex:Slide_IterativeDeepeningTopic a focu:Topic ;
+    focu:linkedTo <https://www.wikidata.org/wiki/Q1675274> ;
+    focu:provenance ex:COMP472Slides02 ;
+    focu:topicName "Iterative Deepening" .
+
+ex:Slide_JeffTopic a focu:Topic ;
+    focu:linkedTo <https://www.wikidata.org/wiki/Q44137> ;
+    focu:provenance ex:COMP472Slides05 ;
+    focu:topicName "Jeff" .
+
+ex:Slide_JeopardyTopic a focu:Topic ;
+    focu:linkedTo <https://www.wikidata.org/wiki/Q3211698> ;
+    focu:provenance ex:COMP472Slides01 ;
+    focu:topicName "Jeopardy" .
+
+ex:Slide_JohnMcCarthyTopic a focu:Topic ;
+    focu:linkedTo <https://www.wikidata.org/wiki/Q92739> ;
+    focu:provenance ex:COMP472Slides01 ;
+    focu:topicName "John McCarthy" .
+
+ex:Slide_JohnSnowTopic a focu:Topic ;
+    focu:linkedTo <https://www.wikidata.org/wiki/Q356407> ;
+    focu:provenance ex:COMP472Slides04 ;
+    focu:topicName "John Snow" .
+
+ex:Slide_JohnTopic a focu:Topic ;
+    focu:linkedTo <https://www.wikidata.org/wiki/Q36766> ;
+    focu:provenance ex:COMP472Slides04 ;
+    focu:topicName "John" .
+
+ex:Slide_JosephWeizenbaumTopic a focu:Topic ;
+    focu:linkedTo <https://www.wikidata.org/wiki/Q75778> ;
+    focu:provenance ex:COMP472Slides01 ;
+    focu:topicName "Joseph Weizenbaum" .
+
+ex:Slide_KasparovTopic a focu:Topic ;
+    focu:linkedTo <https://www.wikidata.org/wiki/Q1382111> ;
+    focu:provenance ex:COMP472Slides01 ;
+    focu:topicName "Kasparov" .
+
+ex:Slide_KenJenningsTopic a focu:Topic ;
+    focu:linkedTo <https://www.wikidata.org/wiki/Q6387874> ;
+    focu:provenance ex:COMP472Slides01 ;
+    focu:topicName "Ken Jennings" .
+
+ex:Slide_KeywordTopic a focu:Topic ;
+    focu:linkedTo <https://www.wikidata.org/wiki/Q1128340> ;
+    focu:provenance ex:COMP472Slides01 ;
+    focu:topicName "Keyword" .
+
+ex:Slide_KnightTopic a focu:Topic ;
+    focu:linkedTo <https://www.wikidata.org/wiki/Q102083> ;
+    focu:provenance ex:COMP472Slides01 ;
+    focu:topicName "Knight" .
+
+ex:Slide_KramnikTopic a focu:Topic ;
+    focu:linkedTo <https://www.wikidata.org/wiki/Q1786436> ;
+    focu:provenance ex:COMP472Slides01 ;
+    focu:topicName "Kramnik" .
+
+ex:Slide_KurzweilTopic a focu:Topic ;
+    focu:linkedTo <https://www.wikidata.org/wiki/Q495548>,
+        <https://www.wikidata.org/wiki/Q6447642> ;
+    focu:provenance ex:COMP472Slides01 ;
+    focu:topicName "Kurzweil" .
+
+ex:Slide_LogicalInferenceTopic a focu:Topic ;
+    focu:linkedTo <https://www.wikidata.org/wiki/Q408386> ;
+    focu:provenance ex:COMP472Slides04 ;
+    focu:topicName "Logical Inference" .
+
+ex:Slide_LogisticRegressionTopic a focu:Topic ;
+    focu:linkedTo <https://www.wikidata.org/wiki/Q1132755> ;
+    focu:provenance ex:COMP472Slides03 ;
+    focu:topicName "Logistic Regression" .
+
+ex:Slide_LondonTopic a focu:Topic ;
+    focu:linkedTo <https://www.wikidata.org/wiki/Q84> ;
+    focu:provenance ex:COMP472Slides04 ;
+    focu:topicName "London" .
+
+ex:Slide_LotusDevelopmentTopic a focu:Topic ;
+    focu:linkedTo <https://www.wikidata.org/wiki/Q909169> ;
+    focu:provenance ex:COMP472Slides01 ;
+    focu:topicName "Lotus Development" .
+
+ex:Slide_LugerTopic a focu:Topic ;
+    focu:linkedTo <https://www.wikidata.org/wiki/Q154199> ;
+    focu:provenance ex:COMP472Slides05 ;
+    focu:topicName "Luger" .
+
+ex:Slide_MYCINTopic a focu:Topic ;
+    focu:linkedTo <https://www.wikidata.org/wiki/Q644624> ;
+    focu:provenance ex:COMP472Slides01 ;
+    focu:topicName "MYCIN" .
+
+ex:Slide_MachineLearningTopic a focu:Topic ;
+    focu:linkedTo <https://www.wikidata.org/wiki/Q2539>,
+        <https://www.wikidata.org/wiki/Q6723676> ;
+    focu:provenance ex:COMP472Slides01,
+        ex:COMP472Slides03,
+        ex:COMP472Slides04 ;
+    focu:topicName "Machine Learning" .
+
+ex:Slide_ManhattanTopic a focu:Topic ;
+    focu:linkedTo <https://www.wikidata.org/wiki/Q11299> ;
+    focu:provenance ex:COMP472Slides02 ;
+    focu:topicName "Manhattan" .
+
+ex:Slide_MatrixNotationTopic a focu:Topic ;
+    focu:linkedTo <https://www.wikidata.org/wiki/Q44337> ;
+    focu:provenance ex:COMP472Slides06 ;
+    focu:topicName "Matrix Notation" .
+
+ex:Slide_McCarthyTopic a focu:Topic ;
+    focu:linkedTo <https://www.wikidata.org/wiki/Q1047693> ;
+    focu:provenance ex:COMP472Slides01 ;
+    focu:topicName "McCarthy" .
+
+ex:Slide_McDermottTopic a focu:Topic ;
+    focu:linkedTo <https://www.wikidata.org/wiki/Q1915079> ;
+    focu:provenance ex:COMP472Slides01 ;
+    focu:topicName "McDermott" .
+
+ex:Slide_MeasureTopic a focu:Topic ;
+    focu:linkedTo <https://www.wikidata.org/wiki/Q6804197> ;
+    focu:provenance ex:COMP472Slides04 ;
+    focu:topicName "Measure" .
+
+ex:Slide_MedicalDiagnosticsTopic a focu:Topic ;
+    focu:linkedTo <https://www.wikidata.org/wiki/Q177719> ;
+    focu:provenance ex:COMP472Slides04 ;
+    focu:topicName "Medical Diagnostics" .
+
+ex:Slide_MinskyTopic a focu:Topic ;
+    focu:linkedTo <https://www.wikidata.org/wiki/Q204815> ;
+    focu:provenance ex:COMP472Slides01,
+        ex:COMP472Slides05 ;
+    focu:topicName "Minsky" .
+
+ex:Slide_MitchellTopic a focu:Topic ;
+    focu:linkedTo <https://www.wikidata.org/wiki/Q3229189> ;
+    focu:provenance ex:COMP472Slides04 ;
+    focu:topicName "Mitchell" .
+
+ex:Slide_ModelTopic a focu:Topic ;
+    focu:linkedTo <https://www.wikidata.org/wiki/Q4610556> ;
+    focu:provenance ex:COMP472Slides04 ;
+    focu:topicName "Model" .
+
+ex:Slide_MotivationTopic a focu:Topic ;
+    focu:linkedTo <https://www.wikidata.org/wiki/Q6917873> ;
+    focu:provenance ex:COMP472Slides03,
+        ex:COMP472Slides06 ;
+    focu:topicName "Motivation" .
+
+ex:Slide_NETtalkTopic a focu:Topic ;
+    focu:linkedTo <https://www.wikidata.org/wiki/Q1960039> ;
+    focu:provenance ex:COMP472Slides05 ;
+    focu:topicName "NETtalk" .
+
+ex:Slide_NULLTopic a focu:Topic ;
+    focu:linkedTo <https://www.wikidata.org/wiki/Q1179138> ;
+    focu:provenance ex:COMP472Slides02 ;
+    focu:topicName "NULL" .
+
+ex:Slide_NathanielRochesterTopic a focu:Topic ;
+    focu:linkedTo <https://www.wikidata.org/wiki/Q6969830> ;
+    focu:provenance ex:COMP472Slides01 ;
+    focu:topicName "Nathaniel Rochester" .
+
+ex:Slide_NaturalLanguageProcessingTopic a focu:Topic ;
+    focu:linkedTo <https://www.wikidata.org/wiki/Q30642> ;
+    focu:provenance ex:COMP472Slides04,
+        ex:COMP472Slides06 ;
+    focu:topicName "Natural Language Processing" .
+
+ex:Slide_NaveBayesTopic a focu:Topic ;
+    focu:linkedTo <https://www.wikidata.org/wiki/Q812530> ;
+    focu:provenance ex:COMP472Slides03 ;
+    focu:topicName "Naïve Bayes" .
+
+ex:Slide_NetflixTopic a focu:Topic ;
+    focu:linkedTo <https://www.wikidata.org/wiki/Q907311> ;
+    focu:provenance ex:COMP472Slides04 ;
+    focu:topicName "Netflix" .
+
+ex:Slide_NetworkTopic a focu:Topic ;
+    focu:linkedTo <https://www.wikidata.org/wiki/Q572165> ;
+    focu:provenance ex:COMP472Slides05 ;
+    focu:topicName "Network" .
+
+ex:Slide_NeuralNetworksTopic a focu:Topic ;
+    focu:linkedTo <https://www.wikidata.org/wiki/Q15708873>,
+        <https://www.wikidata.org/wiki/Q55624999> ;
+    focu:provenance ex:COMP472Slides05 ;
+    focu:topicName "Neural Networks" .
+
+ex:Slide_NeuralTopic a focu:Topic ;
+    focu:linkedTo <https://www.wikidata.org/wiki/Q43054> ;
+    focu:provenance ex:COMP472Slides04 ;
+    focu:topicName "Neural" .
+
+ex:Slide_NeuronTopic a focu:Topic ;
+    focu:linkedTo <https://www.wikidata.org/wiki/Q43054> ;
+    focu:provenance ex:COMP472Slides05 ;
+    focu:topicName "Neuron" .
+
+ex:Slide_NorvigTopic a focu:Topic ;
+    focu:linkedTo <https://www.wikidata.org/wiki/Q92832> ;
+    focu:provenance ex:COMP472Slides04 ;
+    focu:topicName "Norvig" .
+
+ex:Slide_OckhamTopic a focu:Topic ;
+    focu:linkedTo <https://www.wikidata.org/wiki/Q2705385> ;
+    focu:provenance ex:COMP472Slides04 ;
+    focu:topicName "Ockham" .
+
+ex:Slide_OliverSelfridgeTopic a focu:Topic ;
+    focu:linkedTo <https://www.wikidata.org/wiki/Q2651957> ;
+    focu:provenance ex:COMP472Slides01 ;
+    focu:topicName "Oliver Selfridge" .
+
+ex:Slide_PapertTopic a focu:Topic ;
+    focu:linkedTo <https://www.wikidata.org/wiki/Q335027> ;
+    focu:provenance ex:COMP472Slides05 ;
+    focu:topicName "Papert" .
+
+ex:Slide_PathLengthTopic a focu:Topic ;
+    focu:linkedTo <https://www.wikidata.org/wiki/Q1475329> ;
+    focu:provenance ex:COMP472Slides04 ;
+    focu:topicName "Path Length" .
+
+ex:Slide_PatternRecognitionTopic a focu:Topic ;
+    focu:linkedTo <https://www.wikidata.org/wiki/Q378859> ;
+    focu:provenance ex:COMP472Slides04 ;
+    focu:topicName "Pattern Recognition" .
+
+ex:Slide_PerceptronTopic a focu:Topic ;
+    focu:linkedTo <https://www.wikidata.org/wiki/Q690207> ;
+    focu:provenance ex:COMP472Slides05 ;
+    focu:topicName "Perceptron" .
+
+ex:Slide_PeterHartTopic a focu:Topic ;
+    focu:linkedTo <https://www.wikidata.org/wiki/Q7173787> ;
+    focu:provenance ex:COMP472Slides02 ;
+    focu:topicName "Peter Hart" .
+
+ex:Slide_PlateauTopic a focu:Topic ;
+    focu:linkedTo <https://www.wikidata.org/wiki/Q32108> ;
+    focu:provenance ex:COMP472Slides02 ;
+    focu:topicName "Plateau" .
+
+ex:Slide_PoolingLayerTopic a focu:Topic ;
+    focu:linkedTo <https://www.wikidata.org/wiki/Q17084460> ;
+    focu:provenance ex:COMP472Slides06 ;
+    focu:topicName "Pooling Layer" .
+
+ex:Slide_PrologTopic a focu:Topic ;
+    focu:linkedTo <https://www.wikidata.org/wiki/Q163468> ;
+    focu:provenance ex:COMP472Slides01 ;
+    focu:topicName "Prolog" .
+
+ex:Slide_QuestionAnsweringTopic a focu:Topic ;
+    focu:linkedTo <https://www.wikidata.org/wiki/Q1074173> ;
+    focu:provenance ex:COMP472Slides06 ;
+    focu:topicName "Question Answering" .
+
+ex:Slide_QuinlanTopic a focu:Topic ;
+    focu:linkedTo <https://www.wikidata.org/wiki/Q981491> ;
+    focu:provenance ex:COMP472Slides04 ;
+    focu:topicName "Quinlan" .
+
+ex:Slide_RaySolomonoffTopic a focu:Topic ;
+    focu:linkedTo <https://www.wikidata.org/wiki/Q3123640> ;
+    focu:provenance ex:COMP472Slides01 ;
+    focu:topicName "Ray Solomonoff" .
+
+ex:Slide_RecommenderTopic a focu:Topic ;
+    focu:linkedTo <https://www.wikidata.org/wiki/Q554950> ;
+    focu:provenance ex:COMP472Slides04 ;
+    focu:topicName "Recommender" .
+
+ex:Slide_ReinforcementLearningTopic a focu:Topic ;
+    focu:linkedTo <https://www.wikidata.org/wiki/Q830687> ;
+    focu:provenance ex:COMP472Slides03 ;
+    focu:topicName "Reinforcement Learning" .
+
+ex:Slide_RepresentationTopic a focu:Topic ;
+    focu:linkedTo <https://www.wikidata.org/wiki/Q15716526> ;
+    focu:provenance ex:COMP472Slides03 ;
+    focu:topicName "Representation" .
+
+ex:Slide_RestaurantTopic a focu:Topic ;
+    focu:linkedTo <https://www.wikidata.org/wiki/Q11707> ;
+    focu:provenance ex:COMP472Slides04 ;
+    focu:topicName "Restaurant" .
+
+ex:Slide_RichTopic a focu:Topic ;
+    focu:linkedTo <https://www.wikidata.org/wiki/Q3430427> ;
+    focu:provenance ex:COMP472Slides01 ;
+    focu:topicName "Rich" .
+
+ex:Slide_RichardTopic a focu:Topic ;
+    focu:linkedTo <https://www.wikidata.org/wiki/Q2978735> ;
+    focu:provenance ex:COMP472Slides04,
+        ex:COMP472Slides05 ;
+    focu:topicName "Richard" .
+
+ex:Slide_RoboticsTopic a focu:Topic ;
+    focu:linkedTo <https://www.wikidata.org/wiki/Q170978> ;
+    focu:provenance ex:COMP472Slides01 ;
+    focu:topicName "Robotics" .
+
+ex:Slide_RubikTopic a focu:Topic ;
+    focu:linkedTo <https://www.wikidata.org/wiki/Q20727062> ;
+    focu:provenance ex:COMP472Slides02 ;
+    focu:topicName "Rubik" .
+
+ex:Slide_SHRDLUTopic a focu:Topic ;
+    focu:linkedTo <https://www.wikidata.org/wiki/Q1778029> ;
+    focu:provenance ex:COMP472Slides01 ;
+    focu:topicName "SHRDLU" .
+
+ex:Slide_SPAMTopic a focu:Topic ;
+    focu:linkedTo <https://www.wikidata.org/wiki/Q606132> ;
+    focu:provenance ex:COMP472Slides03 ;
+    focu:topicName "SPAM" .
+
+ex:Slide_SamLoydTopic a focu:Topic ;
+    focu:linkedTo <https://www.wikidata.org/wiki/Q337325> ;
+    focu:provenance ex:COMP472Slides02 ;
+    focu:topicName "Sam Loyd" .
+
+ex:Slide_SearchTopic a focu:Topic ;
+    focu:linkedTo <https://www.wikidata.org/wiki/Q3953588> ;
+    focu:provenance ex:COMP472Slides02 ;
+    focu:topicName "Search" .
+
+ex:Slide_ShakeytheRobotTopic a focu:Topic ;
+    focu:linkedTo <https://www.wikidata.org/wiki/Q1810639> ;
+    focu:provenance ex:COMP472Slides02 ;
+    focu:topicName "Shakey the Robot" .
+
+ex:Slide_ShannonTopic a focu:Topic ;
+    focu:linkedTo <https://www.wikidata.org/wiki/Q192820> ;
+    focu:provenance ex:COMP472Slides04 ;
+    focu:topicName "Shannon" .
+
+ex:Slide_ShapeTopic a focu:Topic ;
+    focu:linkedTo <https://www.wikidata.org/wiki/Q327416> ;
+    focu:provenance ex:COMP472Slides04 ;
+    focu:topicName "Shape" .
+
+ex:Slide_SideEffectTopic a focu:Topic ;
+    focu:linkedTo <https://www.wikidata.org/wiki/Q7508263> ;
+    focu:provenance ex:COMP472Slides03 ;
+    focu:topicName "Side Effect" .
+
+ex:Slide_SimonTopic a focu:Topic ;
+    focu:linkedTo <https://www.wikidata.org/wiki/Q741948> ;
+    focu:provenance ex:COMP472Slides05 ;
+    focu:topicName "Simon" .
+
+ex:Slide_SizeTopic a focu:Topic ;
+    focu:linkedTo <https://www.wikidata.org/wiki/Q322481> ;
+    focu:provenance ex:COMP472Slides04 ;
+    focu:topicName "Size" .
+
+ex:Slide_SkypeTranslatorTopic a focu:Topic ;
+    focu:linkedTo <https://www.wikidata.org/wiki/Q19881089> ;
+    focu:provenance ex:COMP472Slides06 ;
+    focu:topicName "Skype Translator" .
+
+ex:Slide_SlideTopic a focu:Topic ;
+    focu:linkedTo <https://www.wikidata.org/wiki/Q85801586> ;
+    focu:provenance ex:COMP472Slides06 ;
+    focu:topicName "Slide" .
+
+ex:Slide_SpamTopic a focu:Topic ;
+    focu:linkedTo <https://www.wikidata.org/wiki/Q606132> ;
+    focu:provenance ex:COMP472Slides03 ;
+    focu:topicName "Spam" .
+
+ex:Slide_SportsTopic a focu:Topic ;
+    focu:linkedTo <https://www.wikidata.org/wiki/Q349> ;
+    focu:provenance ex:COMP472Slides03 ;
+    focu:topicName "Sports" .
+
+ex:Slide_StandardTopic a focu:Topic ;
+    focu:linkedTo <https://www.wikidata.org/wiki/Q666494> ;
+    focu:provenance ex:COMP472Slides06 ;
+    focu:topicName "Standard" .
+
+ex:Slide_StanfordTopic a focu:Topic ;
+    focu:linkedTo <https://www.wikidata.org/wiki/Q41506> ;
+    focu:provenance ex:COMP472Slides02 ;
+    focu:topicName "Stanford" .
+
+ex:Slide_StateGraphTopic a focu:Topic ;
+    focu:linkedTo <https://www.wikidata.org/wiki/Q230885> ;
+    focu:provenance ex:COMP472Slides02 ;
+    focu:topicName """State Graph
+
+""" .
+
+ex:Slide_StateSpaceRepresentationTopic a focu:Topic ;
+    focu:linkedTo <https://www.wikidata.org/wiki/Q230945> ;
+    focu:provenance ex:COMP472Slides02 ;
+    focu:topicName "State Space Representation" .
+
+ex:Slide_StateSpaceSearchTopic a focu:Topic ;
+    focu:linkedTo <https://www.wikidata.org/wiki/Q2033871> ;
+    focu:provenance ex:COMP472Slides02 ;
+    focu:topicName "State Space Search" .
+
+ex:Slide_StateSpaceTopic a focu:Topic ;
+    focu:linkedTo <https://www.wikidata.org/wiki/Q230930> ;
+    focu:provenance ex:COMP472Slides02 ;
+    focu:topicName "State Space" .
+
+ex:Slide_StatesTopic a focu:Topic ;
+    focu:linkedTo <https://www.wikidata.org/wiki/Q30>,
+        <https://www.wikidata.org/wiki/Q35657> ;
+    focu:provenance ex:COMP472Slides02 ;
+    focu:topicName "States" .
+
+ex:Slide_StochasticGradientDescentTopic a focu:Topic ;
+    focu:linkedTo <https://www.wikidata.org/wiki/Q7617819> ;
+    focu:provenance ex:COMP472Slides05 ;
+    focu:topicName "Stochastic Gradient Descent" .
+
+ex:Slide_StubbleFieldTopic a focu:Topic ;
+    focu:linkedTo <https://www.wikidata.org/wiki/Q7627341> ;
+    focu:provenance ex:COMP472Slides01 ;
+    focu:topicName "StubbleField" .
+
+ex:Slide_SuttonTopic a focu:Topic ;
+    focu:linkedTo <https://www.wikidata.org/wiki/Q4437087> ;
+    focu:provenance ex:COMP472Slides06 ;
+    focu:topicName "Sutton" .
+
+ex:Slide_TargetTopic a focu:Topic ;
+    focu:linkedTo <https://www.wikidata.org/wiki/Q1046951> ;
+    focu:provenance ex:COMP472Slides03 ;
+    focu:topicName "Target" .
+
+ex:Slide_ThaiTopic a focu:Topic ;
+    focu:linkedTo <https://www.wikidata.org/wiki/Q472834>,
+        <https://www.wikidata.org/wiki/Q869> ;
+    focu:provenance ex:COMP472Slides04 ;
+    focu:topicName "Thai" .
+
+ex:Slide_TheTuringTestTopic a focu:Topic ;
+    focu:linkedTo <https://www.wikidata.org/wiki/Q26973017>,
+        <https://www.wikidata.org/wiki/Q7770728> ;
+    focu:provenance ex:COMP472Slides01 ;
+    focu:topicName "The Turing Test" .
+
+ex:Slide_TheoremTopic a focu:Topic ;
+    focu:linkedTo <https://www.wikidata.org/wiki/Q914157> ;
+    focu:provenance ex:COMP472Slides03 ;
+    focu:topicName "Theorem" .
+
+ex:Slide_TodayTopic a focu:Topic ;
+    focu:linkedTo <https://www.wikidata.org/wiki/Q130838>,
+        <https://www.wikidata.org/wiki/Q4353208>,
+        <https://www.wikidata.org/wiki/Q7812175> ;
+    focu:provenance ex:COMP472Slides01,
+        ex:COMP472Slides02,
+        ex:COMP472Slides03,
+        ex:COMP472Slides04,
+        ex:COMP472Slides05,
+        ex:COMP472Slides06 ;
+    focu:topicName "Today" .
+
+ex:Slide_TomMitchellTopic a focu:Topic ;
+    focu:linkedTo <https://www.wikidata.org/wiki/Q7816904> ;
+    focu:provenance ex:COMP472Slides04 ;
+    focu:topicName "Tom Mitchell" .
+
+ex:Slide_ToothacheTopic a focu:Topic ;
+    focu:linkedTo <https://www.wikidata.org/wiki/Q2744030> ;
+    focu:provenance ex:COMP472Slides03 ;
+    focu:topicName "Toothache" .
+
+ex:Slide_TorontoTopic a focu:Topic ;
+    focu:linkedTo <https://www.wikidata.org/wiki/Q172> ;
+    focu:provenance ex:COMP472Slides06 ;
+    focu:topicName "Toronto" .
+
+ex:Slide_TransformerTopic a focu:Topic ;
+    focu:linkedTo <https://www.wikidata.org/wiki/Q631153> ;
+    focu:provenance ex:COMP472Slides05 ;
+    focu:topicName "Transformer" .
+
+ex:Slide_UnderstandTopic a focu:Topic ;
+    focu:linkedTo <https://www.wikidata.org/wiki/Q7883773> ;
+    focu:provenance ex:COMP472Slides03 ;
+    focu:topicName "Understand" .
+
+ex:Slide_UninformedTopic a focu:Topic ;
+    focu:linkedTo <https://www.wikidata.org/wiki/Q815577> ;
+    focu:provenance ex:COMP472Slides02 ;
+    focu:topicName "Uninformed" .
+
+ex:Slide_UnsupervisedLearningTopic a focu:Topic ;
+    focu:linkedTo <https://www.wikidata.org/wiki/Q1152135> ;
+    focu:provenance ex:COMP472Slides03,
+        ex:COMP472Slides04 ;
+    focu:topicName "Unsupervised Learning" .
+
+ex:Slide_UpdateTopic a focu:Topic ;
+    focu:linkedTo <https://www.wikidata.org/wiki/Q7898219> ;
+    focu:provenance ex:COMP472Slides05 ;
+    focu:topicName "Update" .
+
+ex:Slide_ValueTopic a focu:Topic ;
+    focu:linkedTo <https://www.wikidata.org/wiki/Q194112> ;
+    focu:provenance ex:COMP472Slides06 ;
+    focu:topicName "Value" .
+
+ex:Slide_VectorInstituteTopic a focu:Topic ;
+    focu:linkedTo <https://www.wikidata.org/wiki/Q4106097> ;
+    focu:provenance ex:COMP472Slides06 ;
+    focu:topicName "Vector Institute" .
+
+ex:Slide_VideosTopic a focu:Topic ;
+    focu:linkedTo <https://www.wikidata.org/wiki/Q25674> ;
+    focu:provenance ex:COMP472Slides06 ;
+    focu:topicName "Videos" .
+
+ex:Slide_WatsonTopic a focu:Topic ;
+    focu:linkedTo <https://www.wikidata.org/wiki/Q12253>,
+        <https://www.wikidata.org/wiki/Q7342210> ;
+    focu:provenance ex:COMP472Slides01 ;
+    focu:topicName "Watson" .
+
+ex:Slide_WeightedTopic a focu:Topic ;
+    focu:linkedTo <https://www.wikidata.org/wiki/Q1520657> ;
+    focu:provenance ex:COMP472Slides04 ;
+    focu:topicName "Weighted" .
+
+ex:Slide_WeizenbaumTopic a focu:Topic ;
+    focu:linkedTo <https://www.wikidata.org/wiki/Q75778> ;
+    focu:provenance ex:COMP472Slides01 ;
+    focu:topicName "Weizenbaum" .
+
+ex:Slide_WikipediaTopic a focu:Topic ;
+    focu:linkedTo <https://www.wikidata.org/wiki/Q52> ;
+    focu:provenance ex:COMP472Slides05 ;
+    focu:topicName "Wikipedia" .
+
+ex:Slide_WinogradTopic a focu:Topic ;
+    focu:linkedTo <https://www.wikidata.org/wiki/Q21504688> ;
+    focu:provenance ex:COMP472Slides01 ;
+    focu:topicName "Winograd" .
+
+ex:Slide_WinstonTopic a focu:Topic ;
+    focu:linkedTo <https://www.wikidata.org/wiki/Q171494> ;
+    focu:provenance ex:COMP472Slides01 ;
+    focu:topicName "Winston" .
+
+ex:Slide_YannLeCunTopic a focu:Topic ;
+    focu:linkedTo <https://www.wikidata.org/wiki/Q3571662> ;
+    focu:provenance ex:COMP472Slides06 ;
+    focu:topicName "Yann LeCun" .
+
+ex:Slide_YoshuaBengioTopic a focu:Topic ;
+    focu:linkedTo <https://www.wikidata.org/wiki/Q3572699> ;
+    focu:provenance ex:COMP472Slides06 ;
+    focu:topicName "Yoshua Bengio" .
+
+ex:Slide_YoungTopic a focu:Topic ;
+    focu:linkedTo <https://www.wikidata.org/wiki/Q2964905> ;
+    focu:provenance ex:COMP472Slides03 ;
+    focu:topicName "Young" .
+
+ex:Slide_everysingledayTopic a focu:Topic ;
+    focu:linkedTo <https://www.wikidata.org/wiki/Q12606699> ;
+    focu:provenance ex:COMP472Slides03 ;
+    focu:topicName "every single day" .
+
+ex:Slide_kMeansTopic a focu:Topic ;
+    focu:linkedTo <https://www.wikidata.org/wiki/Q310401> ;
+    focu:provenance ex:COMP472Slides04 ;
+    focu:topicName "k-Means" .
+
+ex:Slide_lastyearTopic a focu:Topic ;
+    focu:linkedTo <https://www.wikidata.org/wiki/Q77927099> ;
+    focu:provenance ex:COMP472Slides05 ;
+    focu:topicName """last 
+year""",
+        "last year" .
+
+ex:Slide_lastyearsTopic a focu:Topic ;
+    focu:linkedTo <https://www.wikidata.org/wiki/Q60776254> ;
+    focu:provenance ex:COMP472Slides04 ;
+    focu:topicName "last year’s" .
+
+ex:Slide_linguisticsTopic a focu:Topic ;
+    focu:linkedTo <https://www.wikidata.org/wiki/Q8162> ;
+    focu:provenance ex:COMP472Slides06 ;
+    focu:topicName "linguistics" .
+
+ex:Slide_nodeTopic a focu:Topic ;
+    focu:linkedTo <https://www.wikidata.org/wiki/Q173106>,
+        <https://www.wikidata.org/wiki/Q1777473> ;
+    focu:provenance ex:COMP472Slides02,
+        ex:COMP472Slides04 ;
+    focu:topicName "node" .
+
+ex:Slide_sigmodTopic a focu:Topic ;
+    focu:linkedTo <https://www.wikidata.org/wiki/Q7390336> ;
+    focu:provenance ex:COMP472Slides06 ;
+    focu:topicName "sigmod" .
+
+ex:Slide_theTuringTestTopic a focu:Topic ;
+    focu:linkedTo <https://www.wikidata.org/wiki/Q26973017>,
+        <https://www.wikidata.org/wiki/Q7770728> ;
+    focu:provenance ex:COMP472Slides01 ;
+    focu:topicName "the Turing Test" .
+
+ex:Slide_thesedaysTopic a focu:Topic ;
+    focu:linkedTo <https://www.wikidata.org/wiki/Q7783367> ;
+    focu:provenance ex:COMP472Slides01 ;
+    focu:topicName "these days" .
+
+ex:Slide_thisyearTopic a focu:Topic ;
+    focu:linkedTo <https://www.wikidata.org/wiki/Q4583838> ;
+    focu:provenance ex:COMP472Slides04,
+        ex:COMP472Slides05 ;
+    focu:topicName """this 
+year""",
+        "this year" .
+
+ex:Worksheet_100Topic a focu:Topic ;
+    focu:linkedTo <https://www.wikidata.org/wiki/Q307482> ;
+    focu:provenance ex:COMP472Worksheet03 ;
+    focu:topicName "100%" .
+
+ex:Worksheet_AccuracyTopic a focu:Topic ;
+    focu:linkedTo <https://www.wikidata.org/wiki/Q272035> ;
+    focu:provenance ex:COMP472Worksheet02 ;
+    focu:topicName "Accuracy" .
+
+ex:Worksheet_ActivationMapTopic a focu:Topic ;
+    focu:linkedTo <https://www.wikidata.org/wiki/Q4677469> ;
+    focu:provenance ex:COMP472Worksheet05 ;
+    focu:topicName "Activation Map" .
+
+ex:Worksheet_AlanTopic a focu:Topic ;
+    focu:linkedTo <https://www.wikidata.org/wiki/Q178054>,
+        <https://www.wikidata.org/wiki/Q29583521> ;
+    focu:provenance ex:COMP472Worksheet04 ;
+    focu:topicName "Alan" .
+
+ex:Worksheet_AlisonTopic a focu:Topic ;
+    focu:linkedTo <https://www.wikidata.org/wiki/Q10853873> ;
+    focu:provenance ex:COMP472Worksheet04 ;
+    focu:topicName "Alison" .
+
+ex:Worksheet_ArtificialNeuralNetworksTopic a focu:Topic ;
+    focu:linkedTo <https://www.wikidata.org/wiki/Q192776>,
+        <https://www.wikidata.org/wiki/Q197536> ;
+    focu:provenance ex:COMP472Worksheet04 ;
+    focu:topicName "Artificial Neural Networks" .
+
+ex:Worksheet_BayesTopic a focu:Topic ;
+    focu:linkedTo <https://www.wikidata.org/wiki/Q208452> ;
+    focu:provenance ex:COMP472Worksheet02 ;
+    focu:topicName "Bayes" .
+
+ex:Worksheet_CalculateTopic a focu:Topic ;
+    focu:linkedTo <https://www.wikidata.org/wiki/Q1084910> ;
+    focu:provenance ex:COMP472Worksheet04 ;
+    focu:topicName "Calculate" .
+
+ex:Worksheet_DeltaRuleTopic a focu:Topic ;
+    focu:linkedTo <https://www.wikidata.org/wiki/Q577075> ;
+    focu:provenance ex:COMP472Worksheet04 ;
+    focu:topicName "Delta Rule" .
+
+ex:Worksheet_DrinksTopic a focu:Topic ;
+    focu:linkedTo <https://www.wikidata.org/wiki/Q40050> ;
+    focu:provenance ex:COMP472Worksheet04 ;
+    focu:topicName "Drinks" .
+
+ex:Worksheet_EntropyTopic a focu:Topic ;
+    focu:linkedTo <https://www.wikidata.org/wiki/Q45003> ;
+    focu:provenance ex:COMP472Worksheet03 ;
+    focu:topicName "Entropy" .
+
+ex:Worksheet_MachineLearningTopic a focu:Topic ;
+    focu:linkedTo <https://www.wikidata.org/wiki/Q6723676> ;
+    focu:provenance ex:COMP472Worksheet02 ;
+    focu:topicName "Machine Learning" .
+
+ex:Worksheet_MultinomialTopic a focu:Topic ;
+    focu:linkedTo <https://www.wikidata.org/wiki/Q1650843> ;
+    focu:provenance ex:COMP472Worksheet02 ;
+    focu:topicName "Multinomial" .
+
+ex:Worksheet_PerceptronTopic a focu:Topic ;
+    focu:linkedTo <https://www.wikidata.org/wiki/Q690207> ;
+    focu:provenance ex:COMP472Worksheet04 ;
+    focu:topicName "Perceptron" .
+
+ex:Worksheet_PoolingLayerTopic a focu:Topic ;
+    focu:linkedTo <https://www.wikidata.org/wiki/Q17084460> ;
+    focu:provenance ex:COMP472Worksheet05 ;
+    focu:topicName "Pooling Layer" .
+
+ex:Worksheet_RichardTopic a focu:Topic ;
+    focu:linkedTo <https://www.wikidata.org/wiki/Q2978735> ;
+    focu:provenance ex:COMP472Worksheet04 ;
+    focu:topicName "Richard" .
+
+ex:Worksheet_RouletteTopic a focu:Topic ;
+    focu:linkedTo <https://www.wikidata.org/wiki/Q64017682> ;
+    focu:provenance ex:COMP472Worksheet03 ;
+    focu:topicName "Roulette" .
+
+ex:Worksheet_TheoremTopic a focu:Topic ;
+    focu:linkedTo <https://www.wikidata.org/wiki/Q914157> ;
+    focu:provenance ex:COMP472Worksheet02 ;
+    focu:topicName "Theorem" .
+
+ex:Worksheet_TodayTopic a focu:Topic ;
+    focu:linkedTo <https://www.wikidata.org/wiki/Q130838> ;
+    focu:provenance ex:COMP472Worksheet02 ;
+    focu:topicName "Today" .
+
+ex:Worksheet_lastyearTopic a focu:Topic ;
+    focu:linkedTo <https://www.wikidata.org/wiki/Q77927099> ;
+    focu:provenance ex:COMP472Worksheet04 ;
+    focu:topicName "last year" .
+
+ex:Worksheet_thisyearTopic a focu:Topic ;
+    focu:linkedTo <https://www.wikidata.org/wiki/Q4583838> ;
+    focu:provenance ex:COMP472Worksheet03,
+        ex:COMP472Worksheet04 ;
+    focu:topicName "this year" .
+
