@@ -1,0 +1,237 @@
+@prefix ex: <http://example.org/> .
+@prefix focu: <http://focu.io/schema#> .
+
+ex:AccuracyTopic a focu:Topic ;
+    focu:linkedTo <https://www.wikidata.org/wiki/Q272035> ;
+    focu:provenance ex:COMP474Worksheet05 ;
+    focu:topicName "Accuracy" .
+
+ex:COMP474Lecture02 focu:lectureContent ex:COMP474Worksheet01 .
+
+ex:COMP474Lecture03 focu:lectureContent ex:COMP474Worksheet02 .
+
+ex:COMP474Lecture04 focu:lectureContent ex:COMP474Worksheet03 .
+
+ex:COMP474Lecture05 focu:lectureContent ex:COMP474Worksheet04 .
+
+ex:COMP474Lecture06 focu:lectureContent ex:COMP474Worksheet05 .
+
+ex:COMP474Lecture07 focu:lectureContent ex:COMP474Worksheet06 .
+
+ex:CapitalLettersTopic a focu:Topic ;
+    focu:linkedTo <https://www.wikidata.org/wiki/Q47460540> ;
+    focu:provenance ex:COMP474Worksheet06 ;
+    focu:topicName "Capital Letters" .
+
+ex:ComedyTopic a focu:Topic ;
+    focu:linkedTo <https://www.wikidata.org/wiki/Q40831> ;
+    focu:provenance ex:COMP474Worksheet04 ;
+    focu:topicName "Comedy" .
+
+ex:ComputeTopic a focu:Topic ;
+    focu:linkedTo <https://www.wikidata.org/wiki/Q4036474> ;
+    focu:provenance ex:COMP474Worksheet04 ;
+    focu:topicName "Compute" .
+
+ex:ConcordiaTopic a focu:Topic ;
+    focu:linkedTo <https://www.wikidata.org/wiki/Q1913996>,
+        <https://www.wikidata.org/wiki/Q52578> ;
+    focu:provenance ex:COMP474Worksheet01,
+        ex:COMP474Worksheet02,
+        ex:COMP474Worksheet03,
+        ex:COMP474Worksheet06 ;
+    focu:topicName "Concordia" .
+
+ex:ConcordiaUniversityTopic a focu:Topic ;
+    focu:linkedTo <https://www.wikidata.org/wiki/Q326342> ;
+    focu:provenance ex:COMP474Worksheet01,
+        ex:COMP474Worksheet03,
+        ex:COMP474Worksheet06 ;
+    focu:topicName "Concordia University" .
+
+ex:DBpediaTopic a focu:Topic ;
+    focu:linkedTo <https://www.wikidata.org/wiki/Q465> ;
+    focu:provenance ex:COMP474Worksheet03,
+        ex:COMP474Worksheet06 ;
+    focu:topicName "DBpedia" .
+
+ex:DawsonCollegeTopic a focu:Topic ;
+    focu:linkedTo <https://www.wikidata.org/wiki/Q2983587> ;
+    focu:provenance ex:COMP474Worksheet03 ;
+    focu:topicName "Dawson College" .
+
+ex:DistanceTopic a focu:Topic ;
+    focu:linkedTo <https://www.wikidata.org/wiki/Q2699535> ;
+    focu:provenance ex:COMP474Worksheet05 ;
+    focu:topicName "Distance" .
+
+ex:DramaTopic a focu:Topic ;
+    focu:linkedTo <https://www.wikidata.org/wiki/Q212841> ;
+    focu:provenance ex:COMP474Worksheet04 ;
+    focu:topicName "Drama" .
+
+ex:ElizaTopic a focu:Topic ;
+    focu:linkedTo <https://www.wikidata.org/wiki/Q5362079> ;
+    focu:provenance ex:COMP474Worksheet03 ;
+    focu:topicName "Eliza" .
+
+ex:EnglishTopic a focu:Topic ;
+    focu:linkedTo <https://www.wikidata.org/wiki/Q1860> ;
+    focu:provenance ex:COMP474Worksheet02,
+        ex:COMP474Worksheet06 ;
+    focu:topicName "English" .
+
+ex:EuclidianTopic a focu:Topic ;
+    focu:linkedTo <https://www.wikidata.org/wiki/Q702232> ;
+    focu:provenance ex:COMP474Worksheet05,
+        ex:COMP474Worksheet06 ;
+    focu:topicName "Euclidian" .
+
+ex:EvaluateTopic a focu:Topic ;
+    focu:linkedTo <https://www.wikidata.org/wiki/Q1379672> ;
+    focu:provenance ex:COMP474Worksheet04 ;
+    focu:topicName "Evaluate" .
+
+ex:FOAFTopic a focu:Topic ;
+    focu:linkedTo <https://www.wikidata.org/wiki/Q1389366> ;
+    focu:provenance ex:COMP474Worksheet02 ;
+    focu:topicName "FOAF" .
+
+ex:FacebookTopic a focu:Topic ;
+    focu:linkedTo <https://www.wikidata.org/wiki/Q355> ;
+    focu:provenance ex:COMP474Worksheet01 ;
+    focu:topicName "Facebook" .
+
+ex:FrenchTopic a focu:Topic ;
+    focu:linkedTo <https://www.wikidata.org/wiki/Q150> ;
+    focu:provenance ex:COMP474Worksheet02 ;
+    focu:topicName "French" .
+
+ex:HiltonTopic a focu:Topic ;
+    focu:linkedTo <https://www.wikidata.org/wiki/Q2085484> ;
+    focu:provenance ex:COMP474Worksheet06 ;
+    focu:topicName "Hilton" .
+
+ex:IntelligentSystemsTopic a focu:Topic ;
+    focu:linkedTo <https://www.wikidata.org/wiki/Q150001> ;
+    focu:provenance ex:COMP474Worksheet04,
+        ex:COMP474Worksheet05 ;
+    focu:topicName "Intelligent Systems" .
+
+ex:JaneTopic a focu:Topic ;
+    focu:linkedTo <https://www.wikidata.org/wiki/Q3039162> ;
+    focu:provenance ex:COMP474Worksheet01,
+        ex:COMP474Worksheet02 ;
+    focu:topicName "Jane" .
+
+ex:LengthTopic a focu:Topic ;
+    focu:linkedTo <https://www.wikidata.org/wiki/Q36253> ;
+    focu:provenance ex:COMP474Worksheet05 ;
+    focu:topicName "Length" .
+
+ex:LinkedInTopic a focu:Topic ;
+    focu:linkedTo <https://www.wikidata.org/wiki/Q213660> ;
+    focu:provenance ex:COMP474Worksheet01 ;
+    focu:topicName "LinkedIn" .
+
+ex:McGillTopic a focu:Topic ;
+    focu:linkedTo <https://www.wikidata.org/wiki/Q201492> ;
+    focu:provenance ex:COMP474Worksheet01,
+        ex:COMP474Worksheet06 ;
+    focu:topicName "McGill" .
+
+ex:McGillUniversityTopic a focu:Topic ;
+    focu:linkedTo <https://www.wikidata.org/wiki/Q201492> ;
+    focu:provenance ex:COMP474Worksheet01 ;
+    focu:topicName "McGill University" .
+
+ex:MontrealTopic a focu:Topic ;
+    focu:linkedTo <https://www.wikidata.org/wiki/Q340> ;
+    focu:provenance ex:COMP474Worksheet01,
+        ex:COMP474Worksheet03 ;
+    focu:topicName "Montreal" .
+
+ex:MovieTopic a focu:Topic ;
+    focu:linkedTo <https://www.wikidata.org/wiki/Q11424> ;
+    focu:provenance ex:COMP474Worksheet04,
+        ex:COMP474Worksheet05 ;
+    focu:topicName "Movie" .
+
+ex:OpenCalaisTopic a focu:Topic ;
+    focu:linkedTo <https://www.wikidata.org/wiki/Q5018342> ;
+    focu:provenance ex:COMP474Worksheet06 ;
+    focu:topicName "OpenCalais" .
+
+ex:ParisHiltonTopic a focu:Topic ;
+    focu:linkedTo <https://www.wikidata.org/wiki/Q47899> ;
+    focu:provenance ex:COMP474Worksheet06 ;
+    focu:topicName "Paris Hilton" .
+
+ex:ParisTopic a focu:Topic ;
+    focu:linkedTo <https://www.wikidata.org/wiki/Q90> ;
+    focu:provenance ex:COMP474Worksheet06 ;
+    focu:topicName "Paris" .
+
+ex:PrecisionTopic a focu:Topic ;
+    focu:linkedTo <https://www.wikidata.org/wiki/Q3232795> ;
+    focu:provenance ex:COMP474Worksheet04 ;
+    focu:topicName "Precision" .
+
+ex:RatingTopic a focu:Topic ;
+    focu:linkedTo <https://www.wikidata.org/wiki/Q2760788> ;
+    focu:provenance ex:COMP474Worksheet05 ;
+    focu:topicName "Rating" .
+
+ex:RecommenderSystemsTopic a focu:Topic ;
+    focu:linkedTo <https://www.wikidata.org/wiki/Q554950> ;
+    focu:provenance ex:COMP474Worksheet04 ;
+    focu:topicName "Recommender Systems" .
+
+ex:RomanceTopic a focu:Topic ;
+    focu:linkedTo <https://www.wikidata.org/wiki/Q19814> ;
+    focu:provenance ex:COMP474Worksheet04 ;
+    focu:topicName "Romance" .
+
+ex:SELECTTopic a focu:Topic ;
+    focu:linkedTo <https://www.wikidata.org/wiki/Q1164001> ;
+    focu:provenance ex:COMP474Worksheet03,
+        ex:COMP474Worksheet06 ;
+    focu:topicName "SELECT" .
+
+ex:SciFiTopic a focu:Topic ;
+    focu:linkedTo <https://www.wikidata.org/wiki/Q7660487> ;
+    focu:provenance ex:COMP474Worksheet04 ;
+    focu:topicName "Sci-Fi" .
+
+ex:SteveJobsTopic a focu:Topic ;
+    focu:linkedTo <https://www.wikidata.org/wiki/Q19837> ;
+    focu:provenance ex:COMP474Worksheet06 ;
+    focu:topicName "Steve Jobs" .
+
+ex:TargetTopic a focu:Topic ;
+    focu:linkedTo <https://www.wikidata.org/wiki/Q1046951> ;
+    focu:provenance ex:COMP474Worksheet04 ;
+    focu:topicName "Target" .
+
+ex:TurtleTopic a focu:Topic ;
+    focu:linkedTo <https://www.wikidata.org/wiki/Q758540> ;
+    focu:provenance ex:COMP474Worksheet02 ;
+    focu:topicName "Turtle" .
+
+ex:WikidataTopic a focu:Topic ;
+    focu:linkedTo <https://www.wikidata.org/wiki/Q2013> ;
+    focu:provenance ex:COMP474Worksheet01,
+        ex:COMP474Worksheet03 ;
+    focu:topicName "Wikidata" .
+
+ex:WikipediaTopic a focu:Topic ;
+    focu:linkedTo <https://www.wikidata.org/wiki/Q52> ;
+    focu:provenance ex:COMP474Worksheet06 ;
+    focu:topicName "Wikipedia" .
+
+ex:sTopic a focu:Topic ;
+    focu:linkedTo <https://www.wikidata.org/wiki/Q3631750> ;
+    focu:provenance ex:COMP474Worksheet01,
+        ex:COMP474Worksheet03 ;
+    focu:topicName "â€™s" .
+

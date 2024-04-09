@@ -1,0 +1,3 @@
+('BFS', 'ORG', 'Q812816', 'https://www.wikidata.org/wiki/Q812816', 0.4527)
+('BA', 'ORG', 'Q1765120', 'https://www.wikidata.org/wiki/Q1765120', 0.4548)
+('B4', 'NORP', 'Q726738', 'https://www.wikidata.org/wiki/Q726738', 0.3997)

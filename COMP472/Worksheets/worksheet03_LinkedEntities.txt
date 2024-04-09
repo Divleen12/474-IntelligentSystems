@@ -1,0 +1,7 @@
+('this year', 'DATE', 'Q4583838', 'https://www.wikidata.org/wiki/Q4583838', 0.3225)
+('X.', 'PERSON', 'Q249498', 'https://www.wikidata.org/wiki/Q249498', 0.3241)
+('Entropy', 'ORG', 'Q45003', 'https://www.wikidata.org/wiki/Q45003', 0.4606)
+('x1', 'ORG', 'Q65665588', 'https://www.wikidata.org/wiki/Q65665588', 0.1979)
+('Roulette', 'GPE', 'Q64017682', 'https://www.wikidata.org/wiki/Q64017682', 0.4561)
+('IG', 'ORG', 'Q4273151', 'https://www.wikidata.org/wiki/Q4273151', 0.4871)
+('100%', 'PERCENT', 'Q307482', 'https://www.wikidata.org/wiki/Q307482', 0.3392)
