@@ -59,8 +59,8 @@ entities:
   - material_number
   - givenName
   - familyName
-  - lecture_number
   - university
+
 
 actions: 
   - action_default_fallback
@@ -71,6 +71,7 @@ actions:
   - action_topic_course
   - action_topic_course_lecture
   - action_material_describe
+  - action_material_topic
   - action_students_course
 
 slots:
@@ -116,12 +117,6 @@ slots:
     mappings:
       - type: from_entity
         entity: familyName
-  lecture_number:
-    type: float
-    initial_value: 0
-    mappings:
-      - type: from_entity
-        entity: lecture_number
   university:
     type: text
     initial_value: "placeholder"

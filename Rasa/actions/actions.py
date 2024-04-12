@@ -142,17 +142,15 @@ class ActionUniversityCoursesInSubject(Action):
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
 
         course_name = tracker.slots['course_name']
-        course_number = tracker.slots['course_number']
         university = tracker.slots['university']
+        
+        if "university" not in university.lower():
+            university = university+" university"
         
         if course_name is None or not course_name:
             dispatcher.utter_message(text=f"Sorry, I'm not sure I understand")
             return []
         
-        if course_number is None or not course_number:
-            dispatcher.utter_message(text=f"Sorry, I'm not sure I understand")
-            return []
-
         resources = query.get_university_topics(university, course_name)
         if resources is None or not resources:
             dispatcher.utter_message(text=f"Sorry, I can't seem to find courses for {course_name} at {university}")
@@ -177,6 +175,7 @@ class ActionCoursesInUniversity(Action):
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
 
         university = tracker.slots['university']
+        
         
         resources = query.get_university_courses(university)
         if resources is None or not resources:
@@ -271,7 +270,7 @@ class ContentInLectureInCourse(Action):
         
         course_name = tracker.slots['course_name']
         course_number = tracker.slots['course_number']
-        lecture_number = tracker.slots['lecture_number']
+        material_number = tracker.slots['material_number']
         
         if course_name is None or not course_name:
             dispatcher.utter_message(text=f"Sorry, I'm not sure I understand")
@@ -281,16 +280,16 @@ class ContentInLectureInCourse(Action):
             dispatcher.utter_message(text=f"Sorry, I'm not sure I understand")
             return []
 
-        if lecture_number is None or not lecture_number:
+        if material_number is None or not material_number:
             dispatcher.utter_message(text=f"Sorry, I'm not sure I understand")
             return []
         
-        resources = query.content_lecture_course(lecture_number, course_name, course_number)
+        resources = query.content_lecture_course(material_number, course_name, course_number)
         if resources is None or not resources:
             dispatcher.utter_message(text=f"Sorry, I can't seem to find content for {course_name} {course_number}")
             return []
 
-        response = f"Here is the content I found about for {course_name} {course_number}, lecture {lecture_number}:\n"
+        response = f"Here is the content I found about for {course_name} {course_number}, lecture {material_number}:\n"
         for entry in resources:
             lectureName, contentType, contentLabel, seeAlso = entry
             response += f"{lectureName} {contentLabel}: {contentType}\n"
@@ -309,7 +308,7 @@ class MaterialTopicCourse(Action):
         
         course_name = tracker.slots['course_name']
         course_number = tracker.slots['course_number']
-        lecture_number = tracker.slots['lecture_number']
+        material_number = tracker.slots['material_number']
         
         if course_name is None or not course_name:
             dispatcher.utter_message(text=f"Sorry, I'm not sure I understand")
@@ -319,16 +318,16 @@ class MaterialTopicCourse(Action):
             dispatcher.utter_message(text=f"Sorry, I'm not sure I understand")
             return []
 
-        if lecture_number is None or not lecture_number:
+        if material_number is None or not material_number:
             dispatcher.utter_message(text=f"Sorry, I'm not sure I understand")
             return []
         
-        resources = query.content_lecture_course(lecture_number, course_name, course_number)
+        resources = query.content_lecture_course(material_number, course_name, course_number)
         if resources is None or not resources:
             dispatcher.utter_message(text=f"Sorry, I can't seem to find content for {course_name} {course_number}")
             return []
 
-        response = f"Here is the content I found about for {course_name} {course_number}, lecture {lecture_number}:\n"
+        response = f"Here is the content I found about for {course_name} {course_number}, lecture {material_number}:\n"
         for entry in resources:
             lectureName, contentType, contentLabel, seeAlso = entry
             response += f"{lectureName} {contentLabel}: {contentType}\n"

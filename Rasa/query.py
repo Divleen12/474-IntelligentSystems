@@ -1,5 +1,7 @@
 import requests
 import json
+import logging
+
 
 from constants import FUSEKI_BASE_URL
 
@@ -125,15 +127,16 @@ def get_university_topics(university, course_name):
 
     q = f"""PREFIX ex: <http://example.org/>
             PREFIX focu: <http://focu.io/schema#>
-
             SELECT ?course ?courseName ?courseNumber
             WHERE {{
-            ?university ex:universityName "{university}"
-            ?course a focu:Course ;
+                ?university ex:universityName ?uniName .
+                FILTER(UCASE(?uniName) = UCASE("{university}"))
+                ?course a focu:Course ;
                     focu:courseName ?courseName ;
                     focu:courseNumber ?courseNumber ;
-                    focu:courseSubject "{course_name}" . 
+                    focu:courseSubject "{course_name}"  .
             }}"""
+            
     rows = make_query(q)
     print(rows)
     if rows is None:
@@ -162,7 +165,7 @@ def get_university_courses(university):
     q = f"""PREFIX ex: <http://example.org/>
             PREFIX focu: <http://focu.io/schema#>
 
-            SELECT ?courseName ?courseNumber ?courseCredits ?courseDescription
+            SELECT ?courseName ?courseNumber ?courseCredits ?courseDescription ?courseSubject
             WHERE {{
                 ?university ex:universityName "{university}" .
                 ?course a focu:Course ;
@@ -183,6 +186,7 @@ def get_university_courses(university):
 
     resources = []
     for result in bindings:
+        print(result)
         courseSubject = result.get("courseSubject", {}).get("value", None)
         courseNumber = result.get("courseNumber", {}).get("value", None)
         courseName = result.get("courseName", {}).get("value", None)
@@ -191,7 +195,7 @@ def get_university_courses(university):
 
         if courseSubject is not None and courseNumber is not None and courseName is not None and courseCredits is not None and courseDescription is not None:
             resources.append((courseName, courseNumber,courseSubject, courseCredits, courseDescription ))
-
+    print(resources)
     return resources
 
 def get_topic_course(topic):
@@ -319,46 +323,46 @@ def content_lecture_course(lecture_number, course_name, course_number):
 
 
 # def material_topic(material, topic, course_name, course_number):
-    """
-    Query the graph for the content of a particular lecture in a particular course
-    """
+    # """
+    # Query the graph for the content of a particular lecture in a particular course
+    # """
 
-    q = f"""PREFIX ex: <http://example.org/>
-            PREFIX focu: <http://focu.io/schema#>
-            PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+    # q = f"""PREFIX ex: <http://example.org/>
+    #         PREFIX focu: <http://focu.io/schema#>
+    #         PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 
-            SELECT ?lectureName ?materialType ?materialLabel ?seeAlso
-            WHERE {{
-            ?course a focu:Course ;
-                   focu:courseSubject "{course_name}" ;
-                    focu:courseNumber "{course_number}" . 
-            ?lecture focu:lectureContent ?material ;
-                    focu:lectureName ?lectureName .
-            ?material a ?materialType ;
-                        rdfs:label ?materialLabel .
-            OPTIONAL {{ ?material focu:seeAlso ?seeAlso . }}
-            FILTER ( ?materialType IN (focu:Slides, focu:Readings) )
-            }}"""
-    rows = make_query(q)
-    print(rows)
-    if rows is None:
-        return None
-    print(rows.json())
-    bindings = extract_bindings(rows.json())
-    if bindings is None:
-        return None
+    #         SELECT ?lectureName ?materialType ?materialLabel ?seeAlso
+    #         WHERE {{
+    #         ?course a focu:Course ;
+    #                focu:courseSubject "{course_name}" ;
+    #                 focu:courseNumber "{course_number}" . 
+    #         ?lecture focu:lectureContent ?material ;
+    #                 focu:lectureName ?lectureName .
+    #         ?material a ?materialType ;
+    #                     rdfs:label ?materialLabel .
+    #         OPTIONAL {{ ?material focu:seeAlso ?seeAlso . }}
+    #         FILTER ( ?materialType IN (focu:Slides, focu:Readings) )
+    #         }}"""
+    # rows = make_query(q)
+    # print(rows)
+    # if rows is None:
+    #     return None
+    # print(rows.json())
+    # bindings = extract_bindings(rows.json())
+    # if bindings is None:
+    #     return None
 
-    resources = []
-    for result in bindings:
-        lectureName = result.get("lectureName", {}).get("value", None)
-        contentType = result.get("contentType", {}).get("value", None)
-        contentLabel = result.get("contentLabel", {}).get("value", None)
-        seeAlso = result.get("seeAlso", {}).get("value", None)
+    # resources = []
+    # for result in bindings:
+    #     lectureName = result.get("lectureName", {}).get("value", None)
+    #     contentType = result.get("contentType", {}).get("value", None)
+    #     contentLabel = result.get("contentLabel", {}).get("value", None)
+    #     seeAlso = result.get("seeAlso", {}).get("value", None)
 
-        if lectureName is not None and lectureName:
-            resources.append((lectureName,contentType,contentLabel,seeAlso ))
+    #     if lectureName is not None and lectureName:
+    #         resources.append((lectureName,contentType,contentLabel,seeAlso ))
 
-    return resources
+    # return resources
 
 
 def students_course(course_name, course_number):
