@@ -56,10 +56,11 @@ for index, row in df.iterrows():
     g.add((course_uri, focu.courseName, Literal(row["Completed Course"])))
 
     userGrade = ex[Literal(row["Grade"])]
-    userRetakeGrade = ex[Literal(row["Retake Grade"])]
+    userRetakeGrade = ex["Retake_" + Literal(row["Retake Grade"])]
 
 
     if letterToNumber(row["Retake Grade"]) > letterToNumber(row["Grade"]):
+        g.add((student_uri, userGrade, course_uri))
         g.add((student_uri, userRetakeGrade, course_uri))
     else:
         g.add((student_uri, userGrade, course_uri))

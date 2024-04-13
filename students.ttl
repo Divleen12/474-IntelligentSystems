@@ -4,7 +4,8 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 ex:student_1 a ex:Student ;
-    ex:A focu:COMP_474 ;
+    ex:D focu:COMP_474 ;
+    ex:Retake_A focu:COMP_474 ;
     ex:completedCourse focu:COMP_474 ;
     ex:studentID 40834 ;
     foaf:familyName "Hinkle" ;
