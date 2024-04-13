@@ -1,6 +1,24 @@
 version: "3.1"
 
 nlu:
+- lookup: course_number
+  examples: |
+    - 474
+    - 472
+    - 221
+    - 363
+    - 211
+    - 357
+    - 348
+    - 311
+    - 301
+    - 302
+    - 202
+    - 284
+    - 445
+    - 432
+    - 471
+
 - intent: greet
   examples: |
     - hey
@@ -114,6 +132,10 @@ nlu:
     - List all courses offered by [Carleton University](university)
     - List all courses offered by [McGill University](university)
     - List all courses offered by [_oov_ _oov_](university)
+    - Give all courses offered by [Concordia University](university)
+    - What are the courses offered by [Concordia University](university)?
+    - What are the courses offered by [Concordia University](university)
+    - Which courses are offered by [Concordia University](university)?
 
 - intent: university_topics
   examples: |
@@ -147,6 +169,10 @@ nlu:
     - Which topics will be covered in [lab](material) [4](material_number) of [COMP](course_name) [474](course_number)?
     - What topics are there in [reading](material) [4](material_number) of [COMP](course_name) [474](course_number)?
     - What topics will be covered in [lab](material) [4](material_number) of [COMP](course_name) [474](course_number)?
+    - Give the topics covered in [COMP](course_name) [474][course_number] during [Lecture](material) [04](material_number)?
+    - Give all the topics covered in [COMP](course_name) [474][course_number] during [Lecture](material) [04](material_number)?
+    - List the topics covered in [COMP](course_name) [474][course_number] during [Lecture](material) [04](material_number)?
+    - List all the topics covered in [COMP](course_name) [474][course_number] during [Lecture](material) [04](material_number)?
 
 - intent: material_topic
   examples: |
@@ -161,6 +187,8 @@ nlu:
     - What [slides](material) are given for [ElizaTopic](topic) in [COMP](course_name) [474](course_number)?
     - What [readings](material) are given for [DBpediaTopic](topic) in [COMP](course_name) [472](course_number)?
     - What [lectures](material) are given for [DBpediaTopic](topic) in [COMP](course_name) [472](course_number)?
+    - Give the slides recommended for for [ElizaTopic](topic) in [COMP](course_name) [474](course_number)?
+    - List the slides recommended for [ElizaTopic](topic) in [COMP](course_name) [474](course_number)?
 
 - intent: material_describe
   examples: | 
@@ -169,6 +197,7 @@ nlu:
     - Describe the content (slides, worksheets, readings) available for Lecture [04](material_number) in [COMP](course_name) [472](course_number).
     - Give the description of the content (slides, worksheets, readings) available for Lecture [6](material_number) in [SOEN](course_name) [363](course_number).
     - Give the description of the content available for Lecture [10](material_number) in [SOEN](course_name) [357](course_number).
+    - Give the content available for Lecture [2](material_number) in [COMP](course_name) [474](course_number).
 
 - intent: readings
   examples: | 
@@ -205,6 +234,10 @@ nlu:
     - Name the students who have completed [COMP](course_name) [472](course_number)?
     - Which students have completed [SOEN](course_name) [363](course_number)?
     - Which students have completed [SOEN](course_name) [357](course_number)?
+    - Provide a list of students who have completed [COMP](course_name) [474](course_number).
+    - Tell me the students who have completed [COMP](course_name) [474](course_number)?
+    - Tell me which students have completed [COMP](course_name) [474](course_number)?
+    - Give me the students who have completed [MIAE](course_name) [221](course_number)?
 
 - intent: student_transcript
   examples: |

@@ -26,6 +26,7 @@ pipeline:
     use_shared_vocab: false
   - name: DIETClassifier
     epochs: 100
+    entity_recognition: True  
   - name: EntitySynonymMapper
   - name: ResponseSelector
     epochs: 100
@@ -33,6 +34,7 @@ pipeline:
   - name: FallbackClassifier
     threshold: 0.3
     ambiguity_threshold: 0.1
+  
 
 # Configuration for Rasa Core.
 # https://rasa.com/docs/rasa/core/policies/
