@@ -39,8 +39,10 @@ df = pd.read_excel("StudentsData.xlsx", engine="openpyxl")
 
 # Iterate over the rows
 for index, row in df.iterrows():
-
-    student_uri = ex[f"student_{index + 1}"]
+    if (None, ex.studentID, Literal(row["ID Number"])) in g:
+        student_uri = ex[f"student_{index}"]
+    else:
+        student_uri = ex[f"student_{index+1}"]
 
     # Add triples
     g.add((student_uri, rdf.type, ex.Student))
