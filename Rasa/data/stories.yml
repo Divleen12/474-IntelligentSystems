@@ -1,0 +1,141 @@
+version: "3.1"
+
+stories:
+## Fallback Stories
+- story: Fallback Scenario
+  steps:
+  - intent: nlu_fallback
+  - action: action_default_fallback
+
+- story: happy path
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_great
+  - action: utter_happy
+
+- story: sad path 1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_happy
+
+- story: sad path 2
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: deny
+  - action: utter_goodbye
+
+
+- story : course_credits
+  steps:
+    - intent: greet
+    - action: utter_greet
+    - intent: course_credits
+    - action: action_course_credits
+
+- story : course_resources
+  steps:
+    - intent: greet
+    - action: utter_greet
+    - intent: course_resources
+    - action: action_additional_resources
+
+- story : university_topics
+  steps:
+    - intent: greet
+    - action: utter_greet
+    - intent: university_topics
+    - action: action_university_topics
+
+- story : University
+  steps:
+    - intent: greet
+    - action: utter_greet
+    - intent:  University
+    - action: action_university_courses
+
+- story : topic
+  steps:
+    - intent: greet
+    - action: utter_greet
+    - intent: topic
+    - action: action_topic_course
+
+- story : topic_course
+  steps:
+    - intent: greet
+    - action: utter_greet
+    - intent:  topic_course
+    - action: action_topic_course_lecture
+
+# - story : material_topic
+#   steps:
+#     - intent: greet
+#     - action: utter_greet
+#     - intent:  material_topic
+#     - action: action_material_topic
+
+- story : material_describe
+  steps:
+    - intent: greet
+    - action: utter_greet
+    - intent:  material_describe
+    - action: action_material_describe
+
+# - story : readings
+#   steps:
+#     - intent: greet
+#     - action: utter_greet
+#     - intent:  readings
+#     - action: action_course_resources
+
+# - story : topic_competency
+#   steps:
+#     - intent: greet
+#     - action: utter_greet
+#     - intent:  topic_competency
+#     - action: action_course_resources
+
+# - story : grade_course
+#   steps:
+#     - intent: greet
+#     - action: utter_greet
+#     - intent:  grade_course
+#     - action: action_course_resources
+
+- story : student_course
+  steps:
+    - intent: greet
+    - action: utter_greet
+    - intent:  student_course
+    - action: action_students_course
+
+# - story : student_transcript
+#   steps:
+#     - intent: greet
+#     - action: utter_greet
+#     - intent:  student_transcript
+#     - action: action_course_resources
+
+# - story : course_description_outline
+#   steps:
+#     - intent: greet
+#     - action: utter_greet
+#     - intent:  course_description_outline
+#     - action: action_course_resources
+
+# - story : material_course
+#   steps:
+#     - intent: greet
+#     - action: utter_greet
+#     - intent:  material_course
+#     - action: action_course_resources
