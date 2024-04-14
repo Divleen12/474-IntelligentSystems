@@ -211,3 +211,9 @@ focu:linkedTo a rdf:Property ;
     rdfs:range rdfs:Resource .
 	
 
+
+focu:belongsToCourse a rdf:Property ;
+    rdfs:label "Belongs to Course"@en ;
+    rdfs:comment "Indicates the course to which a lecture belongs."@en ;
+    rdfs:domain focu:Lecture ;
+    rdfs:range focu:Course .
