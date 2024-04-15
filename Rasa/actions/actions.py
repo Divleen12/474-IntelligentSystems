@@ -185,23 +185,20 @@ class ActionTopicInCourseInLectureNumber(Action):
             dispatcher.utter_message(text=f"Sorry, I'm not sure I understand")
             return []
         
-        if course_number is None or not course_number:
-            dispatcher.utter_message(text=f"Sorry, I'm not sure I understand")
-            return []
-
         if material_number is None or not material_number:
             dispatcher.utter_message(text=f"Sorry, I'm not sure I understand")
             return []
         
         resources = query.get_topic_course_lecture(course_name, course_number, material, material_number)
+        print(resources)
         if resources is None or not resources:
-            dispatcher.utter_message(text=f"Sorry, I can't seem to find topics for {course_name} {course_number}")
+            dispatcher.utter_message(text=f"Sorry, I can't seem to find topics for {course_name} {course_number}, lecture {material_number}")
             return []
 
         response = f"Here are the topics I found for {course_name} {course_number}, lecture {material_number}:\n"
         for entry in resources:
-            lectureName = entry
-            response += f"{course_name}: {course_number}\n Topic: {lectureName}\n"
+            lectureName, contentLabel = entry
+            response += f"Topic: {lectureName}, Content Label:{contentLabel}\n"
 
         dispatcher.utter_message(text=response)
         return []
@@ -584,8 +581,7 @@ class ActionDefaultFallback(Action):
         
         response = "Oops! Looked like you asked a question I cannot answer. Try asking something like:\n"
         for intent, confidence in top_5_intents:
-            
-            response += "Examples:\n"
+            response += ""
             for example in intent_examples.get(intent):
                 response += f"- {example}\n"
             response += "\n"
