@@ -77,12 +77,12 @@ stories:
     - intent:  topic_course
     - action: action_topic_course_lecture
 
-# - story : material_topic
-#   steps:
-#     - intent: greet
-#     - action: utter_greet
-#     - intent:  material_topic
-#     - action: action_material_topic
+- story : material_topic
+  steps:
+    - intent: greet
+    - action: utter_greet
+    - intent:  material_topic
+    - action: action_material_topic
 
 - story : material_describe
   steps:
@@ -98,19 +98,19 @@ stories:
 #     - intent:  readings
 #     - action: action_course_resources
 
-# - story : topic_competency
-#   steps:
-#     - intent: greet
-#     - action: utter_greet
-#     - intent:  topic_competency
-#     - action: action_course_resources
+- story : topic_competency
+  steps:
+    - intent: greet
+    - action: utter_greet
+    - intent:  topic_competency
+    - action: action_topic_competency
 
-# - story : grade_course
-#   steps:
-#     - intent: greet
-#     - action: utter_greet
-#     - intent:  grade_course
-#     - action: action_course_resources
+- story : grade_course
+  steps:
+    - intent: greet
+    - action: utter_greet
+    - intent:  grade_course
+    - action: action_grade_course
 
 - story : student_course
   steps:
@@ -119,23 +119,31 @@ stories:
     - intent:  student_course
     - action: action_students_course
 
-# - story : student_transcript
-#   steps:
-#     - intent: greet
-#     - action: utter_greet
-#     - intent:  student_transcript
-#     - action: action_course_resources
+- story : student_transcript
+  steps:
+    - intent: greet
+    - action: utter_greet
+    - intent:  student_transcript
+    - action: action_student_transcript
 
-# - story : course_description_outline
-#   steps:
-#     - intent: greet
-#     - action: utter_greet
-#     - intent:  course_description_outline
-#     - action: action_course_resources
+- story : course_description_outline
+  steps:
+    - intent: greet
+    - action: utter_greet
+    - intent:  course_description_outline
+    - action: action_course_description_outline
 
-# - story : material_course
-#   steps:
-#     - intent: greet
-#     - action: utter_greet
-#     - intent:  material_course
-#     - action: action_course_resources
+- story : course_events
+  steps:
+    - intent: greet
+    - action: utter_greet
+    - intent:  topics_course_events
+    - action: action_course_events
+
+
+- story : material_course
+  steps:
+    - intent: greet
+    - action: utter_greet
+    - intent:  material_course
+    - action: action_material_course

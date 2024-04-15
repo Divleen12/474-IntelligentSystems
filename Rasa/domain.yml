@@ -23,6 +23,7 @@ intents:
   - student_transcript
   - course_description_outline
   - material_course
+  - topics_course_events
 
 responses:
   utter_greet:
@@ -60,6 +61,7 @@ entities:
   - givenName
   - familyName
   - university
+  - studentID
 
 
 actions: 
@@ -73,6 +75,12 @@ actions:
   - action_material_describe
   - action_material_topic
   - action_students_course
+  - action_course_description_outline
+  - action_student_transcript
+  - action_topic_competency
+  - action_grade_course
+  - action_material_course
+  - action_course_events
 
 slots:
   course_name:
@@ -123,3 +131,9 @@ slots:
     mappings:
       - type: from_entity
         entity: university
+  studentID:
+    type: float
+    initial_value: 0
+    mappings:
+      - type: from_entity
+        entity: studentID
