@@ -1,16 +1,27 @@
 digraph  {
 0 [class="start active", fillcolor=green, fontsize=12, label=START, style=filled];
 "-1" [class=end, fillcolor=red, fontsize=12, label=END, style=filled];
-1 [class=active, fontsize=12, label=action_session_start];
-2 [class=active, fontsize=12, label=action_university_topics];
-6 [class="intent dashed active", label="  ?  ", shape=rect];
-7 [class="intent active", fillcolor=lightblue, label="/university_topics", shape=rect, style=filled];
-8 [class="intent active", fillcolor=lightblue, label="/university_topics", shape=rect, style=filled];
+1 [class="", fontsize=12, label=utter_greet];
+12 [class="", fontsize=12, label=action_default_fallback];
+"-14" [class=ellipsis, label="..."];
+"-21" [class=ellipsis, label="..."];
+20 [class=active, fontsize=12, label=action_students_course];
+21 [class=active, fontsize=12, label=action_material_describe];
+22 [class="intent dashed active", label="  ?  ", shape=rect];
+23 [class=intent, fillcolor=lightblue, label="/greet", shape=rect, style=filled];
+24 [class=intent, fillcolor=lightblue, label="/nlu_fallback", shape=rect, style=filled];
+25 [class="intent active", fillcolor=lightblue, label="/student_course", shape=rect, style=filled];
+26 [class="intent active", fillcolor=lightblue, label="/material_describe", shape=rect, style=filled];
 0 -> "-1"  [class="", key=NONE, label=""];
-0 -> 1  [class=active, key=NONE, label=""];
-1 -> 7  [class=active, key=0];
-2 -> 6  [class=active, key=NONE, label=""];
-2 -> 8  [class=active, key=0];
-7 -> 2  [class=active, key=0];
-8 -> 2  [class=active, key=0];
+0 -> 23  [class="", key=0];
+0 -> 24  [class="", key=0];
+0 -> 25  [class=active, key=0];
+1 -> "-21"  [class="", key=NONE, label=""];
+12 -> "-14"  [class="", key=NONE, label=""];
+20 -> 26  [class=active, key=0];
+21 -> 22  [class=active, key=NONE, label=""];
+23 -> 1  [class="", key=0];
+24 -> 12  [class="", key=0];
+25 -> 20  [class=active, key=0];
+26 -> 21  [class=active, key=0];
 }

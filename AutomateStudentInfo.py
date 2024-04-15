@@ -39,8 +39,10 @@ df = pd.read_excel("StudentsData.xlsx", engine="openpyxl")
 
 # Iterate over the rows
 for index, row in df.iterrows():
-
-    student_uri = ex[f"student_{index + 1}"]
+    if (None, ex.studentID, Literal(row["ID Number"])) in g:
+        student_uri = ex[f"student_{index}"]
+    else:
+        student_uri = ex[f"student_{index+1}"]
 
     # Add triples
     g.add((student_uri, rdf.type, ex.Student))
@@ -56,10 +58,11 @@ for index, row in df.iterrows():
     g.add((course_uri, focu.courseName, Literal(row["Completed Course"])))
 
     userGrade = ex[Literal(row["Grade"])]
-    userRetakeGrade = ex[Literal(row["Retake Grade"])]
+    userRetakeGrade = ex["Retake_" + Literal(row["Retake Grade"])]
 
 
     if letterToNumber(row["Retake Grade"]) > letterToNumber(row["Grade"]):
+        g.add((student_uri, userGrade, course_uri))
         g.add((student_uri, userRetakeGrade, course_uri))
     else:
         g.add((student_uri, userGrade, course_uri))

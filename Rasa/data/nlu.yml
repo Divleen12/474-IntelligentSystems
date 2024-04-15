@@ -1,6 +1,24 @@
 version: "3.1"
 
 nlu:
+- lookup: course_number
+  examples: |
+    - 474
+    - 472
+    - 221
+    - 363
+    - 211
+    - 357
+    - 348
+    - 311
+    - 301
+    - 302
+    - 202
+    - 284
+    - 445
+    - 432
+    - 471
+
 - intent: greet
   examples: |
     - hey
@@ -90,6 +108,7 @@ nlu:
     - am I talking to a bot?
     - am I talking to a human?
 
+# Query 6
 - intent: course_credits
   examples: |
     - How many credits is [COMP](course_name) [474](course_number) worth?
@@ -97,6 +116,7 @@ nlu:
     - How many credits is [SOEN](course_name) [363](course_number) worth?
     - How many credits is [SOEN](course_name) [357](course_number) for?
 
+# Query 7
 - intent: course_resources
   examples: |
     - For [COMP](course_name) [474](course_number), what additional resources are available?
@@ -108,6 +128,19 @@ nlu:
     - What additional resources are provided for [SOEN](course_name) [363](course_number)?
     - What additional resources are available for [SOEN](course_name) [363](course_number)?
     
+# Query 1
+- intent: University
+  examples: |
+    - List all courses offered by [Concordia University](university)
+    - List all courses offered by [Carleton University](university)
+    - List all courses offered by [McGill University](university)
+    - List all courses offered by [_oov_ _oov_](university)
+    - Give all courses offered by [Concordia University](university)
+    - What are the courses offered by [Concordia University](university)?
+    - What are the courses offered by [Concordia University](university)
+    - Which courses are offered by [Concordia University](university)?
+
+# Query 4
 - intent: university_topics
   examples: |
     - List all courses offered by [Concordia University](university) within [COMP](course_name)
@@ -119,34 +152,39 @@ nlu:
     - Which courses are offered by [Concordia University](university) within the [MIAE](course_name)?
     - Which courses are offered by [Concordia University](university) for [MIAE](course_name)?
 
-- intent: University
-  examples: |
-    - List all courses offered by [Concordia University](university)
-    - List all courses offered by [Carleton University](university)
-    - List all courses offered by [McGill University](university)
-
+# Query 2
 - intent: topic
   examples: |
     - In which courses is [DBpediaTopic](topic) discussed?
+    - In which courses is [_oov_](topic) discussed?
+    - In which courses is [_oov_ _oov_](topic) discussed?
     - In which courses is [DawsonCollegeTopic](topic) discussed?
     - Which courses discuss [DramaTopic](topic)?
     - Which course discusses [ElizaTopic](topic) discussed?
 
+#  Query 3
 - intent: topic_course
   examples: |
-    - Which topics are covered in [COMP](course_name) [474][course_number] during [Lecture](material) [04](material_number?
-    - Which topics are covered in [COMP](course_name) [474][course_number] during [lecture](material) [2](material_number?
-    - Which topics are covered in [Lecture](material) [04](material_number) of [COMP](course_name) [474][course_number]?
-    - Which topics are covered in [slides](material) [2](material_number) of [COMP](course_name) [474][course_number]?
-    - What are the topics for [worksheet](material) [3](material_number) of [COMP](course_name) [474][course_number]?
-    - Which topics are there in [reading](material) [4](material_number) of [COMP](course_name) [474][course_number]?
-    - Which topics will be covered in [lab](material) [4](material_number) of [COMP](course_name) [474][course_number]?
-    - What topics are there in [reading](material) [4](material_number) of [COMP](course_name) [474][course_number]?
-    - What topics will be covered in [lab](material) [4](material_number) of [COMP](course_name) [474][course_number]?
+    - Which topics are covered in [COMP](course_name) [474][course_number] during [Lecture](material) [04](material_number)?
+    - Which topics are covered in [_oov_](course_name) [_oov_][course_number] during [_oov_](material) [_oov_](material_number)?
+    - Which topics are covered in [COMP](course_name) [474][course_number] during [lecture](material) [2](material_number)?
+    - Which topics are covered in [Lecture](material) [04](material_number) of [COMP](course_name) [474](course_number)?
+    - Which topics are covered in [slides](material) [2](material_number) of [COMP](course_name) [474](course_number)?
+    - What are the topics for [worksheet](material) [3](material_number) of [COMP](course_name) [474](course_number)?
+    - Which topics are there in [reading](material) [4](material_number) of [COMP](course_name) [474](course_number)?
+    - Which topics will be covered in [lab](material) [4](material_number) of [COMP](course_name) [474](course_number)?
+    - What topics are there in [reading](material) [4](material_number) of [COMP](course_name) [474](course_number)?
+    - What topics will be covered in [lab](material) [4](material_number) of [COMP](course_name) [474](course_number)?
+    - Give the topics covered in [COMP](course_name) [474][course_number] during [Lecture](material) [04](material_number)?
+    - Give all the topics covered in [COMP](course_name) [474][course_number] during [Lecture](material) [04](material_number)?
+    - List the topics covered in [COMP](course_name) [474][course_number] during [Lecture](material) [04](material_number)?
+    - List all the topics covered in [COMP](course_name) [474][course_number] during [Lecture](material) [04](material_number)?
 
+# Query 5
 - intent: material_topic
   examples: |
     - What [slides](material) are recommended for [ElizaTopic](topic) in [COMP](course_name) [474](course_number)?
+    - What [_oov_](material) are recommended for [_oov_](topic) in [_oov_](course_name) [_oov_](course_number)?
     - What [readings](material) are recommended for [DBpediaTopic](topic) in [COMP](course_name) [472](course_number)?
     - What [worksheets](material) are recommended for [DramaTopic](topic) in [COMP](course_name) [474](course_number)?
     - What [worksheets](material) are there for [DramaTopic](topic) in [COMP](course_name) [474](course_number)?
@@ -156,14 +194,20 @@ nlu:
     - What [slides](material) are given for [ElizaTopic](topic) in [COMP](course_name) [474](course_number)?
     - What [readings](material) are given for [DBpediaTopic](topic) in [COMP](course_name) [472](course_number)?
     - What [lectures](material) are given for [DBpediaTopic](topic) in [COMP](course_name) [472](course_number)?
+    - Give the slides recommended for for [ElizaTopic](topic) in [COMP](course_name) [474](course_number)?
+    - List the slides recommended for [ElizaTopic](topic) in [COMP](course_name) [474](course_number)?
 
+# Query 8
 - intent: material_describe
   examples: | 
-    - Detail the content available for Lecture [2](lecture_number) in [COMP](course_name) [474](course_number).
-    - Describe the content (slides, worksheets, readings) available for Lecture [04](lecture_number) in [COMP](course_name) [472](course_number).
-    - Give the description of the content (slides, worksheets, readings) available for Lecture [6](lecture_number) in [SOEN](course_name) [363](course_number).
-    - Give the description of the content available for Lecture [10](lecture_number) in [SOEN](course_name) [357](course_number).
+    - Detail the content available for Lecture [2](material_number) in [COMP](course_name) [474](course_number).
+    - Detail the content available for Lecture [_oov_](material_number) in [_oov_](course_name) [_oov_](course_number).
+    - Describe the content (slides, worksheets, readings) available for Lecture [04](material_number) in [COMP](course_name) [472](course_number).
+    - Give the description of the content (slides, worksheets, readings) available for Lecture [6](material_number) in [SOEN](course_name) [363](course_number).
+    - Give the description of the content available for Lecture [10](material_number) in [SOEN](course_name) [357](course_number).
+    - Give the content available for Lecture [2](material_number) in [COMP](course_name) [474](course_number).
 
+# Query 9
 - intent: readings
   examples: | 
     - What reading materials are recommended for studying [ElizaTopic](topic) in [COMP](course_name) [474](course_number)?
@@ -173,6 +217,7 @@ nlu:
     - What reading materials are there for studying [FOAFTopic](topic) in [COMP](course_name) [472](course_number)?
     - What are the reading materials for studying [WikidataTopic](topic) in [COMP](course_name) [474](course_number)?
 
+# Query 10
 - intent: topic_competency
   examples: |
     - What competencies does a student gain after completing [COMP](course_name) [474](course_number)? 
@@ -183,22 +228,30 @@ nlu:
     - What competencies does a student know after completing [SOEN](course_name) [357](course_number)? 
     - What topics does a student know after completing [SOEN](course_name) [357](course_number)? 
 
+# Query 11
 - intent: grade_course
   examples: |
-    - What grades did [Jane](givenName) [Doe](familyName) achieve in [COMP](course_name) [474](course_number)?
-    - What grade did [John](givenName) [Doe](familyName) achieve in [COMP](course_name) [472](course_number)?
-    - What letter grade did [John](givenName) [Doe](familyName) achieve in [COMP](course_name) [472](course_number)?
-    - What letter grade did [John](givenName) [Doe](familyName) get in [COMP](course_name) [472](course_number)?
-    - What grades did [Bill](givenName) [Gates](familyName) get in [COMP](course_name) [474](course_number)?
-    - What did [Steve](givenName) [Jobs](familyName) score in [COMP](course_name) [472](course_number)?
+    - What grades did [81620](studentID) achieve in [COMP](course_name) [474](course_number)?
+    - What grade did [81620](studentID) achieve in [COMP](course_name) [472](course_number)?
+    - What letter grade did [81620](studentID) achieve in [COMP](course_name) [472](course_number)?
+    - What letter grade did [81620](studentID) get in [COMP](course_name) [472](course_number)?
+    - What grades did [81620](studentID) get in [COMP](course_name) [474](course_number)?
+    - What did [81620](studentID) score in [COMP](course_name) [472](course_number)?
   
+# Query 12
 - intent: student_course
   examples: |
     - Which students have completed [COMP](course_name) [474](course_number)?
+    - Which students have completed [_oov_](course_name) [_oov_](course_number)?
     - Name the students who have completed [COMP](course_name) [472](course_number)?
     - Which students have completed [SOEN](course_name) [363](course_number)?
     - Which students have completed [SOEN](course_name) [357](course_number)?
+    - Provide a list of students who have completed [COMP](course_name) [474](course_number).
+    - Tell me the students who have completed [COMP](course_name) [474](course_number)?
+    - Tell me which students have completed [COMP](course_name) [474](course_number)?
+    - Give me the students who have completed [MIAE](course_name) [221](course_number)?
 
+# Query 13
 - intent: student_transcript
   examples: |
     - Print a transcript for [Jane](givenName) [Doe](familyName), listing all the course taken with their grades.
@@ -206,10 +259,11 @@ nlu:
     - Give the transcript for [Bill](givenName) [Gates](familyName), listing all the course taken with their grades.
     - Print a transcript for [Steve](givenName) [Jobs](familyName), listing all the course taken with their grades.
     
+# Query 1 - Assignment 2
 - intent: course_description_outline
   examples: |
     - What is [COMP](course_name) [474](course_number) about?
-    - What is [__oov__](course_name) [__oov__](course_number) about?
+    - What is [_oov_](course_name) [_oov_](course_number) about?
     - What does [COMP](course_name) [472](course_number) cover?
     - What is course description of[SOEN](course_name) [363](course_number)?
     - What is description of [MIAE](course_name) [221](course_number)?
@@ -218,9 +272,24 @@ nlu:
     - What does [MECH](course_name) [221](course_number) teach?
     - What is there in [MIAE](course_name) [221](course_number)?
 
+# Query 2 - Assignment 2
+- intent: topics_course_events
+  examples: |
+    - Which topics are covered in Lecture [2](material_number) of [COMP](course_name) [474](course_number)?
+    - What topics are covered in Lecture [2](material_number) of [COMP](course_name) [474](course_number)?
+    - Which topics does Lecture [2](material_number) of [COMP](course_name) [474](course_number) cover?
+    - Lecture [2](material_number) of [COMP](course_name) [474](course_number) covers which topics?
+    - List the topics covered in Lecture [2](material_number) of [COMP](course_name) [474](course_number).
+    - List the topics covered by Lecture [2](material_number) of [COMP](course_name) [474](course_number).
+    - Give me the topics covered by Lecture [2](material_number) in [COMP](course_name) [474](course_number).
+    
+
+# Query 3 - Assignment 2
 - intent: material_course
   examples: |
-    - Which course events cover [ElizaTopic](topic)?
+    - Which course events cover [Alan Turing](topic)?
+    - Which course events cover [_oov_ _oov_](topic)?
+    - Which course events cover [_oov_](topic)?
     - Which are the course events covered in [DramaTopic](topic)?
     - Which labs are covered [FOAFTopic](topic)?
     - Which slides are covered in [DBpediaTopic](topic)?

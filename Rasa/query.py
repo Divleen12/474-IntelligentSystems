@@ -1,5 +1,7 @@
 import requests
 import json
+import logging
+
 
 from constants import FUSEKI_BASE_URL
 
@@ -43,7 +45,7 @@ def extract_bindings(query_result):
 
 def get_course_credits(course_name, course_number):
     """
-    Query the graph for the credits of the course number
+    Query 6
     """
 
     # course = URIRef(FOCU + f"{'_'.join(course.split()).upper()}")
@@ -80,7 +82,7 @@ def get_course_credits(course_name, course_number):
 
 def get_course_resources(course_name, course_number):
     """
-    Query the graph for additional resources
+    Query 7
     """
 
     q = f"""PREFIX ex: <http://example.org/>
@@ -125,15 +127,16 @@ def get_university_topics(university, course_name):
 
     q = f"""PREFIX ex: <http://example.org/>
             PREFIX focu: <http://focu.io/schema#>
-
             SELECT ?course ?courseName ?courseNumber
             WHERE {{
-            ?university ex:universityName "{university}"
-            ?course a focu:Course ;
+                ?university ex:universityName ?uniName .
+                FILTER(UCASE(?uniName) = UCASE("{university}"))
+                ?course a focu:Course ;
                     focu:courseName ?courseName ;
                     focu:courseNumber ?courseNumber ;
-                    focu:courseSubject "{course_name}" . 
+                    focu:courseSubject "{course_name}"  .
             }}"""
+            
     rows = make_query(q)
     print(rows)
     if rows is None:
@@ -162,7 +165,7 @@ def get_university_courses(university):
     q = f"""PREFIX ex: <http://example.org/>
             PREFIX focu: <http://focu.io/schema#>
 
-            SELECT ?courseName ?courseNumber ?courseCredits ?courseDescription
+            SELECT ?courseName ?courseNumber ?courseCredits ?courseDescription ?courseSubject
             WHERE {{
                 ?university ex:universityName "{university}" .
                 ?course a focu:Course ;
@@ -183,6 +186,7 @@ def get_university_courses(university):
 
     resources = []
     for result in bindings:
+        print(result)
         courseSubject = result.get("courseSubject", {}).get("value", None)
         courseNumber = result.get("courseNumber", {}).get("value", None)
         courseName = result.get("courseName", {}).get("value", None)
@@ -191,7 +195,7 @@ def get_university_courses(university):
 
         if courseSubject is not None and courseNumber is not None and courseName is not None and courseCredits is not None and courseDescription is not None:
             resources.append((courseName, courseNumber,courseSubject, courseCredits, courseDescription ))
-
+    print(resources)
     return resources
 
 def get_topic_course(topic):
@@ -275,7 +279,7 @@ def get_topic_course_lecture(course_name, course_number, material, material_numb
 
 def content_lecture_course(lecture_number, course_name, course_number):
     """
-    Query the graph for the content of a particular lecture in a particular course
+    Query 8
     """
 
     q = f"""PREFIX ex: <http://example.org/>
@@ -318,9 +322,9 @@ def content_lecture_course(lecture_number, course_name, course_number):
     return resources
 
 
-# def material_topic(material, topic, course_name, course_number):
+def material_topic(course_name, course_number):
     """
-    Query the graph for the content of a particular lecture in a particular course
+    Query 5
     """
 
     q = f"""PREFIX ex: <http://example.org/>
@@ -330,8 +334,8 @@ def content_lecture_course(lecture_number, course_name, course_number):
             SELECT ?lectureName ?materialType ?materialLabel ?seeAlso
             WHERE {{
             ?course a focu:Course ;
-                   focu:courseSubject "{course_name}" ;
-                    focu:courseNumber "{course_number}" . 
+                    focu:courseNumber "{course_number}" ;
+                    focu:courseSubject "{course_name}" .
             ?lecture focu:lectureContent ?material ;
                     focu:lectureName ?lectureName .
             ?material a ?materialType ;
@@ -351,19 +355,19 @@ def content_lecture_course(lecture_number, course_name, course_number):
     resources = []
     for result in bindings:
         lectureName = result.get("lectureName", {}).get("value", None)
-        contentType = result.get("contentType", {}).get("value", None)
-        contentLabel = result.get("contentLabel", {}).get("value", None)
+        materialType = result.get("materialType", {}).get("value", None)
+        materialLabel = result.get("materialLabel", {}).get("value", None)
         seeAlso = result.get("seeAlso", {}).get("value", None)
 
         if lectureName is not None and lectureName:
-            resources.append((lectureName,contentType,contentLabel,seeAlso ))
+            resources.append((lectureName,materialLabel,materialType,seeAlso ))
 
     return resources
 
 
 def students_course(course_name, course_number):
     """
-    Query the graph for the content of a particular lecture in a particular course
+    Query 12
     """
 
     q = f"""PREFIX ex: <http://example.org/>
@@ -396,5 +400,255 @@ def students_course(course_name, course_number):
 
         if studentName is not None and studentName and studentID is not None and studentID:
             resources.append((studentName,studentID))
+
+    return resources
+
+
+def get_topic_competency(course_name, course_number):
+    """
+        Query 10
+    """
+    
+    q = f"""PREFIX ex: <http://example.org/>
+            PREFIX focu: <http://focu.io/schema#>
+            PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+
+            SELECT ?studentName ?courseName
+            WHERE {{
+            ?student a ex:Student ;
+                    foaf:givenName ?studentName ;
+                    ex:completedCourse focu:{course_name}_{course_number} .
+            focu:COMP_474 a focu:Course ;
+                    focu:courseName ?courseName .
+            }}"""
+    rows = make_query(q)
+    print(rows)
+    if rows is None:
+        return None
+    print(rows.json())
+    bindings = extract_bindings(rows.json())
+    if bindings is None:
+        return None
+
+    resources = []
+    for result in bindings:
+        studentName = result.get("studentName", {}).get("value", None)
+        courseName = result.get("courseName", {}).get("value", None)
+
+        if studentName is not None and studentName and courseName is not None and courseName:
+            resources.append((studentName,courseName))
+
+    return resources
+
+
+def get_grade_course(studentID, course_name, course_number):
+    """
+        Query 11
+    """
+    
+    q = f"""
+            PREFIX ex: <http://example.org/>
+            PREFIX focu: <http://focu.io/schema#>
+            PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+
+            SELECT ?studentID ?courseName ?grade
+            WHERE {{
+            ?student a ex:Student ;
+                    ex:studentID ?studentID ;
+                    ?grade focu:COMP_474 .
+            
+            focu:{course_name}_{course_number} a focu:Course ;
+                            focu:courseName ?courseName .
+                FILTER (?studentID = {studentID})  	
+                FILTER (?grade != ex:completedCourse)
+            }}
+            """
+    rows = make_query(q)
+    print(rows)
+    if rows is None:
+        return None
+    print(rows.json())
+    bindings = extract_bindings(rows.json())
+    if bindings is None:
+        return None
+
+    resources = []
+    for result in bindings:
+        studentID = result.get("studentID", {}).get("value", None)
+        courseName = result.get("courseName", {}).get("value", None)
+        grade = result.get("grade", {}).get("value", None)
+
+        if studentID is not None and studentID and courseName is not None and courseName and grade is not None and grade:
+            resources.append((studentID,courseName, grade))
+
+    return resources
+
+
+def get_student_transcript(givenName, familyName):
+    """
+        Query 13
+    """
+    
+    q = f"""PREFIX ex: <http://example.org/>
+            PREFIX focu: <http://focu.io/schema#>
+            PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+
+            SELECT ?studentName ?courseName ?grade ?retakeGrade
+            WHERE {{
+            
+            ?student a ex:Student ;
+                    foaf:givenName  "{givenName}" ; 
+                    foaf:familyName  "{familyName}" ; 
+                    ex:completedCourse ?course ;
+                    ex:grade ?grade .
+            OPTIONAL {{ ?student ex:retakeGrade ?retakeGrade . }}
+            ?course a focu:Course ;
+                    focu:courseName ?courseName .
+            BIND(CONCAT(?givenName, " ", ?familyName) AS ?studentName)
+            }}
+            ORDER BY ?courseName"""
+    rows = make_query(q)
+    print(rows)
+    if rows is None:
+        return None
+    print(rows.json())
+    bindings = extract_bindings(rows.json())
+    if bindings is None:
+        return None
+
+    resources = []
+    for result in bindings:
+        studentName = result.get("studentName", {}).get("value", None)
+        courseName = result.get("courseName", {}).get("value", None)
+        grade = result.get("grade", {}).get("value", None)
+        retakeGrade = result.get("retakeGrade", {}).get("value", None)
+
+        if studentName is not None and studentName and courseName is not None and courseName and grade is not None and grade and retakeGrade is not None and retakeGrade:
+            resources.append((studentName,courseName, grade, retakeGrade))
+
+    return resources
+
+
+def get_course_description_outline(course_name, course_number):
+    """
+        Query 1 - Assignment 2
+    """
+    
+    q = f"""PREFIX ex: <http://example.org/>
+            PREFIX focu: <http://focu.io/schema#>
+            PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+
+
+            SELECT ?courseName ?courseDescription
+            WHERE {{
+            ?course a focu:Course ;
+                    focu:courseNumber "{course_number}" ; 
+                    focu:courseSubject "{course_name}" ;  
+                    focu:courseName ?courseName ;
+                    focu:courseDescription ?courseDescription .
+            }}
+            """
+    rows = make_query(q)
+    print(rows)
+    if rows is None:
+        return None
+    print(rows.json())
+    bindings = extract_bindings(rows.json())
+    if bindings is None:
+        return None
+
+    resources = []
+    for result in bindings:
+        courseName = result.get("courseName", {}).get("value", None)
+        courseDescription = result.get("courseDescription", {}).get("value", None)
+    
+
+        if courseName is not None and courseName and courseDescription is not None and courseDescription:
+            resources.append((courseName, courseDescription))
+
+    return resources
+
+
+def get_course_events(material_number, course_name, course_number):
+    """
+        Query 2 - Assignment 2
+    """
+    
+    q = f"""PREFIX ex: <http://example.org/>
+            PREFIX focu: <http://focu.io/schema#>
+            PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+
+
+            SELECT DISTINCT ?topicName ?resourceUri
+            WHERE {{
+            ?lecture a focu:Lecture ;
+                    focu:lectureContent ?resource .
+            ?topic focu:provenance ?resource ;
+                    focu:topicName ?topicName .
+
+            BIND (STR(?resource) AS ?resourceUri)
+            FILTER (STR(?lecture) = "http://example.org/{course_name}{course_number}Lecture{material_number}")
+            }}"""
+    rows = make_query(q)
+    print(rows)
+    if rows is None:
+        return None
+    print(rows.json())
+    bindings = extract_bindings(rows.json())
+    if bindings is None:
+        return None
+
+    resources = []
+    for result in bindings:
+        topicName = result.get("topicName", {}).get("value", None)
+        resourceUri = result.get("resourceUri", {}).get("value", None)
+
+        if topicName is not None and topicName and resourceUri is not None and resourceUri:
+            resources.append((topicName, resourceUri))
+
+    return resources
+
+
+def get_material_course(topic):
+    """
+        Query 3 - Assignment 2
+    """
+    
+    q = f"""
+            PREFIX ex: <http://example.org/>
+            PREFIX focu: <http://focu.io/schema#>
+            PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+
+            SELECT ?courseEvent ?topicName (COUNT(?resource) AS ?frequency)
+            WHERE {{
+            ?topic a focu:Topic ;
+                    focu:topicName "{topic}" .
+            ?topic focu:provenance ?resource ;
+                    focu:topicName ?topicName .
+            ?courseEvent focu:lectureContent ?resource .
+
+            BIND (STR(?courseEvent) AS ?eventUri)
+            }}
+            GROUP BY ?courseEvent ?topicName
+            ORDER BY DESC(?frequency)
+
+            """
+    rows = make_query(q)
+    print(rows)
+    if rows is None:
+        return None
+    print(rows.json())
+    bindings = extract_bindings(rows.json())
+    if bindings is None:
+        return None
+
+    resources = []
+    for result in bindings:
+        topicName = result.get("topicName", {}).get("value", None)
+        courseEvent = result.get("courseEvent", {}).get("value", None)
+        frequency = result.get("frequency", {}).get("value", None)
+
+        if topicName is not None and topicName and courseEvent is not None and courseEvent and frequency is not None and frequency:
+            resources.append((topicName, courseEvent, frequency))
 
     return resources
