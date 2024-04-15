@@ -165,20 +165,20 @@ nlu:
 #  Query 3
 - intent: topic_course
   examples: |
-    - Which topics are covered in [COMP](course_name) [474][course_number] during [Lecture](material) [04](material_number)?
-    - Which topics are covered in [_oov_](course_name) [_oov_][course_number] during [_oov_](material) [_oov_](material_number)?
-    - Which topics are covered in [COMP](course_name) [474][course_number] during [lecture](material) [2](material_number)?
-    - Which topics are covered in [Lecture](material) [04](material_number) of [COMP](course_name) [474](course_number)?
+    - Which topics are covered in [COMP](course_name) [474](course_number) during [Lecture](material) [4](material_number)?
+    - Which topics are covered in [_oov_](course_name) [_oov_](course_number) during [_oov_](material) [_oov_](material_number)?
+    - Which topics are covered in [COMP](course_name) [474](course_number) during [lecture](material) [2](material_number)?
+    - Which topics are covered in [Lecture](material) [4](material_number) of [COMP](course_name) [474](course_number)?
     - Which topics are covered in [slides](material) [2](material_number) of [COMP](course_name) [474](course_number)?
     - What are the topics for [worksheet](material) [3](material_number) of [COMP](course_name) [474](course_number)?
     - Which topics are there in [reading](material) [4](material_number) of [COMP](course_name) [474](course_number)?
     - Which topics will be covered in [lab](material) [4](material_number) of [COMP](course_name) [474](course_number)?
     - What topics are there in [reading](material) [4](material_number) of [COMP](course_name) [474](course_number)?
     - What topics will be covered in [lab](material) [4](material_number) of [COMP](course_name) [474](course_number)?
-    - Give the topics covered in [COMP](course_name) [474][course_number] during [Lecture](material) [04](material_number)?
-    - Give all the topics covered in [COMP](course_name) [474][course_number] during [Lecture](material) [04](material_number)?
-    - List the topics covered in [COMP](course_name) [474][course_number] during [Lecture](material) [04](material_number)?
-    - List all the topics covered in [COMP](course_name) [474][course_number] during [Lecture](material) [04](material_number)?
+    - Give the topics covered in [COMP](course_name) [474](course_number) during [Lecture](material) [4](material_number)?
+    - Give all the topics covered in [COMP](course_name) [474](course_number) during [Lecture](material) [4](material_number)?
+    - List the topics covered in [COMP](course_name) [474](course_number) during [Lecture](material) [4](material_number)?
+    - List all the topics covered in [COMP](course_name) [474](course_number) during [Lecture](material) [4](material_number)?
 
 # Query 5
 - intent: material_topic

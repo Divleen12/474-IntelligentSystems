@@ -250,7 +250,7 @@ def get_topic_course_lecture(course_name, course_number, material, material_numb
             SELECT ?lectureName ?contentLabel ?seeAlso
             WHERE {{
             ?lecture a focu:Lecture ;
-                    focu:lectureNumber "{material_number}"
+                    focu:lectureNumber "{material_number}" ;
                     focu:lectureName ?lectureName .
             OPTIONAL {{
                 ?lecture focu:lectureContent ?content .
@@ -270,9 +270,10 @@ def get_topic_course_lecture(course_name, course_number, material, material_numb
     resources = []
     for result in bindings:
         lectureName = result.get("lectureName", {}).get("value", None)
+        contentLabel = result.get("contentLabel", {}).get("value", None)
 
         if lectureName is not None and lectureName:
-            resources.append((lectureName ))
+            resources.append((lectureName, contentLabel ))
 
     return resources
 
