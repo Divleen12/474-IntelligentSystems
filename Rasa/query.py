@@ -279,7 +279,7 @@ def get_topic_course_lecture(course_name, course_number, material, material_numb
 
 def content_lecture_course(lecture_number, course_name, course_number):
     """
-    Query the graph for the content of a particular lecture in a particular course
+    Query 8
     """
 
     q = f"""PREFIX ex: <http://example.org/>
@@ -614,20 +614,24 @@ def get_material_course(topic):
         Query 3 - Assignment 2
     """
     
-    q = f"""PREFIX ex: <http://example.org/>
+    q = f"""
+            PREFIX ex: <http://example.org/>
             PREFIX focu: <http://focu.io/schema#>
             PREFIX foaf: <http://xmlns.com/foaf/0.1/>
 
-           SELECT ?topic ?course ?lecture ?resource
+            SELECT ?courseEvent ?topicName (COUNT(?resource) AS ?frequency)
             WHERE {{
-            
             ?topic a focu:Topic ;
-                    focu:topicName "{topic}" ;
-                    focu:provenance ?resource .
-            ?lecture focu:lectureContent ?resource .
+                    focu:topicName "{topic}" .
+            ?topic focu:provenance ?resource ;
+                    focu:topicName ?topicName .
+            ?courseEvent focu:lectureContent ?resource .
 
-                BIND(URI(CONCAT("http://example.org/", STRBEFORE(STRAFTER(STR(?lecture), "http://example.org/"), "Lecture"))) AS ?course)
-        }}
+            BIND (STR(?courseEvent) AS ?eventUri)
+            }}
+            GROUP BY ?courseEvent ?topicName
+            ORDER BY DESC(?frequency)
+
             """
     rows = make_query(q)
     print(rows)
@@ -640,12 +644,11 @@ def get_material_course(topic):
 
     resources = []
     for result in bindings:
-        topic = result.get("topic", {}).get("value", None)
-        course = result.get("course", {}).get("value", None)
-        lecture = result.get("lecture", {}).get("value", None)
-        resource = result.get("resource", {}).get("value", None)
+        topicName = result.get("topicName", {}).get("value", None)
+        courseEvent = result.get("courseEvent", {}).get("value", None)
+        frequency = result.get("frequency", {}).get("value", None)
 
-        if topic is not None and topic and course is not None and course and lecture is not None and lecture and resource is not None and resource:
-            resources.append((topic, course, lecture, resource))
+        if topicName is not None and topicName and courseEvent is not None and courseEvent and frequency is not None and frequency:
+            resources.append((topicName, courseEvent, frequency))
 
     return resources

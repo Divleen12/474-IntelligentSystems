@@ -16,70 +16,6 @@ import query
 
 from collections import defaultdict
 
-class ActionDefaultFallback(Action):
-    """Executes the fallback action."""
-
-    def name(self) -> Text:
-        return "action_default_fallback"
-
-    def run(self, dispatcher: CollectingDispatcher,
-            tracker: Tracker,
-            domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
-
-        # Define example messages for each intent
-        intent_examples_data = {
-            "course_credits": ["How many credits is COMP 474 worth?"],
-            "course_resources": ["What additional resources are there for COMP 474?"],
-            "University": ["List all courses offered by Concordia University"],
-            "university_topics": ["List all courses offered by Concordia University within COMP 474"],
-            "topic": ["In which courses is intelligent systems discussed?"],
-            "topic_course": ["Which topics are covered in COMP 474 during lecture 01?"],
-            "material_topic": ["What slides are recommended for intelligent systems in COMP 474?"],
-            "material_describe": ["Detail the content available for Lecture 1 in COMP 474"],
-            "readings": ["What reading materials are recommended for studying Alan Turing in COMP 474?"],
-            "topic_competency": ["What competencies does a student gain after completing COMP 474?"],
-            "grade_course": ["What grades did Jane Doe achieve in COMP 474?"],
-            "student_course": ["Which students have completed COMP 474?"],
-            "student_transcript": ["Print a transcript for Jane Doe, listing all the course taken with their grades."],
-            "course_description_outline": ["What is COMP 474 about?"],
-            "topics_course_events": ["Which topics are covered in Lecture 01 of COMP 474?"],
-            "material_course": ["Which course events cover Alan Turing?"]
-        }
-
-       
-        excluded_intents = {"greet", "nlu_fallback", "mood_unhappy","deny","affirm","goodbye","bot_challenge","mood_great"}  # Add all intents to be excluded
-        remaining_intents = [(intent['name'], intent['confidence']) for intent in tracker.latest_message['intent_ranking'] if intent['name'] not in excluded_intents]
-        dispatcher.utter_message(text=f"{tracker.latest_message.get('text')}")
-     
-        sorted_intents = sorted(remaining_intents, key=lambda x: x[1], reverse=True)
-
-       
-        top_5_intents = sorted_intents[:1]
-
-        
-        intent_examples = defaultdict(list)
-        for intent, _ in top_5_intents:
-            print(intent)
-            examples = intent_examples_data.get(intent)
-            intent_examples[intent] = examples
-        print(intent_examples)
-        
-        response = "Top 1 intents:\n"
-        for intent, confidence in top_5_intents:
-            print(intent)
-            print(confidence)
-            
-            response += "Examples:\n"
-            for example in intent_examples.get(intent):
-                response += f"- {example}\n"
-            response += "\n"
-            
-        print(response)
-
-        # Send the response to the user
-        dispatcher.utter_message(text=response)
-        return []
-
 class ActionCourseDescribe(Action):
 
     def name(self) -> Text:
@@ -223,7 +159,7 @@ class ActionTopicInCourse(Action):
             dispatcher.utter_message(text=f"Sorry, I can't seem to find courses for {topic}")
             return []
 
-        response = f"Here's what I found about this topic:\n"
+        response = f"Here are the courses in which this topic is discussed:\n"
         for entry in resources:
             courseName, courseNumber, courseSubject, courseDescription = entry
             response += f"{courseName}: {courseSubject} {courseNumber}\n Description: {courseDescription}\n"
@@ -262,7 +198,7 @@ class ActionTopicInCourseInLectureNumber(Action):
             dispatcher.utter_message(text=f"Sorry, I can't seem to find topics for {course_name} {course_number}")
             return []
 
-        response = f"Here are the topics I found about for {course_name} {course_number}, lecture {material_number}:\n"
+        response = f"Here are the topics I found for {course_name} {course_number}, lecture {material_number}:\n"
         for entry in resources:
             lectureName = entry
             response += f"{course_name}: {course_number}\n Topic: {lectureName}\n"
@@ -301,7 +237,7 @@ class ContentInLectureInCourse(Action):
             dispatcher.utter_message(text=f"Sorry, I can't seem to find content for {course_name} {course_number}")
             return []
 
-        response = f"Here is the content I found about for {course_name} {course_number}, lecture {material_number}:\n"
+        response = f"Here is the content I found for {course_name} {course_number}, lecture {material_number}:\n"
         for entry in resources:
             lectureName, contentType, contentLabel, seeAlso = entry
             response += f"{lectureName} {contentLabel}: {contentType}\n"
@@ -336,7 +272,7 @@ class MaterialTopicCourse(Action):
             dispatcher.utter_message(text=f"Sorry, I can't seem to find material for {course_name} {course_number}")
             return []
 
-        response = f"Here is the material I found for {course_name} {course_number}:\n"
+        response = f"Here is the material I found for this topic in {course_name} {course_number}:\n"
         for entry in resources:
             lectureName, materialType, materialLabel, seeAlso = entry
             response += f"{lectureName} {materialLabel}: {materialType}\n Here is the link for this material: {seeAlso}\n"
@@ -592,8 +528,70 @@ class MaterialCourse(Action):
 
         response = f"Here are the course events that cover this topic:\n"
         for entry in resources:
-            topic, course, lecture, resource = entry
-            response += f"Topic Name: {topic}, Course: {course}, Lecture: {lecture}, Resource: {resource}\n"
+            topicName, courseEvent, frequency = entry
+            response += f"Course Event: {courseEvent}, Topic Name: {topicName},  Frequency: {frequency}\n"
 
+        dispatcher.utter_message(text=response)
+        return []
+    
+    
+class ActionDefaultFallback(Action):
+    """Executes the fallback action."""
+
+    def name(self) -> Text:
+        return "action_default_fallback"
+
+    def run(self, dispatcher: CollectingDispatcher,
+            tracker: Tracker,
+            domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+
+        # Define example messages for each intent
+        intent_examples_data = {
+            "course_credits": ["How many credits is COMP 474 worth?"],
+            "course_resources": ["What additional resources are there for COMP 474?"],
+            "University": ["List all courses offered by Concordia University"],
+            "university_topics": ["List all courses offered by Concordia University within COMP 474"],
+            "topic": ["In which courses is intelligent systems discussed?"],
+            "topic_course": ["Which topics are covered in COMP 474 during lecture 01?"],
+            "material_topic": ["What slides are recommended for intelligent systems in COMP 474?"],
+            "material_describe": ["Detail the content available for Lecture 1 in COMP 474"],
+            "readings": ["What reading materials are recommended for studying Alan Turing in COMP 474?"],
+            "topic_competency": ["What competencies does a student gain after completing COMP 474?"],
+            "grade_course": ["What grades did Jane Doe achieve in COMP 474?"],
+            "student_course": ["Which students have completed COMP 474?"],
+            "student_transcript": ["Print a transcript for Jane Doe, listing all the course taken with their grades."],
+            "course_description_outline": ["What is COMP 474 about?"],
+            "topics_course_events": ["Which topics are covered in Lecture 01 of COMP 474?"],
+            "material_course": ["Which course events cover Alan Turing?"]
+        }
+
+       
+        excluded_intents = {"greet", "nlu_fallback", "mood_unhappy","deny","affirm","goodbye","bot_challenge","mood_great"}  # Add all intents to be excluded
+        remaining_intents = [(intent['name'], intent['confidence']) for intent in tracker.latest_message['intent_ranking'] if intent['name'] not in excluded_intents]
+        dispatcher.utter_message(text=f"{tracker.latest_message.get('text')}")
+     
+        sorted_intents = sorted(remaining_intents, key=lambda x: x[1], reverse=True)
+
+       
+        top_5_intents = sorted_intents[:1]
+
+        
+        intent_examples = defaultdict(list)
+        for intent, _ in top_5_intents:
+            print(intent)
+            examples = intent_examples_data.get(intent)
+            intent_examples[intent] = examples
+        
+        response = "Oops! Looked like you asked a question I cannot answer. Try asking something like:\n"
+        for intent, confidence in top_5_intents:
+            
+            response += "Examples:\n"
+            for example in intent_examples.get(intent):
+                response += f"- {example}\n"
+            response += "\n"
+            
+        print(response)
+
+        # Send the response to the user
         dispatcher.utter_message(text=response)
         return []
